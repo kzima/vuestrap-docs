@@ -6,7 +6,7 @@ Vuestrap Docs Components are useful for documenting other [vuestrap](https://git
 DEMO
 =========
 
-[Documentation](http://http://kzima.github.io/vuestrap-docs/#/demo)
+[Documentation](http://kzima.github.io/vuestrap-docs/#/demo)
 
 QUICK USE
 =========
