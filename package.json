@@ -1,6 +1,6 @@
 {
   "name": "vuestrap-docs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vuestrap Docs Components are useed in docs pages to showcase web components.",
   "library": "vuestrapDocs",
   "repository": {
