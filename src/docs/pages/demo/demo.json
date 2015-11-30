@@ -1,0 +1,26 @@
+{
+	"name": "demo",
+	"title": "Demo Component",
+	"description": "Used in docs to showcase markup, snippet and API options.",
+	"dependencies": ["vuestrap/labels", "vuestrap/alert", "vuestrap/icons"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "meta",
+			"type": "Object",
+			"default": "{}",
+			"required": true,
+			"description": "An object data describing component (based on JSON file)."
+		},
+		{
+			"name": "snippet",
+			"type": "String",
+			"default": "",
+			"required": false,
+			"description": "Code examples showing sample usage of the component."
+		}
+	]
+}
