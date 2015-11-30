@@ -57,15 +57,19 @@
 	
 	var _srcDocsPagesIntroduction2 = _interopRequireDefault(_srcDocsPagesIntroduction);
 	
-	var _srcDocsPagesIcons = __webpack_require__(8);
+	var _srcDocsPagesDemo = __webpack_require__(8);
 	
-	var _srcDocsPagesIcons2 = _interopRequireDefault(_srcDocsPagesIcons);
+	var _srcDocsPagesDemo2 = _interopRequireDefault(_srcDocsPagesDemo);
+	
+	var _srcDocsPagesSearch = __webpack_require__(26);
+	
+	var _srcDocsPagesSearch2 = _interopRequireDefault(_srcDocsPagesSearch);
 	
 	// import component dependencies
 	
-	var _vuestrapDocsSrcComponentsSearch = __webpack_require__(34);
+	var _srcComponentsSearch = __webpack_require__(34);
 	
-	var _vuestrapDocsSrcComponentsSearch2 = _interopRequireDefault(_vuestrapDocsSrcComponentsSearch);
+	var _srcComponentsSearch2 = _interopRequireDefault(_srcComponentsSearch);
 	
 	// import vuestrap dependencies
 	
@@ -89,18 +93,19 @@
 	
 	// import route util
 	
-	var _utils = __webpack_require__(14);
+	var _utils = __webpack_require__(32);
 	
 	// components
 	// list of all dependencies
 	var components = {
-		search: _vuestrapDocsSrcComponentsSearch2['default']
+		'docs-search': _srcComponentsSearch2['default']
 	};
 	
 	// component pages
 	var pages = {
 		intro: _srcDocsPagesIntroduction2['default'],
-		icons: _srcDocsPagesIcons2['default']
+		demo: _srcDocsPagesDemo2['default'],
+		search: _srcDocsPagesSearch2['default']
 	};
 	
 	// list of routes
@@ -189,8 +194,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_core.scss", function() {
-				var newContent = require("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_core.scss");
+			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_core.scss", function() {
+				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_core.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -553,7 +558,7 @@
 /* 7 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"jumbotron\">\r\n  <h1>{{pkg.name}} <span class=\"label label-success\">{{pkg.version}}</span></h1>\r\n  <p>{{pkg.description}}</p>\r\n</div>\r\n<h2>Installation</h2>\r\n<div class=\"row\">\r\n\t<div class=\"col-xs-12 col-sm-6\">\r\n    <h3>Compiled</h3>\r\n    <p>Minified CSS and JavaScript with no  documentation or original source files.</p>\r\n    <code>bower install <span class=\"hljs-expansion\">{{pkg.name}}</span> --save-dev</code>\r\n\t</div>\r\n\t<div class=\"col-xs-12 col-sm-6\">\r\n    <h3>Source</h3>\r\n    <p>Source Sass, JavaScript, and documentation files.</p>\r\n    <code>npm install <span class=\"hljs-expansion\">{{pkg.name}}</span> --save-dev</code>\r\n   </div>\r\n</div>\r\n\r\n<div class=\"m-b-lg\"></div>\r\n<h2>Usage</h2>\r\n<p>For compiled components, use it within your Vue instance like this:</p>\r\n<p><code>new <span class=\"hljs-constant\">Vue</span>({ <span class=\"hljs-symbol\">components:</span> { <span class=\"hljs-string\">`{{sampleComponentName}}`</span>: <span class=\"hljs-expansion\">{{pkg.library}}</span>.<span class=\"hljs-expansion\">{{sampleComponentName}}</span> }})</code></p>\r\n\r\n<div class=\"m-b\"></div>\r\n<strong>OR</strong>\r\n<div class=\"m-b\"></div>\r\n\r\n<p>If you chosen to work with source components, just import* desired component like so:</p>\r\n<p><code>import <span class=\"hljs-expansion\">{{sampleComponentName}}</span> from <span class=\"hljs-string\">`{{pkg.name}}/src/components/{{sampleComponentName}}`</span></code></p>\r\n<p>and then load it in your Vue instance:</p>\r\n<p><code>new <span class=\"hljs-constant\">Vue</span>({ <span class=\"hljs-symbol\">components:</span> { <span class=\"hljs-string\">`{{sampleComponentName}}`</span>: <span class=\"hljs-expansion\">{{sampleComponentName}}</span> }})</code></p>\r\n<p>*Note: You will need <a href=\"https://github.com/babel/babel-loader\">Babel Loader</a> in your Webpack config file to support ES6 syntax.</p>";
+	module.exports = "<div class=\"jumbotron\">\r\n  <h1>{{pkg.name}} <span class=\"label label-success\">{{pkg.version}}</span></h1>\r\n  <p>{{pkg.description}}</p>\r\n</div>\r\n<h2>Installation</h2>\r\n<div class=\"row\">\r\n\t<div class=\"col-xs-12 col-sm-6\">\r\n    <h3>Compiled</h3>\r\n    <p>Minified CSS and JavaScript with no  documentation or original source files.</p>\r\n    <code>bower install <span class=\"hljs-expansion\">{{pkg.name}}</span> --save-dev</code>\r\n\t</div>\r\n\t<div class=\"col-xs-12 col-sm-6\">\r\n    <h3>Source</h3>\r\n    <p>Source Sass, JavaScript, and documentation files.</p>\r\n    <code>npm install <span class=\"hljs-expansion\">{{pkg.name}}</span> --save-dev</code>\r\n   </div>\r\n</div>\r\n\r\n<div class=\"m-b-lg\"></div>\r\n<h2>Usage</h2>\r\n<p>For compiled components, use it within your Vue instance like this:</p>\r\n<p><code>new <span class=\"hljs-constant\">Vue</span>({ <span class=\"hljs-symbol\">components:</span> { <span class=\"hljs-string\">'{{sampleComponentName}}'</span>: <span class=\"hljs-expansion\">{{pkg.library}}</span>.<span class=\"hljs-expansion\">{{sampleComponentName}}</span> }})</code></p>\r\n\r\n<div class=\"m-b\"></div>\r\n<strong>OR</strong>\r\n<div class=\"m-b\"></div>\r\n\r\n<p>If you chosen to work with source components, just import* desired component like so:</p>\r\n<p><code>import <span class=\"hljs-expansion\">{{sampleComponentName}}</span> from <span class=\"hljs-string\">'{{pkg.name}}/src/components/{{sampleComponentName}}'</span></code></p>\r\n<p>and then load it in your Vue instance:</p>\r\n<p><code>new <span class=\"hljs-constant\">Vue</span>({ <span class=\"hljs-symbol\">components:</span> { <span class=\"hljs-string\">'{{sampleComponentName}}'</span>: <span class=\"hljs-expansion\">{{sampleComponentName}}</span> }})</code></p>\r\n<p>*Note: You will need <a href=\"https://github.com/babel/babel-loader\">Babel Loader</a> in your Webpack config file to support ES6 syntax.</p>";
 
 /***/ },
 /* 8 */
@@ -571,47 +576,30 @@
 	
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 	
-	var _iconsHtml = __webpack_require__(10);
+	var _demoHtml = __webpack_require__(10);
 	
-	var _iconsHtml2 = _interopRequireDefault(_iconsHtml);
+	var _demoHtml2 = _interopRequireDefault(_demoHtml);
 	
-	var _iconsJson = __webpack_require__(11);
+	var _demoJson = __webpack_require__(11);
 	
-	var _iconsJson2 = _interopRequireDefault(_iconsJson);
+	var _demoJson2 = _interopRequireDefault(_demoJson);
 	
-	__webpack_require__(12);
+	var _srcComponentsDemo = __webpack_require__(12);
 	
-	var _utils = __webpack_require__(14);
+	var _srcComponentsDemo2 = _interopRequireDefault(_srcComponentsDemo);
 	
-	var _srcComponentsIcons = __webpack_require__(16);
-	
-	var _srcComponentsIcons2 = _interopRequireDefault(_srcComponentsIcons);
-	
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(21);
-	
-	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
-	
-	// enable support for svg in all browsers
-	
-	__webpack_require__(33);
+	__webpack_require__(24);
 	
 	exports['default'] = {
-		template: _iconsHtml2['default'],
+		template: _demoHtml2['default'],
 		data: function data() {
 			return {
-				meta: _iconsJson2['default'],
-				snippet: _snippetHtml2['default'],
-				controls: {
-					size: 'xxl',
-					sizes: _utils.sizes.concat([{ text: 'xl', value: 'xl' }, { text: 'xxl', value: 'xxl' }]),
-					variant: 'info',
-					variants: _utils.variants.concat([{ text: 'light', value: 'light' }, { text: 'dark', value: 'dark' }])
-				}
+				meta: _demoJson2['default'],
+				snippet: _snippetHtml2['default']
 			};
 		},
 		components: {
-			icon: _srcComponentsIcons2['default'],
-			demo: _vuestrapDocsSrcComponentsDemo2['default']
+			'docs-demo': _srcComponentsDemo2['default']
 		}
 	};
 	module.exports = exports['default'];
@@ -620,99 +608,48 @@
 /* 9 */
 /***/ function(module, exports) {
 
-	module.exports = "<code lang=\"html\">\r\n&lt;<span class=\"hljs-attribute\">icon</span> name=<span class=\"hljs-string\">&quot;info&quot;</span> size=<span class=\"hljs-string\">&quot;md&quot;</span> variant=<span class=\"hljs-string\">&quot;primary&quot;</span>&gt;&lt;/<span class=\"hljs-attribute\">icon</span>&gt;\r\n&lt;<span class=\"hljs-attribute\">icon</span> name=<span class=\"hljs-string\">&quot;info&quot;</span> <span class=\"hljs-attribute\">background</span>=<span class=\"hljs-string\">&quot;circle-outline&quot;</span> size=<span class=\"hljs-string\">&quot;md&quot;</span> variant=<span class=\"hljs-string\">&quot;primary&quot;</span>&gt;&lt;/<span class=\"hljs-attribute\">icon</span>&gt;\r\n&lt;<span class=\"hljs-attribute\">icon</span> name=<span class=\"hljs-string\">&quot;info&quot;</span> <span class=\"hljs-attribute\">background</span>=<span class=\"hljs-string\">&quot;circle-fill&quot;</span> size=<span class=\"hljs-string\">&quot;md&quot;</span> variant=<span class=\"hljs-string\">&quot;primary&quot;</span>&gt;&lt;/<span class=\"hljs-attribute\">icon</span>&gt;\r\n&lt;<span class=\"hljs-attribute\">icon</span> <span class=\"hljs-attribute\">background</span>=<span class=\"hljs-string\">&quot;circle-fill&quot;</span> size=<span class=\"hljs-string\">&quot;md&quot;</span> variant=<span class=\"hljs-string\">&quot;primary&quot;</span> text=<span class=\"hljs-string\">&quot;1&quot;</span>&gt;&lt;/<span class=\"hljs-attribute\">icon</span>&gt;\r\n&lt;<span class=\"hljs-attribute\">icon</span> <span class=\"hljs-attribute\">background</span>=<span class=\"hljs-string\">&quot;circle-outline&quot;</span> size=<span class=\"hljs-string\">&quot;md&quot;</span> variant=<span class=\"hljs-string\">&quot;primary&quot;</span> text=<span class=\"hljs-string\">&quot;1&quot;</span>&gt;&lt;/<span class=\"hljs-attribute\">icon</span>&gt;\r\n&lt;<span class=\"hljs-attribute\">icon</span> <span class=\"hljs-attribute\">background</span>=<span class=\"hljs-string\">&quot;circle-outline&quot;</span> size=<span class=\"hljs-string\">&quot;md&quot;</span> variant=<span class=\"hljs-string\">&quot;primary&quot;</span> text=<span class=\"hljs-string\">&quot;2&quot;</span>&gt;&lt;/<span class=\"hljs-attribute\">icon</span>&gt;\r\n&lt;<span class=\"hljs-attribute\">icon</span> <span class=\"hljs-attribute\">background</span>=<span class=\"hljs-string\">&quot;circle-outline&quot;</span> size=<span class=\"hljs-string\">&quot;md&quot;</span> variant=<span class=\"hljs-string\">&quot;primary&quot;</span> text=<span class=\"hljs-string\">&quot;11&quot;</span>&gt;&lt;/<span class=\"hljs-attribute\">icon</span>&gt;\r\n&lt;<span class=\"hljs-tag\">button</span> class=<span class=\"hljs-string\">&quot;btn btn-md&quot;</span> aria-label=<span class=\"hljs-string\">&quot;settings&quot;</span>&gt;\r\n  &lt;<span class=\"hljs-attribute\">icon</span> name=<span class=\"hljs-string\">&quot;cog&quot;</span> size=<span class=\"hljs-string\">&quot;md&quot;</span> variant=<span class=\"hljs-string\">&quot;primary&quot;</span>&gt;&lt;/<span class=\"hljs-attribute\">icon</span>&gt;\r\n&lt;/button&gt;\r\n&lt;<span class=\"hljs-tag\">button</span> class=<span class=\"hljs-string\">&quot;btn btn-md&quot;</span>&gt;\r\n  &lt;<span class=\"hljs-attribute\">icon</span> name=<span class=\"hljs-string\">&quot;cog&quot;</span> size=<span class=\"hljs-string\">&quot;md&quot;</span> variant=<span class=\"hljs-string\">&quot;primary&quot;</span>&gt;&lt;/<span class=\"hljs-attribute\">icon</span>&gt; settings\r\n&lt;/button&gt;\r\n</code>";
+	module.exports = "<code lang=\"html\">\r\n<span class=\"hljs-comment\">&lt;!-- demo component --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">docs-demo</span> <span class=\"hljs-attribute\">:meta</span>=<span class=\"hljs-value\">\"meta\"</span> <span class=\"hljs-attribute\">:snippet</span>=<span class=\"hljs-value\">\"snippet\"</span> <span class=\"hljs-attribute\">v-if</span>=<span class=\"hljs-value\">\"controls\"</span>&gt;</span>\r\n  <span class=\"hljs-comment\">&lt;!-- Html controls start--&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"controls\"</span> <span class=\"hljs-attribute\">v-if</span>=<span class=\"hljs-value\">\"controls\"</span>&gt;</span>\r\n    Controls go here...\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n  <span class=\"hljs-comment\">&lt;!-- Html controls end--&gt;</span>\r\n  \r\n  <span class=\"hljs-comment\">&lt;!-- Html markup start--&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"markup\"</span> <span class=\"hljs-attribute\">v-bind:class</span>=<span class=\"hljs-value\">\"{ inverse: controls.variant === 'light' }\"</span>&gt;</span>\r\n    Demo Component's markup go here...\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n  <span class=\"hljs-comment\">&lt;!-- Html markup end--&gt;</span> \r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">docs-demo</span>&gt;</span>\r\n</code>";
 
 /***/ },
 /* 10 */
 /***/ function(module, exports) {
 
-	module.exports = "<!-- demo component -->\r\n<demo :meta=\"meta\" :snippet=\"snippet\" path=\"assets/icons.svg\" v-if=\"controls\">\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\" v-if=\"controls\">\r\n\t\t<label>\r\n\t\t\tsize\r\n\t\t\t<select v-model=\"controls.size\">\r\n\t\t\t\t<option v-for=\"option in controls.sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\r\n\t\t<label>\r\n\t\t\tvariant\r\n\t\t\t<select v-model=\"controls.variant\">\r\n\t\t\t\t<option v-for=\"option in controls.variants\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\t\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\" v-bind:class=\"{ inverse: controls.variant === &apos;light&apos; }\">\r\n\r\n\t\t<icon name=\"info\" :size=\"controls.size\" :variant=\"controls.variant\" path=\"assets/icons.svg\"></icon>\r\n\t\t<icon name=\"info\" background=\"circle-outline\" :size=\"controls.size\" :variant=\"controls.variant\" path=\"assets/icons.svg\"></icon>\r\n\t\t<icon name=\"info\" background=\"circle-fill\" :size=\"controls.size\" :variant=\"controls.variant\" path=\"assets/icons.svg\"></icon>\r\n\t\t<icon background=\"circle-fill\" :size=\"controls.size\" :variant=\"controls.variant\" path=\"assets/icons.svg\" text=\"1\"></icon>\r\n\t\t<icon background=\"circle-outline\" :size=\"controls.size\" :variant=\"controls.variant\" path=\"assets/icons.svg\" text=\"1\"></icon>\r\n\t\t<icon background=\"circle-outline\" :size=\"controls.size\" :variant=\"controls.variant\" path=\"assets/icons.svg\" text=\"2\"></icon>\r\n\t\t<icon background=\"circle-outline\" :size=\"controls.size\" :variant=\"controls.variant\" path=\"assets/icons.svg\" text=\"11\"></icon>\r\n\t\t<button class=\"btn btn-md\" aria-label=\"settings\"><icon name=\"cog\" :size=\"&apos;md&apos;\" :variant=\"controls.variant\" path=\"assets/icons.svg\"></icon> </button>\r\n\t\t<button class=\"btn btn-md\"><icon name=\"cog\" :size=\"&apos;md&apos;\" :variant=\"controls.variant\" path=\"assets/icons.svg\"></icon> settings</button>\r\n\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n</demo>";
+	module.exports = "<!-- demo component -->\r\n<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\">\r\n\t\tControls go here...\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\t\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\" v-bind:class=\"{ inverse: controls.variant === 'light' }\">\r\n\t\tDemo Component's markup go here...\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n</docs-demo>";
 
 /***/ },
 /* 11 */
 /***/ function(module, exports) {
 
 	module.exports = {
-		"name": "icons",
-		"title": "Icons",
-		"description": "SVG sprite consists of 223 icons from Iconic, plus two custom ones: circle-fill and circle-outline.",
-		"accessibility": "By default icons component sets <code>aria-hidden='true'</code> attribute to avoid confusing output in screen readers. For more information please refer to <a href='http://getbootstrap.com/components/#glyphicons-how-to-use'>Accessible Icons section in Bootstrap Docs</a>.",
+		"name": "demo",
+		"title": "Demo Component",
+		"description": "Used in docs to showcase markup, snippet and API options.",
 		"dependencies": [
-			"vuestrap/core/icons"
+			"vuestrap/labels",
+			"vuestrap/alert",
+			"vuestrap/icons"
 		],
 		"category": "components",
 		"browserSupport": {
 			"browsers": [
-				"*IE9+",
-				"*Android 4.3"
-			],
-			"note": "* Icons use svg4everybody v.2.0.0 polyfill and it is embeded in the component's code base."
+				"IE9+",
+				"Android 4.3"
+			]
 		},
 		"options": [
 			{
-				"name": "name",
-				"type": "String",
-				"default": "''",
-				"required": false,
-				"description": "A name of the icon. For more icons please refer to <a href='https://useiconic.com/open/'>https://useiconic.com/open/</a>"
+				"name": "meta",
+				"type": "Object",
+				"default": "{}",
+				"required": true,
+				"description": "An object data describing component (based on JSON file)."
 			},
 			{
-				"name": "background",
-				"type": "String",
-				"default": "''",
-				"required": false,
-				"description": "A name of the background icon. It will be stacked behind the main icon. It supports circle-outline and circle-fill background icons."
-			},
-			{
-				"name": "align",
-				"type": "String",
-				"values": [
-					"left",
-					"right"
-				],
-				"default": "''",
-				"required": false,
-				"description": "Adds extra padding on the left/right of the icon."
-			},
-			{
-				"name": "size",
-				"type": "String",
-				"values": [
-					"sm",
-					"md",
-					"lg",
-					"xl",
-					"xxl"
-				],
-				"default": "md",
-				"description": "Size of the icon. 'sm' starts at 1.0em ('sm') and increments by 0.5em for next sizes."
-			},
-			{
-				"name": "text",
+				"name": "snippet",
 				"type": "String",
 				"default": "",
-				"description": "To place custom text above the icon. Works well with background icon `circle-fill` and supports up to two characters."
-			},
-			{
-				"name": "variant",
-				"type": "String",
-				"values": [
-					"light",
-					"dark",
-					"primary",
-					"success",
-					"info",
-					"warning",
-					"danger"
-				],
-				"default": "light",
-				"description": "Button color context."
-			},
-			{
-				"name": "path",
-				"type": "String",
-				"default": "",
-				"description": "It allows you to specify a path to svg sprite. Default path is set to <code>node_modules/vuestrap-icons/assets/sprite.svg</code> for development and <code>bower_components/vuestrap-icons/assets/sprite.svg</code> for production."
+				"required": false,
+				"description": "Code examples showing sample usage of the component."
 			}
 		]
 	};
@@ -721,10 +658,52 @@
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// import dependencies
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	__webpack_require__(13);
+	
+	var _demoHtml = __webpack_require__(15);
+	
+	var _demoHtml2 = _interopRequireDefault(_demoHtml);
+	
+	__webpack_require__(16);
+	
+	__webpack_require__(19);
+	
+	// export component object
+	exports['default'] = {
+	    template: _demoHtml2['default'],
+	    replace: true,
+	    props: {
+	        meta: {
+	            type: Object,
+	            'default': {},
+	            required: true
+	        },
+	        snippet: {
+	            type: String,
+	            'default': "",
+	            required: true
+	        }
+	    }
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(13);
+	var content = __webpack_require__(14);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -733,8 +712,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../css-loader/index.js!./../../../../../autoprefixer-loader/index.js!./../../../../../sass-loader/index.js!./../../../../../vuestrap-theme-loader/index.js!./_icons.scss", function() {
-				var newContent = require("!!./../../../../../css-loader/index.js!./../../../../../autoprefixer-loader/index.js!./../../../../../sass-loader/index.js!./../../../../../vuestrap-theme-loader/index.js!./_icons.scss");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./_demo.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./_demo.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -744,7 +723,193 @@
 	}
 
 /***/ },
-/* 13 */
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".vuestrap-docs-demo {\n  margin-bottom: 4rem; }\n  .vuestrap-docs-demo .code-demo {\n    position: relative;\n    margin-left: 0;\n    margin-right: 0;\n    margin-bottom: 2rem;\n    padding: 1rem;\n    padding-bottom: 0;\n    border: solid #f7f7f9;\n    border-width: .2rem; }\n    .vuestrap-docs-demo .code-demo > .inverse {\n      background-color: #898989;\n      padding: 0.2em; }\n  .vuestrap-docs-demo .highlight {\n    padding: 1rem;\n    padding-top: 0;\n    margin: 1rem -1rem;\n    background-color: #f7f7f9;\n    margin-bottom: 0; }\n    .vuestrap-docs-demo .highlight pre {\n      margin-bottom: 0; }\n  .vuestrap-docs-demo .options > table code {\n    display: inline-block;\n    margin-right: 2px;\n    margin-bottom: 2px; }\n  .vuestrap-docs-demo .options > table td {\n    width: 10%; }\n  .vuestrap-docs-demo .options > table td:nth-child(1) {\n    min-width: 150px;\n    color: #563d7c; }\n  .vuestrap-docs-demo .options > table td:nth-child(5) {\n    width: 50%; }\n  .vuestrap-docs-demo [slot=\"controls\"] {\n    background-color: #f7f7f9;\n    padding: 1rem; }\n  .vuestrap-docs-demo [slot=\"controls\"] label {\n    margin-bottom: 0;\n    margin-right: 0.5rem; }\n  .vuestrap-docs-demo label.btn {\n    margin-bottom: 0; }\n  .vuestrap-docs-demo .label {\n    margin-right: 0.5rem; }\n  .vuestrap-docs-demo > .label {\n    background-color: #563d7c; }\n  .vuestrap-docs-demo > .alert {\n    border-right-color: #e6e6ec;\n    border-top-color: #e6e6ec;\n    border-bottom-color: #e6e6ec;\n    border-left-width: 5px;\n    background-color: transparent; }\n    .vuestrap-docs-demo > .alert .icons {\n      vertical-align: text-bottom; }\n  .vuestrap-docs-demo .tab-content .tab-pane {\n    padding: 1em 0; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 15 */
+/***/ function(module, exports) {
+
+	module.exports = "<section class=\"vuestrap-docs-demo\" id=\"{{meta.name}}\">\r\n\r\n\t<!-- Meta title -->\r\n\t<h2>{{meta.title}}</h2>\r\n\t<p v-html=\"meta.description\"></p>\r\n\r\n\t<div class=\"m-b\"></div>\r\n\r\n\t<div class=\"alert alert-info\" role=\"alert\" v-if=\"meta.note\">\r\n  \t<icon background=\"circle-outline\" size=\"sm\" variant=\"info\" text=\"i\"></icon> <span v-html=\"meta.note\"></span>\r\n\t</div>\r\n\r\n\t<div class=\"m-b-md\"></div>\r\n\r\n\t<!-- Component manipulators -->\r\n\t<slot name=\"controls\"></slot>\r\n\r\n\t<!-- Output & Code sample -->\r\n\t<div class=\"code-demo\">\r\n\r\n\t\t<slot class=\"markup\" name=\"markup\"></slot>\r\n\r\n\t\t<div class=\"highlight\">\r\n\t\t\t<pre><code v-html=\"snippet\"><span class=\"hljs-expansion\">{{snippet}}</span></code></pre>\r\n\t\t</div>\r\n\t</div>\r\n\r\n\t<!-- Options -->\r\n\t<div class=\"options\" v-if=\"meta.options.length\">\r\n\t\t<h3>Options</h3>\r\n\t\t<table class=\"table table-responsive\">\r\n\t\t\t<tr>\r\n\t\t\t\t<th>Name</th>\r\n\t\t\t\t<th>Type</th>\r\n\t\t\t\t<th>Default</th>\r\n\t\t\t\t<th>Required</th>\r\n\t\t\t\t<th>Description</th>\r\n\t\t\t</tr>\r\n\t\t\t<tr v-for=\"item in meta.options\">\r\n\t\t\t\t<td>{{item.name}}</td>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<code v-html=\"item.type\"></code>\r\n\t\t\t\t</td>\r\n\t\t\t\t<td><code v-if=\"item.default\" v-html=\"item.default\"></code></td>\r\n\t\t\t\t<td>{{item.required == true ? 'yes' : ''}}</td>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<p v-html=\"item.description\"></p>\r\n\t\t\t\t\t<p v-if=\"item.values\">\r\n\t\t\t\t\t\tPosible values:\r\n\t\t\t\t\t\t<code v-for=\"item in item.values\"><span class=\"hljs-expansion\">{{item}}</span></code>\r\n\t\t\t\t\t</p>\r\n\t\t\t\t</td>\r\n\t\t\t</tr>\r\n\t\t</table>\t\r\n\t</div>\r\n\r\n\t<!-- Accessibility -->\r\n\t<div class=\"accessibility\" v-if=\"meta.accessibility\">\r\n\t\t<h3>Accessibility</h3>\r\n\t\t<p v-html=\"meta.accessibility\"></p>\r\n\t</div>\r\n\r\n\t<div class=\"m-b-md\"></div>\r\n\r\n\t<!-- Browser Support -->\r\n\t<div class=\"browserSupport\" v-if=\"meta.browserSupport\">\r\n\t\t<h3>Browser Support</h3>\r\n\t\t<span class=\"label label-primary\" v-for=\"item in meta.browserSupport.browsers\">{{ item }}</span>\r\n\t\t<p><small v-html=\"meta.browserSupport.note\"></small></p>\r\n\t</div>\r\n</section>\r\n";
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// import dependencies
+	'use strict';
+	
+	__webpack_require__(17);
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(18);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_labels.scss", function() {
+				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_labels.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".label {\n  display: inline-block;\n  padding: .25em .4em;\n  font-size: 75%;\n  font-weight: bold;\n  line-height: 1;\n  color: #fff;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: baseline;\n  border-radius: 0.25rem; }\n  .label:empty {\n    display: none; }\n\n.btn .label {\n  position: relative;\n  top: -1px; }\n\na.label:focus, a.label:hover {\n  color: #fff;\n  text-decoration: none;\n  cursor: pointer; }\n\n.label-pill {\n  padding-right: .6em;\n  padding-left: .6em;\n  border-radius: 10rem; }\n\n.label-default {\n  background-color: #818a91; }\n  .label-default[href]:focus, .label-default[href]:hover {\n    background-color: #687077; }\n\n.label-primary {\n  background-color: #563d7c; }\n  .label-primary[href]:focus, .label-primary[href]:hover {\n    background-color: #3e2c5a; }\n\n.label-success {\n  background-color: #42b983; }\n  .label-success[href]:focus, .label-success[href]:hover {\n    background-color: #359368; }\n\n.label-info {\n  background-color: #5bc0de; }\n  .label-info[href]:focus, .label-info[href]:hover {\n    background-color: #31b0d5; }\n\n.label-warning {\n  background-color: #f0ad4e; }\n  .label-warning[href]:focus, .label-warning[href]:hover {\n    background-color: #ec971f; }\n\n.label-danger {\n  background-color: #d9534f; }\n  .label-danger[href]:focus, .label-danger[href]:hover {\n    background-color: #c9302c; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// import dependencies
+	'use strict';
+	
+	__webpack_require__(20);
+	
+	__webpack_require__(22);
+
+/***/ },
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(21);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_alert.scss", function() {
+				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_alert.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".alert {\n  padding: 15px;\n  margin-bottom: 1rem;\n  border: 1px solid transparent;\n  border-radius: 0.25rem; }\n  .alert > p,\n  .alert > ul {\n    margin-bottom: 0; }\n  .alert > p + p {\n    margin-top: 5px; }\n\n.alert-heading {\n  color: inherit; }\n\n.alert-link {\n  font-weight: bold; }\n\n.alert-dismissible {\n  padding-right: 35px; }\n  .alert-dismissible .close {\n    position: relative;\n    top: -2px;\n    right: -21px;\n    color: inherit; }\n\n.alert-success {\n  background-color: #dff0d8;\n  border-color: #d0e9c6;\n  color: #3c763d; }\n  .alert-success hr {\n    border-top-color: #c1e2b3; }\n  .alert-success .alert-link {\n    color: #2b542c; }\n\n.alert-info {\n  background-color: #d9edf7;\n  border-color: #bcdff1;\n  color: #31708f; }\n  .alert-info hr {\n    border-top-color: #a6d5ec; }\n  .alert-info .alert-link {\n    color: #245269; }\n\n.alert-warning {\n  background-color: #fcf8e3;\n  border-color: #faf2cc;\n  color: #8a6d3b; }\n  .alert-warning hr {\n    border-top-color: #f7ecb5; }\n  .alert-warning .alert-link {\n    color: #66512c; }\n\n.alert-danger {\n  background-color: #f2dede;\n  border-color: #ebcccc;\n  color: #a94442; }\n  .alert-danger hr {\n    border-top-color: #e4b9b9; }\n  .alert-danger .alert-link {\n    color: #843534; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(23);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_buttons.scss", function() {
+				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_buttons.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".btn {\n  display: inline-block;\n  font-weight: normal;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  border: 1px solid transparent;\n  padding: 0.375rem 1rem;\n  font-size: 1rem;\n  line-height: 1.5;\n  border-radius: 0.25rem; }\n  .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {\n    outline: thin dotted;\n    outline: 5px auto -webkit-focus-ring-color;\n    outline-offset: -2px; }\n  .btn:focus, .btn:hover {\n    text-decoration: none; }\n  .btn.focus {\n    text-decoration: none; }\n  .btn:active, .btn.active {\n    background-image: none;\n    outline: 0; }\n  .btn.disabled, .btn:disabled {\n    cursor: not-allowed;\n    opacity: .65; }\n\na.btn.disabled,\nfieldset[disabled] a.btn {\n  pointer-events: none; }\n\n.btn-primary {\n  color: #fff;\n  background-color: #563d7c;\n  border-color: #563d7c; }\n  .btn-primary:hover {\n    color: #fff;\n    background-color: #3e2c5a;\n    border-color: #3a2953; }\n  .btn-primary:focus, .btn-primary.focus {\n    color: #fff;\n    background-color: #3e2c5a;\n    border-color: #3a2953; }\n  .btn-primary:active, .btn-primary.active,\n  .open > .btn-primary.dropdown-toggle {\n    color: #fff;\n    background-color: #3e2c5a;\n    border-color: #3a2953;\n    background-image: none; }\n    .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus,\n    .open > .btn-primary.dropdown-toggle:hover,\n    .open > .btn-primary.dropdown-toggle:focus,\n    .open > .btn-primary.dropdown-toggle.focus {\n      color: #fff;\n      background-color: #2e2042;\n      border-color: #1b1327; }\n  .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary:disabled:focus, .btn-primary:disabled.focus {\n    background-color: #563d7c;\n    border-color: #563d7c; }\n  .btn-primary.disabled:hover, .btn-primary:disabled:hover {\n    background-color: #563d7c;\n    border-color: #563d7c; }\n\n.btn-secondary {\n  color: #373a3c;\n  background-color: #fff;\n  border-color: #ccc; }\n  .btn-secondary:hover {\n    color: #373a3c;\n    background-color: #e6e6e6;\n    border-color: #adadad; }\n  .btn-secondary:focus, .btn-secondary.focus {\n    color: #373a3c;\n    background-color: #e6e6e6;\n    border-color: #adadad; }\n  .btn-secondary:active, .btn-secondary.active,\n  .open > .btn-secondary.dropdown-toggle {\n    color: #373a3c;\n    background-color: #e6e6e6;\n    border-color: #adadad;\n    background-image: none; }\n    .btn-secondary:active:hover, .btn-secondary:active:focus, .btn-secondary:active.focus, .btn-secondary.active:hover, .btn-secondary.active:focus, .btn-secondary.active.focus,\n    .open > .btn-secondary.dropdown-toggle:hover,\n    .open > .btn-secondary.dropdown-toggle:focus,\n    .open > .btn-secondary.dropdown-toggle.focus {\n      color: #373a3c;\n      background-color: #d4d4d4;\n      border-color: #8c8c8c; }\n  .btn-secondary.disabled:focus, .btn-secondary.disabled.focus, .btn-secondary:disabled:focus, .btn-secondary:disabled.focus {\n    background-color: #fff;\n    border-color: #ccc; }\n  .btn-secondary.disabled:hover, .btn-secondary:disabled:hover {\n    background-color: #fff;\n    border-color: #ccc; }\n\n.btn-info {\n  color: #fff;\n  background-color: #5bc0de;\n  border-color: #5bc0de; }\n  .btn-info:hover {\n    color: #fff;\n    background-color: #31b0d5;\n    border-color: #2aabd2; }\n  .btn-info:focus, .btn-info.focus {\n    color: #fff;\n    background-color: #31b0d5;\n    border-color: #2aabd2; }\n  .btn-info:active, .btn-info.active,\n  .open > .btn-info.dropdown-toggle {\n    color: #fff;\n    background-color: #31b0d5;\n    border-color: #2aabd2;\n    background-image: none; }\n    .btn-info:active:hover, .btn-info:active:focus, .btn-info:active.focus, .btn-info.active:hover, .btn-info.active:focus, .btn-info.active.focus,\n    .open > .btn-info.dropdown-toggle:hover,\n    .open > .btn-info.dropdown-toggle:focus,\n    .open > .btn-info.dropdown-toggle.focus {\n      color: #fff;\n      background-color: #269abc;\n      border-color: #1f7e9a; }\n  .btn-info.disabled:focus, .btn-info.disabled.focus, .btn-info:disabled:focus, .btn-info:disabled.focus {\n    background-color: #5bc0de;\n    border-color: #5bc0de; }\n  .btn-info.disabled:hover, .btn-info:disabled:hover {\n    background-color: #5bc0de;\n    border-color: #5bc0de; }\n\n.btn-success {\n  color: #fff;\n  background-color: #42b983;\n  border-color: #42b983; }\n  .btn-success:hover {\n    color: #fff;\n    background-color: #359368;\n    border-color: #328c63; }\n  .btn-success:focus, .btn-success.focus {\n    color: #fff;\n    background-color: #359368;\n    border-color: #328c63; }\n  .btn-success:active, .btn-success.active,\n  .open > .btn-success.dropdown-toggle {\n    color: #fff;\n    background-color: #359368;\n    border-color: #328c63;\n    background-image: none; }\n    .btn-success:active:hover, .btn-success:active:focus, .btn-success:active.focus, .btn-success.active:hover, .btn-success.active:focus, .btn-success.active.focus,\n    .open > .btn-success.dropdown-toggle:hover,\n    .open > .btn-success.dropdown-toggle:focus,\n    .open > .btn-success.dropdown-toggle.focus {\n      color: #fff;\n      background-color: #2b7956;\n      border-color: #205b40; }\n  .btn-success.disabled:focus, .btn-success.disabled.focus, .btn-success:disabled:focus, .btn-success:disabled.focus {\n    background-color: #42b983;\n    border-color: #42b983; }\n  .btn-success.disabled:hover, .btn-success:disabled:hover {\n    background-color: #42b983;\n    border-color: #42b983; }\n\n.btn-warning {\n  color: #fff;\n  background-color: #f0ad4e;\n  border-color: #f0ad4e; }\n  .btn-warning:hover {\n    color: #fff;\n    background-color: #ec971f;\n    border-color: #eb9316; }\n  .btn-warning:focus, .btn-warning.focus {\n    color: #fff;\n    background-color: #ec971f;\n    border-color: #eb9316; }\n  .btn-warning:active, .btn-warning.active,\n  .open > .btn-warning.dropdown-toggle {\n    color: #fff;\n    background-color: #ec971f;\n    border-color: #eb9316;\n    background-image: none; }\n    .btn-warning:active:hover, .btn-warning:active:focus, .btn-warning:active.focus, .btn-warning.active:hover, .btn-warning.active:focus, .btn-warning.active.focus,\n    .open > .btn-warning.dropdown-toggle:hover,\n    .open > .btn-warning.dropdown-toggle:focus,\n    .open > .btn-warning.dropdown-toggle.focus {\n      color: #fff;\n      background-color: #d58512;\n      border-color: #b06d0f; }\n  .btn-warning.disabled:focus, .btn-warning.disabled.focus, .btn-warning:disabled:focus, .btn-warning:disabled.focus {\n    background-color: #f0ad4e;\n    border-color: #f0ad4e; }\n  .btn-warning.disabled:hover, .btn-warning:disabled:hover {\n    background-color: #f0ad4e;\n    border-color: #f0ad4e; }\n\n.btn-danger {\n  color: #fff;\n  background-color: #d9534f;\n  border-color: #d9534f; }\n  .btn-danger:hover {\n    color: #fff;\n    background-color: #c9302c;\n    border-color: #c12e2a; }\n  .btn-danger:focus, .btn-danger.focus {\n    color: #fff;\n    background-color: #c9302c;\n    border-color: #c12e2a; }\n  .btn-danger:active, .btn-danger.active,\n  .open > .btn-danger.dropdown-toggle {\n    color: #fff;\n    background-color: #c9302c;\n    border-color: #c12e2a;\n    background-image: none; }\n    .btn-danger:active:hover, .btn-danger:active:focus, .btn-danger:active.focus, .btn-danger.active:hover, .btn-danger.active:focus, .btn-danger.active.focus,\n    .open > .btn-danger.dropdown-toggle:hover,\n    .open > .btn-danger.dropdown-toggle:focus,\n    .open > .btn-danger.dropdown-toggle.focus {\n      color: #fff;\n      background-color: #ac2925;\n      border-color: #8b211e; }\n  .btn-danger.disabled:focus, .btn-danger.disabled.focus, .btn-danger:disabled:focus, .btn-danger:disabled.focus {\n    background-color: #d9534f;\n    border-color: #d9534f; }\n  .btn-danger.disabled:hover, .btn-danger:disabled:hover {\n    background-color: #d9534f;\n    border-color: #d9534f; }\n\n.btn-primary-outline {\n  color: #563d7c;\n  background-image: none;\n  background-color: transparent;\n  border-color: #563d7c; }\n  .btn-primary-outline:focus, .btn-primary-outline.focus, .btn-primary-outline:active, .btn-primary-outline.active,\n  .open > .btn-primary-outline.dropdown-toggle {\n    color: #fff;\n    background-color: #563d7c;\n    border-color: #563d7c; }\n  .btn-primary-outline:hover {\n    color: #fff;\n    background-color: #563d7c;\n    border-color: #563d7c; }\n  .btn-primary-outline.disabled:focus, .btn-primary-outline.disabled.focus, .btn-primary-outline:disabled:focus, .btn-primary-outline:disabled.focus {\n    border-color: #886ab5; }\n  .btn-primary-outline.disabled:hover, .btn-primary-outline:disabled:hover {\n    border-color: #886ab5; }\n\n.btn-secondary-outline {\n  color: #ccc;\n  background-image: none;\n  background-color: transparent;\n  border-color: #ccc; }\n  .btn-secondary-outline:focus, .btn-secondary-outline.focus, .btn-secondary-outline:active, .btn-secondary-outline.active,\n  .open > .btn-secondary-outline.dropdown-toggle {\n    color: #fff;\n    background-color: #ccc;\n    border-color: #ccc; }\n  .btn-secondary-outline:hover {\n    color: #fff;\n    background-color: #ccc;\n    border-color: #ccc; }\n  .btn-secondary-outline.disabled:focus, .btn-secondary-outline.disabled.focus, .btn-secondary-outline:disabled:focus, .btn-secondary-outline:disabled.focus {\n    border-color: white; }\n  .btn-secondary-outline.disabled:hover, .btn-secondary-outline:disabled:hover {\n    border-color: white; }\n\n.btn-info-outline {\n  color: #5bc0de;\n  background-image: none;\n  background-color: transparent;\n  border-color: #5bc0de; }\n  .btn-info-outline:focus, .btn-info-outline.focus, .btn-info-outline:active, .btn-info-outline.active,\n  .open > .btn-info-outline.dropdown-toggle {\n    color: #fff;\n    background-color: #5bc0de;\n    border-color: #5bc0de; }\n  .btn-info-outline:hover {\n    color: #fff;\n    background-color: #5bc0de;\n    border-color: #5bc0de; }\n  .btn-info-outline.disabled:focus, .btn-info-outline.disabled.focus, .btn-info-outline:disabled:focus, .btn-info-outline:disabled.focus {\n    border-color: #b0e1ef; }\n  .btn-info-outline.disabled:hover, .btn-info-outline:disabled:hover {\n    border-color: #b0e1ef; }\n\n.btn-success-outline {\n  color: #42b983;\n  background-image: none;\n  background-color: transparent;\n  border-color: #42b983; }\n  .btn-success-outline:focus, .btn-success-outline.focus, .btn-success-outline:active, .btn-success-outline.active,\n  .open > .btn-success-outline.dropdown-toggle {\n    color: #fff;\n    background-color: #42b983;\n    border-color: #42b983; }\n  .btn-success-outline:hover {\n    color: #fff;\n    background-color: #42b983;\n    border-color: #42b983; }\n  .btn-success-outline.disabled:focus, .btn-success-outline.disabled.focus, .btn-success-outline:disabled:focus, .btn-success-outline:disabled.focus {\n    border-color: #8bd6b4; }\n  .btn-success-outline.disabled:hover, .btn-success-outline:disabled:hover {\n    border-color: #8bd6b4; }\n\n.btn-warning-outline {\n  color: #f0ad4e;\n  background-image: none;\n  background-color: transparent;\n  border-color: #f0ad4e; }\n  .btn-warning-outline:focus, .btn-warning-outline.focus, .btn-warning-outline:active, .btn-warning-outline.active,\n  .open > .btn-warning-outline.dropdown-toggle {\n    color: #fff;\n    background-color: #f0ad4e;\n    border-color: #f0ad4e; }\n  .btn-warning-outline:hover {\n    color: #fff;\n    background-color: #f0ad4e;\n    border-color: #f0ad4e; }\n  .btn-warning-outline.disabled:focus, .btn-warning-outline.disabled.focus, .btn-warning-outline:disabled:focus, .btn-warning-outline:disabled.focus {\n    border-color: #f8d9ac; }\n  .btn-warning-outline.disabled:hover, .btn-warning-outline:disabled:hover {\n    border-color: #f8d9ac; }\n\n.btn-danger-outline {\n  color: #d9534f;\n  background-image: none;\n  background-color: transparent;\n  border-color: #d9534f; }\n  .btn-danger-outline:focus, .btn-danger-outline.focus, .btn-danger-outline:active, .btn-danger-outline.active,\n  .open > .btn-danger-outline.dropdown-toggle {\n    color: #fff;\n    background-color: #d9534f;\n    border-color: #d9534f; }\n  .btn-danger-outline:hover {\n    color: #fff;\n    background-color: #d9534f;\n    border-color: #d9534f; }\n  .btn-danger-outline.disabled:focus, .btn-danger-outline.disabled.focus, .btn-danger-outline:disabled:focus, .btn-danger-outline:disabled.focus {\n    border-color: #eba5a3; }\n  .btn-danger-outline.disabled:hover, .btn-danger-outline:disabled:hover {\n    border-color: #eba5a3; }\n\n.btn-link {\n  font-weight: normal;\n  color: #563d7c;\n  border-radius: 0; }\n  .btn-link, .btn-link:active, .btn-link.active, .btn-link:disabled {\n    background-color: transparent; }\n  .btn-link, .btn-link:focus, .btn-link:active {\n    border-color: transparent; }\n  .btn-link:hover {\n    border-color: transparent; }\n  .btn-link:focus, .btn-link:hover {\n    color: #322449;\n    text-decoration: underline;\n    background-color: transparent; }\n  .btn-link:disabled:focus, .btn-link:disabled:hover {\n    color: #818a91;\n    text-decoration: none; }\n\n.btn-lg {\n  padding: 0.75rem 1.25rem;\n  font-size: 1.25rem;\n  line-height: 1.33333;\n  border-radius: 0.3rem; }\n\n.btn-sm {\n  padding: 0.25rem 0.75rem;\n  font-size: 0.875rem;\n  line-height: 1.5;\n  border-radius: 0.2rem; }\n\n.btn-block {\n  display: block;\n  width: 100%; }\n\n.btn-block + .btn-block {\n  margin-top: 5px; }\n\ninput[type=\"submit\"].btn-block,\ninput[type=\"reset\"].btn-block,\ninput[type=\"button\"].btn-block {\n  width: 100%; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(25);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/autoprefixer-loader/index.js!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vuestrap-theme-loader/index.js!./_demo.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/autoprefixer-loader/index.js!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vuestrap-theme-loader/index.js!./_demo.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -758,7 +923,153 @@
 
 
 /***/ },
-/* 14 */
+/* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+		value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _snippetHtml = __webpack_require__(27);
+	
+	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
+	
+	var _searchHtml = __webpack_require__(28);
+	
+	var _searchHtml2 = _interopRequireDefault(_searchHtml);
+	
+	var _searchJson = __webpack_require__(29);
+	
+	var _searchJson2 = _interopRequireDefault(_searchJson);
+	
+	__webpack_require__(30);
+	
+	var _utils = __webpack_require__(32);
+	
+	var _srcComponentsDemo = __webpack_require__(12);
+	
+	var _srcComponentsDemo2 = _interopRequireDefault(_srcComponentsDemo);
+	
+	var _srcComponentsSearch = __webpack_require__(34);
+	
+	var _srcComponentsSearch2 = _interopRequireDefault(_srcComponentsSearch);
+	
+	exports['default'] = {
+		template: _searchHtml2['default'],
+		data: function data() {
+			return {
+				meta: _searchJson2['default'],
+				snippet: _snippetHtml2['default'],
+				list: [{ name: 'Component A', title: 'Component A' }, { name: 'Component B', title: 'Component B' }, { name: 'Other', title: 'Other' }]
+			};
+		},
+		components: {
+			search: _srcComponentsSearch2['default'],
+			demo: _srcComponentsDemo2['default']
+		}
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 27 */
+/***/ function(module, exports) {
+
+	module.exports = "<code lang=\"html\">\r\n<span class=\"hljs-comment\">&lt;!-- serch list --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">docs-search</span> <span class=\"hljs-attribute\">:list</span>=<span class=\"hljs-value\">\"[\r\n  {name: 'Component A', title: 'Component A'}, \r\n  {name: 'Component B', title: 'Component B'}, \r\n  {name: 'Other', title: 'Other'}]\"</span> <span class=\"hljs-attribute\">:current-view</span>=<span class=\"hljs-value\">\"currentView\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">docs-search</span>&gt;</span>\r\n</code>";
+
+/***/ },
+/* 28 */
+/***/ function(module, exports) {
+
+	module.exports = "<!-- demo component -->\r\n<demo :meta=\"meta\" :snippet=\"snippet\" path=\"assets/icons.svg\">\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\" v-bind:class=\"{ inverse: controls.variant === `light` }\">\r\n\t\t<search :show-search=\"1\" :list=\"list\" :current=\"currentComponent.meta.name\"></search>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n</demo>";
+
+/***/ },
+/* 29 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"name": "search",
+		"title": "Search Component",
+		"description": "Used in docs to list and search components.",
+		"dependencies": [
+			"vuestrap/list-group",
+			"vuestrap/forms"
+		],
+		"category": "components",
+		"browserSupport": {
+			"browsers": [
+				"IE9+",
+				"Android 4.3"
+			]
+		},
+		"options": [
+			{
+				"name": "show-search",
+				"type": "Number",
+				"default": 5,
+				"required": true,
+				"description": "Show search box only if number of components is more than number specified."
+			},
+			{
+				"name": "list",
+				"type": "Array",
+				"default": "",
+				"description": "List of components with <code>title</code> and <code>name</code> attributes."
+			},
+			{
+				"name": "currentView",
+				"type": "String",
+				"default": "",
+				"description": "Sets active state on the matching component."
+			}
+		]
+	};
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(31);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/autoprefixer-loader/index.js!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vuestrap-theme-loader/index.js!./_search.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/autoprefixer-loader/index.js!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vuestrap-theme-loader/index.js!./_search.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".code-demo .vuestrap-docs-search {\n  max-width: 350px; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -772,7 +1083,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _director = __webpack_require__(15);
+	var _director = __webpack_require__(33);
 	
 	var _director2 = _interopRequireDefault(_director);
 	
@@ -823,7 +1134,7 @@
 	exports.sizes = sizes;
 
 /***/ },
-/* 15 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -1567,603 +1878,6 @@
 	//
 
 /***/ },
-/* 16 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {// import dependencies
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	__webpack_require__(18);
-	
-	var _iconsHtml = __webpack_require__(20);
-	
-	var _iconsHtml2 = _interopRequireDefault(_iconsHtml);
-	
-	// export component object
-	exports['default'] = {
-	  template: _iconsHtml2['default'],
-	  replace: true,
-	  computed: {
-	    iconsSize: function iconsSize() {
-	      return !this.size ? 'icons-sm' : 'icons-' + this.size;
-	    },
-	    iconsAlign: function iconsAlign() {
-	      return !this.align ? '' : 'icons-' + this.align;
-	    },
-	    iconsVariant: function iconsVariant() {
-	      return !this.variant ? '' : 'icons-' + this.variant;
-	    },
-	    iconsBackground: function iconsBackground() {
-	      var bg = this.background.split('-');
-	      bg = bg[1] ? bg[1] : 'fill';
-	      return !this.background ? '' : 'icons-bg-' + bg;
-	    }
-	  },
-	  props: {
-	    name: {
-	      type: String
-	    },
-	    background: {
-	      type: String,
-	      'default': ''
-	    },
-	    align: {
-	      type: String,
-	      'default': ''
-	    },
-	    size: {
-	      type: String,
-	      'default': 'sm'
-	    },
-	    text: {
-	      type: String,
-	      'default': ''
-	    },
-	    variant: {
-	      type: String,
-	      'default': 'standard'
-	    },
-	    path: {
-	      type: String,
-	      'default': function _default() {
-	        if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'dev') {
-	          return 'bower_components/vuestrap-icons/assets/icons.min.svg';
-	        }
-	        return 'node_modules/vuestrap-icons/assets/icons.min.svg';
-	      }
-	    }
-	  }
-	};
-	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
-
-/***/ },
-/* 17 */
-/***/ function(module, exports) {
-
-	// shim for using process in browser
-	
-	'use strict';
-	
-	var process = module.exports = {};
-	var queue = [];
-	var draining = false;
-	var currentQueue;
-	var queueIndex = -1;
-	
-	function cleanUpNextTick() {
-	    draining = false;
-	    if (currentQueue.length) {
-	        queue = currentQueue.concat(queue);
-	    } else {
-	        queueIndex = -1;
-	    }
-	    if (queue.length) {
-	        drainQueue();
-	    }
-	}
-	
-	function drainQueue() {
-	    if (draining) {
-	        return;
-	    }
-	    var timeout = setTimeout(cleanUpNextTick);
-	    draining = true;
-	
-	    var len = queue.length;
-	    while (len) {
-	        currentQueue = queue;
-	        queue = [];
-	        while (++queueIndex < len) {
-	            if (currentQueue) {
-	                currentQueue[queueIndex].run();
-	            }
-	        }
-	        queueIndex = -1;
-	        len = queue.length;
-	    }
-	    currentQueue = null;
-	    draining = false;
-	    clearTimeout(timeout);
-	}
-	
-	process.nextTick = function (fun) {
-	    var args = new Array(arguments.length - 1);
-	    if (arguments.length > 1) {
-	        for (var i = 1; i < arguments.length; i++) {
-	            args[i - 1] = arguments[i];
-	        }
-	    }
-	    queue.push(new Item(fun, args));
-	    if (queue.length === 1 && !draining) {
-	        setTimeout(drainQueue, 0);
-	    }
-	};
-	
-	// v8 likes predictible objects
-	function Item(fun, array) {
-	    this.fun = fun;
-	    this.array = array;
-	}
-	Item.prototype.run = function () {
-	    this.fun.apply(null, this.array);
-	};
-	process.title = 'browser';
-	process.browser = true;
-	process.env = {};
-	process.argv = [];
-	process.version = ''; // empty string to avoid regexp issues
-	process.versions = {};
-	
-	function noop() {}
-	
-	process.on = noop;
-	process.addListener = noop;
-	process.once = noop;
-	process.off = noop;
-	process.removeListener = noop;
-	process.removeAllListeners = noop;
-	process.emit = noop;
-	
-	process.binding = function (name) {
-	    throw new Error('process.binding is not supported');
-	};
-	
-	process.cwd = function () {
-	    return '/';
-	};
-	process.chdir = function (dir) {
-	    throw new Error('process.chdir is not supported');
-	};
-	process.umask = function () {
-	    return 0;
-	};
-
-/***/ },
-/* 18 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(19);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_icons.scss", function() {
-				var newContent = require("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_icons.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 19 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".vuestrap-icons {\n  font-size: 1.5rem;\n  line-height: 1.5rem;\n  width: 1.5rem;\n  height: 1.5rem;\n  display: inline-block;\n  vertical-align: middle;\n  position: relative; }\n  .vuestrap-icons .icon {\n    width: 100%;\n    height: 100%;\n    top: 0%;\n    left: 0%;\n    position: absolute;\n    z-index: 2; }\n  .vuestrap-icons .icon-background {\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    left: 0;\n    z-index: 1; }\n  .vuestrap-icons.icons-bg-fill .icon, .vuestrap-icons.icons-bg-outline .icon {\n    width: 50%;\n    height: 50%;\n    top: 25%;\n    left: 25%; }\n  .vuestrap-icons .text {\n    position: relative;\n    color: #fff;\n    z-index: 3;\n    font-size: 70%;\n    width: 100%;\n    height: 100%;\n    display: table;\n    text-align: center; }\n    .vuestrap-icons .text > span {\n      display: table-cell;\n      vertical-align: middle; }\n  .vuestrap-icons.icons-right {\n    margin-left: 0.2em;\n    margin-right: 0; }\n  .vuestrap-icons.icons-left {\n    margin-left: 0;\n    margin-right: 0.2em; }\n  .vuestrap-icons .hidden {\n    display: none; }\n\n.vuestrap-icons.icons-sm {\n  font-size: 1rem;\n  line-height: 1rem;\n  width: 1rem;\n  height: 1rem; }\n\n.vuestrap-icons.icons-md {\n  font-size: 1.5rem;\n  line-height: 1.5rem;\n  width: 1.5rem;\n  height: 1.5rem; }\n\n.vuestrap-icons.icons-lg {\n  font-size: 2rem;\n  line-height: 2rem;\n  width: 2rem;\n  height: 2rem; }\n\n.vuestrap-icons.icons-xl {\n  font-size: 3rem;\n  line-height: 3rem;\n  width: 3rem;\n  height: 3rem; }\n\n.vuestrap-icons.icons-xxl {\n  font-size: 3.5rem;\n  line-height: 3.5rem;\n  width: 3.5rem;\n  height: 3.5rem; }\n\n.vuestrap-icons .icon {\n  fill: #818a91; }\n\n.vuestrap-icons.icons-bg-fill .icon {\n  fill: #fff; }\n\n.vuestrap-icons.icons-bg-fill .icon-background {\n  fill: #818a91; }\n\n.vuestrap-icons.icons-bg-fill .text {\n  color: #fff; }\n\n.vuestrap-icons.icons-bg-outline .icon-background {\n  fill: #818a91; }\n\n.vuestrap-icons.icons-bg-outline .text {\n  color: #818a91; }\n\n.vuestrap-icons.icons-primary .icon {\n  fill: #563d7c; }\n\n.vuestrap-icons.icons-primary.icons-bg-fill .icon {\n  fill: #fff; }\n\n.vuestrap-icons.icons-primary.icons-bg-fill .icon-background {\n  fill: #563d7c; }\n\n.vuestrap-icons.icons-primary.icons-bg-fill .text {\n  color: #fff; }\n\n.vuestrap-icons.icons-primary.icons-bg-outline .icon-background {\n  fill: #563d7c; }\n\n.vuestrap-icons.icons-primary.icons-bg-outline .text {\n  color: #563d7c; }\n\n.vuestrap-icons.icons-info .icon {\n  fill: #5bc0de; }\n\n.vuestrap-icons.icons-info.icons-bg-fill .icon {\n  fill: #fff; }\n\n.vuestrap-icons.icons-info.icons-bg-fill .icon-background {\n  fill: #5bc0de; }\n\n.vuestrap-icons.icons-info.icons-bg-fill .text {\n  color: #fff; }\n\n.vuestrap-icons.icons-info.icons-bg-outline .icon-background {\n  fill: #5bc0de; }\n\n.vuestrap-icons.icons-info.icons-bg-outline .text {\n  color: #5bc0de; }\n\n.vuestrap-icons.icons-success .icon {\n  fill: #42b983; }\n\n.vuestrap-icons.icons-success.icons-bg-fill .icon {\n  fill: #fff; }\n\n.vuestrap-icons.icons-success.icons-bg-fill .icon-background {\n  fill: #42b983; }\n\n.vuestrap-icons.icons-success.icons-bg-fill .text {\n  color: #fff; }\n\n.vuestrap-icons.icons-success.icons-bg-outline .icon-background {\n  fill: #42b983; }\n\n.vuestrap-icons.icons-success.icons-bg-outline .text {\n  color: #42b983; }\n\n.vuestrap-icons.icons-warning .icon {\n  fill: #f0ad4e; }\n\n.vuestrap-icons.icons-warning.icons-bg-fill .icon {\n  fill: #fff; }\n\n.vuestrap-icons.icons-warning.icons-bg-fill .icon-background {\n  fill: #f0ad4e; }\n\n.vuestrap-icons.icons-warning.icons-bg-fill .text {\n  color: #fff; }\n\n.vuestrap-icons.icons-warning.icons-bg-outline .icon-background {\n  fill: #f0ad4e; }\n\n.vuestrap-icons.icons-warning.icons-bg-outline .text {\n  color: #f0ad4e; }\n\n.vuestrap-icons.icons-danger .icon {\n  fill: #d9534f; }\n\n.vuestrap-icons.icons-danger.icons-bg-fill .icon {\n  fill: #fff; }\n\n.vuestrap-icons.icons-danger.icons-bg-fill .icon-background {\n  fill: #d9534f; }\n\n.vuestrap-icons.icons-danger.icons-bg-fill .text {\n  color: #fff; }\n\n.vuestrap-icons.icons-danger.icons-bg-outline .icon-background {\n  fill: #d9534f; }\n\n.vuestrap-icons.icons-danger.icons-bg-outline .text {\n  color: #d9534f; }\n\n.vuestrap-icons.icons-dark .icon {\n  fill: #000; }\n\n.vuestrap-icons.icons-dark.icons-bg-fill .icon {\n  fill: #fff; }\n\n.vuestrap-icons.icons-dark.icons-bg-fill .icon-background {\n  fill: #000; }\n\n.vuestrap-icons.icons-dark.icons-bg-fill .text {\n  color: #fff; }\n\n.vuestrap-icons.icons-dark.icons-bg-outline .icon-background {\n  fill: #000; }\n\n.vuestrap-icons.icons-dark.icons-bg-outline .text {\n  color: #000; }\n\n.vuestrap-icons.icons-light .icon {\n  fill: #fff; }\n\n.vuestrap-icons.icons-light.icons-bg-fill .icon {\n  fill: #000; }\n\n.vuestrap-icons.icons-light.icons-bg-fill .icon-background {\n  fill: #fff; }\n\n.vuestrap-icons.icons-light.icons-bg-fill .text {\n  color: #000; }\n\n.vuestrap-icons.icons-light.icons-bg-outline .icon-background {\n  fill: #fff; }\n\n.vuestrap-icons.icons-light.icons-bg-outline .text {\n  color: #fff; }\n\n.btn.disabled svg {\n  opacity: 0.5; }\n\n.btn:hover svg {\n  fill: #fff; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 20 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"vuestrap-icons {{iconsSize}} {{iconsVariant}} {{iconsBackground}} {{iconsAlign}}\" aria-hidden=\"true\">\r\n\t<span v-if=\"name\">\r\n\t\t<svg role=\"img\" class=\"icon\">\r\n\t\t\t<use v-bind:xlink:href=\"path + &apos;#&apos; + name\">\r\n\t\t</svg>\r\n\t</span>\r\n\t<span v-if=\"background\">\r\n\t\t<svg role=\"img\" class=\"icon-background\">\r\n\t\t\t<use v-bind:xlink:href=\"path + &apos;#&apos; + background\">\r\n\t\t</svg>\r\n\t</span>\r\n\t<span class=\"text\" v-show=\"text.length\">\r\n\t\t<span><slot>{{text}}</slot></span>\r\n\t</span>\r\n</span>";
-
-/***/ },
-/* 21 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	    value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	__webpack_require__(22);
-	
-	var _demoHtml = __webpack_require__(24);
-	
-	var _demoHtml2 = _interopRequireDefault(_demoHtml);
-	
-	__webpack_require__(25);
-	
-	__webpack_require__(28);
-	
-	//import icons from 'vuestrap-icons'
-	
-	// export component object
-	exports['default'] = {
-	    template: _demoHtml2['default'],
-	    replace: true,
-	    props: {
-	        meta: {
-	            type: Object,
-	            'default': {},
-	            required: true
-	        },
-	        snippet: {
-	            type: String,
-	            'default': "",
-	            required: true
-	        }
-	    },
-	    components: {
-	        //'icon': icons,
-	    }
-	};
-	module.exports = exports['default'];
-
-/***/ },
-/* 22 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(23);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../../../css-loader/index.js!./../../../../../../autoprefixer-loader/index.js!./../../../../../../sass-loader/index.js!./../../../../../../vuestrap-theme-loader/index.js!./_demo.scss", function() {
-				var newContent = require("!!./../../../../../../css-loader/index.js!./../../../../../../autoprefixer-loader/index.js!./../../../../../../sass-loader/index.js!./../../../../../../vuestrap-theme-loader/index.js!./_demo.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 23 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".vuestrap-docs-demo {\n  margin-bottom: 4rem; }\n  .vuestrap-docs-demo .code-demo {\n    position: relative;\n    margin-left: 0;\n    margin-right: 0;\n    margin-bottom: 2rem;\n    padding: 1rem;\n    padding-bottom: 0;\n    border: solid #f7f7f9;\n    border-width: .2rem; }\n    .vuestrap-docs-demo .code-demo > .inverse {\n      background-color: #898989;\n      padding: 0.2em; }\n  .vuestrap-docs-demo .highlight {\n    padding: 1rem;\n    margin: 1rem -1rem;\n    background-color: #f7f7f9;\n    margin-bottom: 0; }\n    .vuestrap-docs-demo .highlight pre {\n      margin-bottom: 0; }\n  .vuestrap-docs-demo .options > table code {\n    display: inline-block;\n    margin-right: 2px;\n    margin-bottom: 2px; }\n  .vuestrap-docs-demo .options > table td {\n    width: 10%; }\n  .vuestrap-docs-demo .options > table td:nth-child(1) {\n    min-width: 150px;\n    color: #563d7c; }\n  .vuestrap-docs-demo .options > table td:nth-child(5) {\n    width: 50%; }\n  .vuestrap-docs-demo [slot=\"controls\"] {\n    background-color: #f7f7f9;\n    padding: 1rem; }\n  .vuestrap-docs-demo [slot=\"controls\"] label {\n    margin-bottom: 0;\n    margin-right: 0.5rem; }\n  .vuestrap-docs-demo label.btn {\n    margin-bottom: 0; }\n  .vuestrap-docs-demo .label {\n    margin-right: 0.5rem; }\n  .vuestrap-docs-demo > .label {\n    background-color: #563d7c; }\n  .vuestrap-docs-demo > .alert {\n    border-right-color: #e6e6ec;\n    border-top-color: #e6e6ec;\n    border-bottom-color: #e6e6ec;\n    border-left-width: 5px;\n    background-color: transparent; }\n    .vuestrap-docs-demo > .alert .icons {\n      vertical-align: text-bottom; }\n  .vuestrap-docs-demo .tab-content .tab-pane {\n    padding: 1em 0; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 24 */
-/***/ function(module, exports) {
-
-	module.exports = "<section class=\"vuestrap-docs-demo\" id=\"{{meta.name}}\">\r\n\r\n\t<!-- Meta title -->\r\n\t<h2>{{meta.title}}</h2>\r\n\t<p v-html=\"meta.description\"></p>\r\n\r\n\t<div class=\"m-b\"></div>\r\n\r\n\t<div class=\"alert alert-info\" role=\"alert\" v-if=\"meta.note\">\r\n  \t<icon background=\"circle-outline\" size=\"sm\" variant=\"info\" text=\"i\"></icon> <span v-html=\"meta.note\"></span>\r\n\t</div>\r\n\r\n\t<div class=\"m-b-md\"></div>\r\n\r\n\t<!-- Component manipulators -->\r\n\t<slot name=\"controls\"></slot>\r\n\r\n\t<!-- Output & Code sample -->\r\n\t<div class=\"code-demo\">\r\n\r\n\t\t<slot class=\"markup\" name=\"markup\"></slot>\r\n\r\n\t\t<div class=\"highlight\">\r\n\t\t\t<pre><code v-html=\"snippet\"></code></pre>\r\n\t\t</div>\r\n\t</div>\r\n\r\n\t<!-- Options -->\r\n\t<div class=\"options\" v-if=\"meta.options.length\">\r\n\t\t<h3>Options</h3>\r\n\t\t<table class=\"table table-responsive\">\r\n\t\t\t<tr>\r\n\t\t\t\t<th>Name</th>\r\n\t\t\t\t<th>Type</th>\r\n\t\t\t\t<th>Default</th>\r\n\t\t\t\t<th>Required</th>\r\n\t\t\t\t<th>Description</th>\r\n\t\t\t</tr>\r\n\t\t\t<tr v-for=\"item in meta.options\">\r\n\t\t\t\t<td>{{item.name}}</td>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<code v-html=\"item.type\"></code>\r\n\t\t\t\t</td>\r\n\t\t\t\t<td><code v-if=\"item.default\" v-html=\"item.default\"></code></td>\r\n\t\t\t\t<td>{{item.required == true ? &apos;yes&apos; : &apos;&apos;}}</td>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<p v-html=\"item.description\"></p>\r\n\t\t\t\t\t<p v-if=\"item.values\">\r\n\t\t\t\t\t\tPosible values:\r\n\t\t\t\t\t\t<code v-for=\"item in item.values\"><span class=\"hljs-expansion\">{{item}}</span></code>\r\n\t\t\t\t\t</p>\r\n\t\t\t\t</td>\r\n\t\t\t</tr>\r\n\t\t</table>\t\r\n\t</div>\r\n\r\n\t<!-- Accessibility -->\r\n\t<div class=\"accessibility\" v-if=\"meta.accessibility\">\r\n\t\t<h3>Accessibility</h3>\r\n\t\t<p v-html=\"meta.accessibility\"></p>\r\n\t</div>\r\n\r\n\t<div class=\"m-b-md\"></div>\r\n\r\n\t<!-- Browser Support -->\r\n\t<div class=\"browserSupport\" v-if=\"meta.browserSupport\">\r\n\t\t<h3>Browser Support</h3>\r\n\t\t<span class=\"label label-primary\" v-for=\"item in meta.browserSupport.browsers\">{{ item }}</span>\r\n\t\t<p><small v-html=\"meta.browserSupport.note\"></small></p>\r\n\t</div>\r\n</section>\r\n";
-
-/***/ },
-/* 25 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(26);
-
-/***/ },
-/* 26 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(27);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_labels.scss", function() {
-				var newContent = require("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_labels.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 27 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".label {\n  display: inline-block;\n  padding: .25em .4em;\n  font-size: 75%;\n  font-weight: bold;\n  line-height: 1;\n  color: #fff;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: baseline;\n  border-radius: 0.25rem; }\n  .label:empty {\n    display: none; }\n\n.btn .label {\n  position: relative;\n  top: -1px; }\n\na.label:focus, a.label:hover {\n  color: #fff;\n  text-decoration: none;\n  cursor: pointer; }\n\n.label-pill {\n  padding-right: .6em;\n  padding-left: .6em;\n  border-radius: 10rem; }\n\n.label-default {\n  background-color: #818a91; }\n  .label-default[href]:focus, .label-default[href]:hover {\n    background-color: #687077; }\n\n.label-primary {\n  background-color: #563d7c; }\n  .label-primary[href]:focus, .label-primary[href]:hover {\n    background-color: #3e2c5a; }\n\n.label-success {\n  background-color: #42b983; }\n  .label-success[href]:focus, .label-success[href]:hover {\n    background-color: #359368; }\n\n.label-info {\n  background-color: #5bc0de; }\n  .label-info[href]:focus, .label-info[href]:hover {\n    background-color: #31b0d5; }\n\n.label-warning {\n  background-color: #f0ad4e; }\n  .label-warning[href]:focus, .label-warning[href]:hover {\n    background-color: #ec971f; }\n\n.label-danger {\n  background-color: #d9534f; }\n  .label-danger[href]:focus, .label-danger[href]:hover {\n    background-color: #c9302c; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 28 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(29);
-	
-	__webpack_require__(31);
-
-/***/ },
-/* 29 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(30);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_alert.scss", function() {
-				var newContent = require("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_alert.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 30 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".alert {\n  padding: 15px;\n  margin-bottom: 1rem;\n  border: 1px solid transparent;\n  border-radius: 0.25rem; }\n  .alert > p,\n  .alert > ul {\n    margin-bottom: 0; }\n  .alert > p + p {\n    margin-top: 5px; }\n\n.alert-heading {\n  color: inherit; }\n\n.alert-link {\n  font-weight: bold; }\n\n.alert-dismissible {\n  padding-right: 35px; }\n  .alert-dismissible .close {\n    position: relative;\n    top: -2px;\n    right: -21px;\n    color: inherit; }\n\n.alert-success {\n  background-color: #dff0d8;\n  border-color: #d0e9c6;\n  color: #3c763d; }\n  .alert-success hr {\n    border-top-color: #c1e2b3; }\n  .alert-success .alert-link {\n    color: #2b542c; }\n\n.alert-info {\n  background-color: #d9edf7;\n  border-color: #bcdff1;\n  color: #31708f; }\n  .alert-info hr {\n    border-top-color: #a6d5ec; }\n  .alert-info .alert-link {\n    color: #245269; }\n\n.alert-warning {\n  background-color: #fcf8e3;\n  border-color: #faf2cc;\n  color: #8a6d3b; }\n  .alert-warning hr {\n    border-top-color: #f7ecb5; }\n  .alert-warning .alert-link {\n    color: #66512c; }\n\n.alert-danger {\n  background-color: #f2dede;\n  border-color: #ebcccc;\n  color: #a94442; }\n  .alert-danger hr {\n    border-top-color: #e4b9b9; }\n  .alert-danger .alert-link {\n    color: #843534; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 31 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(32);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_buttons.scss", function() {
-				var newContent = require("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_buttons.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 32 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".btn {\n  display: inline-block;\n  font-weight: normal;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  border: 1px solid transparent;\n  padding: 0.375rem 1rem;\n  font-size: 1rem;\n  line-height: 1.5;\n  border-radius: 0.25rem; }\n  .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {\n    outline: thin dotted;\n    outline: 5px auto -webkit-focus-ring-color;\n    outline-offset: -2px; }\n  .btn:focus, .btn:hover {\n    text-decoration: none; }\n  .btn.focus {\n    text-decoration: none; }\n  .btn:active, .btn.active {\n    background-image: none;\n    outline: 0; }\n  .btn.disabled, .btn:disabled {\n    cursor: not-allowed;\n    opacity: .65; }\n\na.btn.disabled,\nfieldset[disabled] a.btn {\n  pointer-events: none; }\n\n.btn-primary {\n  color: #fff;\n  background-color: #563d7c;\n  border-color: #563d7c; }\n  .btn-primary:hover {\n    color: #fff;\n    background-color: #3e2c5a;\n    border-color: #3a2953; }\n  .btn-primary:focus, .btn-primary.focus {\n    color: #fff;\n    background-color: #3e2c5a;\n    border-color: #3a2953; }\n  .btn-primary:active, .btn-primary.active,\n  .open > .btn-primary.dropdown-toggle {\n    color: #fff;\n    background-color: #3e2c5a;\n    border-color: #3a2953;\n    background-image: none; }\n    .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus,\n    .open > .btn-primary.dropdown-toggle:hover,\n    .open > .btn-primary.dropdown-toggle:focus,\n    .open > .btn-primary.dropdown-toggle.focus {\n      color: #fff;\n      background-color: #2e2042;\n      border-color: #1b1327; }\n  .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary:disabled:focus, .btn-primary:disabled.focus {\n    background-color: #563d7c;\n    border-color: #563d7c; }\n  .btn-primary.disabled:hover, .btn-primary:disabled:hover {\n    background-color: #563d7c;\n    border-color: #563d7c; }\n\n.btn-secondary {\n  color: #373a3c;\n  background-color: #fff;\n  border-color: #ccc; }\n  .btn-secondary:hover {\n    color: #373a3c;\n    background-color: #e6e6e6;\n    border-color: #adadad; }\n  .btn-secondary:focus, .btn-secondary.focus {\n    color: #373a3c;\n    background-color: #e6e6e6;\n    border-color: #adadad; }\n  .btn-secondary:active, .btn-secondary.active,\n  .open > .btn-secondary.dropdown-toggle {\n    color: #373a3c;\n    background-color: #e6e6e6;\n    border-color: #adadad;\n    background-image: none; }\n    .btn-secondary:active:hover, .btn-secondary:active:focus, .btn-secondary:active.focus, .btn-secondary.active:hover, .btn-secondary.active:focus, .btn-secondary.active.focus,\n    .open > .btn-secondary.dropdown-toggle:hover,\n    .open > .btn-secondary.dropdown-toggle:focus,\n    .open > .btn-secondary.dropdown-toggle.focus {\n      color: #373a3c;\n      background-color: #d4d4d4;\n      border-color: #8c8c8c; }\n  .btn-secondary.disabled:focus, .btn-secondary.disabled.focus, .btn-secondary:disabled:focus, .btn-secondary:disabled.focus {\n    background-color: #fff;\n    border-color: #ccc; }\n  .btn-secondary.disabled:hover, .btn-secondary:disabled:hover {\n    background-color: #fff;\n    border-color: #ccc; }\n\n.btn-info {\n  color: #fff;\n  background-color: #5bc0de;\n  border-color: #5bc0de; }\n  .btn-info:hover {\n    color: #fff;\n    background-color: #31b0d5;\n    border-color: #2aabd2; }\n  .btn-info:focus, .btn-info.focus {\n    color: #fff;\n    background-color: #31b0d5;\n    border-color: #2aabd2; }\n  .btn-info:active, .btn-info.active,\n  .open > .btn-info.dropdown-toggle {\n    color: #fff;\n    background-color: #31b0d5;\n    border-color: #2aabd2;\n    background-image: none; }\n    .btn-info:active:hover, .btn-info:active:focus, .btn-info:active.focus, .btn-info.active:hover, .btn-info.active:focus, .btn-info.active.focus,\n    .open > .btn-info.dropdown-toggle:hover,\n    .open > .btn-info.dropdown-toggle:focus,\n    .open > .btn-info.dropdown-toggle.focus {\n      color: #fff;\n      background-color: #269abc;\n      border-color: #1f7e9a; }\n  .btn-info.disabled:focus, .btn-info.disabled.focus, .btn-info:disabled:focus, .btn-info:disabled.focus {\n    background-color: #5bc0de;\n    border-color: #5bc0de; }\n  .btn-info.disabled:hover, .btn-info:disabled:hover {\n    background-color: #5bc0de;\n    border-color: #5bc0de; }\n\n.btn-success {\n  color: #fff;\n  background-color: #42b983;\n  border-color: #42b983; }\n  .btn-success:hover {\n    color: #fff;\n    background-color: #359368;\n    border-color: #328c63; }\n  .btn-success:focus, .btn-success.focus {\n    color: #fff;\n    background-color: #359368;\n    border-color: #328c63; }\n  .btn-success:active, .btn-success.active,\n  .open > .btn-success.dropdown-toggle {\n    color: #fff;\n    background-color: #359368;\n    border-color: #328c63;\n    background-image: none; }\n    .btn-success:active:hover, .btn-success:active:focus, .btn-success:active.focus, .btn-success.active:hover, .btn-success.active:focus, .btn-success.active.focus,\n    .open > .btn-success.dropdown-toggle:hover,\n    .open > .btn-success.dropdown-toggle:focus,\n    .open > .btn-success.dropdown-toggle.focus {\n      color: #fff;\n      background-color: #2b7956;\n      border-color: #205b40; }\n  .btn-success.disabled:focus, .btn-success.disabled.focus, .btn-success:disabled:focus, .btn-success:disabled.focus {\n    background-color: #42b983;\n    border-color: #42b983; }\n  .btn-success.disabled:hover, .btn-success:disabled:hover {\n    background-color: #42b983;\n    border-color: #42b983; }\n\n.btn-warning {\n  color: #fff;\n  background-color: #f0ad4e;\n  border-color: #f0ad4e; }\n  .btn-warning:hover {\n    color: #fff;\n    background-color: #ec971f;\n    border-color: #eb9316; }\n  .btn-warning:focus, .btn-warning.focus {\n    color: #fff;\n    background-color: #ec971f;\n    border-color: #eb9316; }\n  .btn-warning:active, .btn-warning.active,\n  .open > .btn-warning.dropdown-toggle {\n    color: #fff;\n    background-color: #ec971f;\n    border-color: #eb9316;\n    background-image: none; }\n    .btn-warning:active:hover, .btn-warning:active:focus, .btn-warning:active.focus, .btn-warning.active:hover, .btn-warning.active:focus, .btn-warning.active.focus,\n    .open > .btn-warning.dropdown-toggle:hover,\n    .open > .btn-warning.dropdown-toggle:focus,\n    .open > .btn-warning.dropdown-toggle.focus {\n      color: #fff;\n      background-color: #d58512;\n      border-color: #b06d0f; }\n  .btn-warning.disabled:focus, .btn-warning.disabled.focus, .btn-warning:disabled:focus, .btn-warning:disabled.focus {\n    background-color: #f0ad4e;\n    border-color: #f0ad4e; }\n  .btn-warning.disabled:hover, .btn-warning:disabled:hover {\n    background-color: #f0ad4e;\n    border-color: #f0ad4e; }\n\n.btn-danger {\n  color: #fff;\n  background-color: #d9534f;\n  border-color: #d9534f; }\n  .btn-danger:hover {\n    color: #fff;\n    background-color: #c9302c;\n    border-color: #c12e2a; }\n  .btn-danger:focus, .btn-danger.focus {\n    color: #fff;\n    background-color: #c9302c;\n    border-color: #c12e2a; }\n  .btn-danger:active, .btn-danger.active,\n  .open > .btn-danger.dropdown-toggle {\n    color: #fff;\n    background-color: #c9302c;\n    border-color: #c12e2a;\n    background-image: none; }\n    .btn-danger:active:hover, .btn-danger:active:focus, .btn-danger:active.focus, .btn-danger.active:hover, .btn-danger.active:focus, .btn-danger.active.focus,\n    .open > .btn-danger.dropdown-toggle:hover,\n    .open > .btn-danger.dropdown-toggle:focus,\n    .open > .btn-danger.dropdown-toggle.focus {\n      color: #fff;\n      background-color: #ac2925;\n      border-color: #8b211e; }\n  .btn-danger.disabled:focus, .btn-danger.disabled.focus, .btn-danger:disabled:focus, .btn-danger:disabled.focus {\n    background-color: #d9534f;\n    border-color: #d9534f; }\n  .btn-danger.disabled:hover, .btn-danger:disabled:hover {\n    background-color: #d9534f;\n    border-color: #d9534f; }\n\n.btn-primary-outline {\n  color: #563d7c;\n  background-image: none;\n  background-color: transparent;\n  border-color: #563d7c; }\n  .btn-primary-outline:focus, .btn-primary-outline.focus, .btn-primary-outline:active, .btn-primary-outline.active,\n  .open > .btn-primary-outline.dropdown-toggle {\n    color: #fff;\n    background-color: #563d7c;\n    border-color: #563d7c; }\n  .btn-primary-outline:hover {\n    color: #fff;\n    background-color: #563d7c;\n    border-color: #563d7c; }\n  .btn-primary-outline.disabled:focus, .btn-primary-outline.disabled.focus, .btn-primary-outline:disabled:focus, .btn-primary-outline:disabled.focus {\n    border-color: #886ab5; }\n  .btn-primary-outline.disabled:hover, .btn-primary-outline:disabled:hover {\n    border-color: #886ab5; }\n\n.btn-secondary-outline {\n  color: #ccc;\n  background-image: none;\n  background-color: transparent;\n  border-color: #ccc; }\n  .btn-secondary-outline:focus, .btn-secondary-outline.focus, .btn-secondary-outline:active, .btn-secondary-outline.active,\n  .open > .btn-secondary-outline.dropdown-toggle {\n    color: #fff;\n    background-color: #ccc;\n    border-color: #ccc; }\n  .btn-secondary-outline:hover {\n    color: #fff;\n    background-color: #ccc;\n    border-color: #ccc; }\n  .btn-secondary-outline.disabled:focus, .btn-secondary-outline.disabled.focus, .btn-secondary-outline:disabled:focus, .btn-secondary-outline:disabled.focus {\n    border-color: white; }\n  .btn-secondary-outline.disabled:hover, .btn-secondary-outline:disabled:hover {\n    border-color: white; }\n\n.btn-info-outline {\n  color: #5bc0de;\n  background-image: none;\n  background-color: transparent;\n  border-color: #5bc0de; }\n  .btn-info-outline:focus, .btn-info-outline.focus, .btn-info-outline:active, .btn-info-outline.active,\n  .open > .btn-info-outline.dropdown-toggle {\n    color: #fff;\n    background-color: #5bc0de;\n    border-color: #5bc0de; }\n  .btn-info-outline:hover {\n    color: #fff;\n    background-color: #5bc0de;\n    border-color: #5bc0de; }\n  .btn-info-outline.disabled:focus, .btn-info-outline.disabled.focus, .btn-info-outline:disabled:focus, .btn-info-outline:disabled.focus {\n    border-color: #b0e1ef; }\n  .btn-info-outline.disabled:hover, .btn-info-outline:disabled:hover {\n    border-color: #b0e1ef; }\n\n.btn-success-outline {\n  color: #42b983;\n  background-image: none;\n  background-color: transparent;\n  border-color: #42b983; }\n  .btn-success-outline:focus, .btn-success-outline.focus, .btn-success-outline:active, .btn-success-outline.active,\n  .open > .btn-success-outline.dropdown-toggle {\n    color: #fff;\n    background-color: #42b983;\n    border-color: #42b983; }\n  .btn-success-outline:hover {\n    color: #fff;\n    background-color: #42b983;\n    border-color: #42b983; }\n  .btn-success-outline.disabled:focus, .btn-success-outline.disabled.focus, .btn-success-outline:disabled:focus, .btn-success-outline:disabled.focus {\n    border-color: #8bd6b4; }\n  .btn-success-outline.disabled:hover, .btn-success-outline:disabled:hover {\n    border-color: #8bd6b4; }\n\n.btn-warning-outline {\n  color: #f0ad4e;\n  background-image: none;\n  background-color: transparent;\n  border-color: #f0ad4e; }\n  .btn-warning-outline:focus, .btn-warning-outline.focus, .btn-warning-outline:active, .btn-warning-outline.active,\n  .open > .btn-warning-outline.dropdown-toggle {\n    color: #fff;\n    background-color: #f0ad4e;\n    border-color: #f0ad4e; }\n  .btn-warning-outline:hover {\n    color: #fff;\n    background-color: #f0ad4e;\n    border-color: #f0ad4e; }\n  .btn-warning-outline.disabled:focus, .btn-warning-outline.disabled.focus, .btn-warning-outline:disabled:focus, .btn-warning-outline:disabled.focus {\n    border-color: #f8d9ac; }\n  .btn-warning-outline.disabled:hover, .btn-warning-outline:disabled:hover {\n    border-color: #f8d9ac; }\n\n.btn-danger-outline {\n  color: #d9534f;\n  background-image: none;\n  background-color: transparent;\n  border-color: #d9534f; }\n  .btn-danger-outline:focus, .btn-danger-outline.focus, .btn-danger-outline:active, .btn-danger-outline.active,\n  .open > .btn-danger-outline.dropdown-toggle {\n    color: #fff;\n    background-color: #d9534f;\n    border-color: #d9534f; }\n  .btn-danger-outline:hover {\n    color: #fff;\n    background-color: #d9534f;\n    border-color: #d9534f; }\n  .btn-danger-outline.disabled:focus, .btn-danger-outline.disabled.focus, .btn-danger-outline:disabled:focus, .btn-danger-outline:disabled.focus {\n    border-color: #eba5a3; }\n  .btn-danger-outline.disabled:hover, .btn-danger-outline:disabled:hover {\n    border-color: #eba5a3; }\n\n.btn-link {\n  font-weight: normal;\n  color: #563d7c;\n  border-radius: 0; }\n  .btn-link, .btn-link:active, .btn-link.active, .btn-link:disabled {\n    background-color: transparent; }\n  .btn-link, .btn-link:focus, .btn-link:active {\n    border-color: transparent; }\n  .btn-link:hover {\n    border-color: transparent; }\n  .btn-link:focus, .btn-link:hover {\n    color: #322449;\n    text-decoration: underline;\n    background-color: transparent; }\n  .btn-link:disabled:focus, .btn-link:disabled:hover {\n    color: #818a91;\n    text-decoration: none; }\n\n.btn-lg {\n  padding: 0.75rem 1.25rem;\n  font-size: 1.25rem;\n  line-height: 1.33333;\n  border-radius: 0.3rem; }\n\n.btn-sm {\n  padding: 0.25rem 0.75rem;\n  font-size: 0.875rem;\n  line-height: 1.5;\n  border-radius: 0.2rem; }\n\n.btn-block {\n  display: block;\n  width: 100%; }\n\n.btn-block + .btn-block {\n  margin-top: 5px; }\n\ninput[type=\"submit\"].btn-block,\ninput[type=\"reset\"].btn-block,\ninput[type=\"button\"].btn-block {\n  width: 100%; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 33 */
-/***/ function(module, exports) {
-
-	/*! svg4everybody v2.0.0 | github.com/jonathantneal/svg4everybody */
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-		value: true
-	});
-	var LEGACY_SUPPORT = false;
-	
-	function embed(svg, g) {
-		if (g) {
-			var viewBox = !svg.getAttribute('viewBox') && g.getAttribute('viewBox');
-			var fragment = document.createDocumentFragment();
-			var clone = g.cloneNode(true);
-	
-			if (viewBox) {
-				svg.setAttribute('viewBox', viewBox);
-			}
-	
-			while (clone.childNodes.length) {
-				fragment.appendChild(clone.firstChild);
-			}
-	
-			svg.appendChild(fragment);
-		}
-	}
-	
-	function loadreadystatechange(xhr) {
-		xhr.onreadystatechange = function () {
-			if (xhr.readyState === 4) {
-				var x = document.createElement('x');
-	
-				x.innerHTML = xhr.responseText;
-	
-				xhr.s.splice(0).map(function (array) {
-					embed(array[0], x.querySelector('#' + array[1].replace(/(\W)/g, '\\$1')));
-				});
-			}
-		};
-	
-		xhr.onreadystatechange();
-	}
-	
-	function svg4everybody(opts) {
-		opts = opts || {};
-	
-		var uses = document.getElementsByTagName('use');
-		var nosvg;
-	
-		if (LEGACY_SUPPORT) {
-			var fallback = opts.fallback || function (src) {
-				return src.replace(/\?[^#]+/, '').replace('#', '.').replace(/^\./, '') + '.png' + (/\?[^#]+/.exec(src) || [''])[0];
-			};
-	
-			nosvg = 'nosvg' in opts ? opts.nosvg : /\bMSIE [1-8]\b/.test(navigator.userAgent);
-	
-			if (nosvg) {
-				document.createElement('svg');
-				document.createElement('use');
-			}
-		}
-	
-		var polyfill = 'polyfill' in opts ? opts.polyfill : LEGACY_SUPPORT ? nosvg || /\bEdge\/12\b|\bMSIE [1-8]\b|\bTrident\/[567]\b|\bVersion\/7.0 Safari\b/.test(navigator.userAgent) || (navigator.userAgent.match(/AppleWebKit\/(\d+)/) || [])[1] < 537 : /\bEdge\/12\b|\bTrident\/[567]\b|\bVersion\/7.0 Safari\b/.test(navigator.userAgent) || (navigator.userAgent.match(/AppleWebKit\/(\d+)/) || [])[1] < 537;
-	
-		var validate = opts.validate;
-		var requestAnimationFrame = window.requestAnimationFrame || setTimeout;
-		var svgCache = {};
-	
-		function oninterval() {
-			var use;
-	
-			while (use = uses[0]) {
-				var svg = use.parentNode;
-	
-				if (svg && /svg/i.test(svg.nodeName)) {
-					var src = use.getAttribute('xlink:href');
-	
-					if (LEGACY_SUPPORT && nosvg) {
-						var img = new Image();
-						var width = svg.getAttribute('width');
-						var height = svg.getAttribute('height');
-	
-						img.src = fallback(src, svg, use);
-	
-						if (width) {
-							img.setAttribute('width', width);
-						}
-	
-						if (height) {
-							img.setAttribute('height', height);
-						}
-	
-						svg.replaceChild(img, use);
-					} else if (polyfill) {
-						if (!validate || validate(src, svg, use)) {
-							var url = src.split('#');
-							var url_root = url[0];
-							var url_hash = url[1];
-	
-							svg.removeChild(use);
-	
-							if (url_root.length) {
-								var xhr = svgCache[url_root] = svgCache[url_root] || new XMLHttpRequest();
-	
-								if (!xhr.s) {
-									xhr.s = [];
-	
-									xhr.open('GET', url_root);
-	
-									xhr.send();
-								}
-	
-								xhr.s.push([svg, url_hash]);
-	
-								loadreadystatechange(xhr);
-							} else {
-								embed(svg, document.getElementById(url_hash));
-							}
-						}
-					}
-				}
-			}
-	
-			requestAnimationFrame(oninterval, 17);
-		}
-	
-		if (polyfill) {
-			oninterval();
-		}
-	}
-	
-	var svgPolyfill = {
-		svg4everybody: svg4everybody()
-	};
-	exports.svgPolyfill = svgPolyfill;
-
-/***/ },
 /* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -2228,8 +1942,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../../css-loader/index.js!./../../../../../../autoprefixer-loader/index.js!./../../../../../../sass-loader/index.js!./../../../../../../vuestrap-theme-loader/index.js!./_search.scss", function() {
-				var newContent = require("!!./../../../../../../css-loader/index.js!./../../../../../../autoprefixer-loader/index.js!./../../../../../../sass-loader/index.js!./../../../../../../vuestrap-theme-loader/index.js!./_search.scss");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./_search.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./_search.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2256,7 +1970,7 @@
 /* 37 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"vuestrap-docs-search list-group\">\r\n  <!-- search -->\r\n  <div class=\"list-group-item list-group-search\" v-if=\"list.length &gt; showSearch\">\r\n    <input type=\"text\" class=\"form-control\" placeholder=\"Search...\" v-model=\"search\" autocomplete=\"off\">\r\n  </div>\r\n  <!-- components -->\r\n  <a href=\"{{item.url}}\" class=\"list-group-item\" v-bind:class=\"{active: currentView &amp;&amp; item.name === currentView}\" v-for=\"item in list | filterBy search in &apos;title&apos;\">\r\n    {{item.title}}\r\n  </a>\r\n</div>";
+	module.exports = "<div class=\"vuestrap-docs-search list-group\">\r\n  <!-- search -->\r\n  <div class=\"list-group-item list-group-search\" v-if=\"list.length > showSearch\">\r\n    <input type=\"text\" class=\"form-control\" placeholder=\"Search...\" v-model=\"search\" autocomplete=\"off\">\r\n  </div>\r\n  <!-- components -->\r\n  <a href=\"{{item.url}}\" class=\"list-group-item\" v-bind:class=\"{active: currentView && item.name === currentView}\" v-for=\"item in list | filterBy search in 'title'\">\r\n    {{item.title}}\r\n  </a>\r\n</div>";
 
 /***/ },
 /* 38 */
@@ -2267,7 +1981,7 @@
 	
 	__webpack_require__(39);
 	
-	__webpack_require__(26);
+	__webpack_require__(17);
 
 /***/ },
 /* 39 */
@@ -2285,8 +1999,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_list-group.scss", function() {
-				var newContent = require("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_list-group.scss");
+			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_list-group.scss", function() {
+				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_list-group.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2316,7 +2030,7 @@
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(31);
+	__webpack_require__(22);
 	
 	__webpack_require__(42);
 	
@@ -2338,8 +2052,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_forms.scss", function() {
-				var newContent = require("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_forms.scss");
+			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_forms.scss", function() {
+				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_forms.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2378,8 +2092,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_custom-forms.scss", function() {
-				var newContent = require("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_custom-forms.scss");
+			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_custom-forms.scss", function() {
+				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_custom-forms.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2427,8 +2141,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_nav.scss", function() {
-				var newContent = require("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_nav.scss");
+			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_nav.scss", function() {
+				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_nav.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2460,7 +2174,7 @@
 	
 	__webpack_require__(50);
 	
-	__webpack_require__(31);
+	__webpack_require__(22);
 	
 	__webpack_require__(47);
 	
@@ -2482,8 +2196,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_navbar.scss", function() {
-				var newContent = require("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_navbar.scss");
+			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_navbar.scss", function() {
+				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_navbar.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2513,7 +2227,7 @@
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(31);
+	__webpack_require__(22);
 
 /***/ },
 /* 53 */
@@ -2540,8 +2254,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_jumbotron.scss", function() {
-				var newContent = require("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_jumbotron.scss");
+			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_jumbotron.scss", function() {
+				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_jumbotron.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2589,8 +2303,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_tables.scss", function() {
-				var newContent = require("!!./../../../../css-loader/index.js!./../../../../autoprefixer-loader/index.js!./../../../../sass-loader/index.js!./../../../../vuestrap-theme-loader/index.js!./_tables.scss");
+			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_tables.scss", function() {
+				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_tables.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2618,13 +2332,13 @@
 /***/ function(module, exports) {
 
 	module.exports = {
-		"name": "vuestrap-icons",
-		"version": "0.4.6",
-		"description": "Vuestrap Icons Component complements Bootstrap 4 with svg icons.",
-		"library": "vuestrapIcons",
+		"name": "vuestrap-docs",
+		"version": "0.1.0",
+		"description": "Vuestrap Docs Components are useed in docs pages to showcase web components.",
+		"library": "vuestrapDocs",
 		"repository": {
 			"type": "git",
-			"url": "git+https://github.com/kzima/vuestrap-icons.git"
+			"url": "git+https://github.com/kzima/vuestrap-docs.git"
 		},
 		"scripts": {
 			"dev": "webpack -w --colors --progress --config webpack.build.js --env dev",
@@ -2644,7 +2358,7 @@
 		},
 		"license": "MIT",
 		"bugs": {
-			"url": "https://github.com/kzima/vuestrap-icons/issues"
+			"url": "https://github.com/kzima/vuestrap-docs/issues"
 		},
 		"dependencies": {
 			"vue": "^1.0.10"
@@ -2658,18 +2372,19 @@
 			"director": "^1.2.8",
 			"event-stream": "^3.3.2",
 			"extract-text-webpack-plugin": "^0.8.2",
+			"highlightjs-loader": "^0.1.0",
 			"html-loader": "^0.3.0",
 			"json-loader": "^0.5.4",
 			"node-sass": "^3.4.1",
 			"optimist": "^0.6.1",
 			"sass-loader": "^3.1.1",
 			"style-loader": "^0.13.0",
-			"vuestrap-docs": "^0.1.0",
+			"vuestrap": "^1.0.0",
 			"vuestrap-theme-loader": "^0.1.2",
 			"webpack": "^1.12.9",
 			"webpack-dev-server": "^1.12.1"
 		},
-		"homepage": "https://github.com/kzima/vuestrap-icons#readme"
+		"homepage": "https://github.com/kzima/vuestrap-docs#readme"
 	};
 
 /***/ }

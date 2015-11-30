@@ -1,13 +1,12 @@
-Vuestrap Icons Component
+Vuestrap Docs Components
 =========
 
-Vuestrap Icons Component is complements Bootstrap 4 with svg icons.
-SVG sprite consists of 223 icons from Iconic — www.useiconic.com/open plus two custom ones: circle-fill and circle-outline
+Vuestrap Docs Components are useful for documenting other [vuestrap](https://github.com/kzima/vuestrap#readme) web components.
 
 DEMO
 =========
 
-[Documentation](http://http://kzima.github.io/vuestrap-icons/#/icons)
+[Documentation](http://http://kzima.github.io/vuestrap-docs/#/demo)
 
 QUICK USE
 =========
@@ -17,7 +16,7 @@ For compiled components, use it within your Vue instance like this:
 ```js
 new Vue({
 	el: '#app',
-	components: { 'icon': vuestrapIcons.icons }
+	components: { 'docs-demo': vuestrapDocs.demo }
 })
 ```
 
@@ -26,7 +25,7 @@ new Vue({
 If you chosen to work with source components, just import* desired component like so:
 
 ```js
-import icons from 'vuestrap-icons/src/components/icons'
+import demo from 'vuestrap-docs/src/components/demo'
 ```
 
 and then load it in your Vue instance:
@@ -34,18 +33,17 @@ and then load it in your Vue instance:
 ```js
 new Vue({
 	el: '#app',
-	components: { 'icon': icons }
+	components: { 'docs-demo': demo }
 })
 ```
 
 *Note: You will need <a href="https://github.com/babel/babel-loader">Babel Loader</a> in your Webpack config file to support ES6 syntax.
 
-You can then use icon component in your html, like so:
+You can then use docs-demo component in your html, like so:
 ```html
-<icon name="cog"></icon>
+<docs-demo :meta="metaData" :snippet="snippet"></docs-demo>
 ```
 
 TODO
 =========
-- create html page with list of icons
-- testing
+- create responsive sidebar
