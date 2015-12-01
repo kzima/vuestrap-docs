@@ -22,10 +22,10 @@
 			"description": "List of components with <code>title</code> and <code>name</code> attributes."
 		},
 		{
-			"name": "currentView",
+			"name": "current-view",
 			"type": "String",
 			"default": "",
-			"description": "Sets active state on the matching component."
+			"description": "Sets active state on the matching component. Expected value is a name of the component as string, i.e. `component-a`."
 		}
 	]
 }

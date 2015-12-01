@@ -1,9 +1,7 @@
-<code lang="html">
-<!-- serch list -->
-<docs-search :list="[
-  {name: 'Component A', title: 'Component A'}, 
-  {name: 'Component B', title: 'Component B'}, 
-  {name: 'Other', title: 'Other'}]" 
-  :current-view="currentView">
+<docs-search 
+  :list="[
+    {name: 'component-a', title: 'Component A'}, 
+    {name: 'component-b', title: 'Component B'}, 
+    {name: 'other', title: 'Other'}]" 
+  :current-view="'component-a'">
 </docs-search>
-</code>

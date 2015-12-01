@@ -544,13 +544,13 @@
 	var _introductionHtml2 = _interopRequireDefault(_introductionHtml);
 	
 	exports['default'] = {
+		template: _introductionHtml2['default'],
 		data: function data() {
 			return {
 				pkg: this.$parent.pkg,
 				sampleComponentName: this.$parent.demoPages[0].name
 			};
-		},
-		template: _introductionHtml2['default']
+		}
 	};
 	module.exports = exports['default'];
 
@@ -558,7 +558,7 @@
 /* 7 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"jumbotron\">\r\n  <h1>{{pkg.name}} <span class=\"label label-success\">{{pkg.version}}</span></h1>\r\n  <p>{{pkg.description}}</p>\r\n</div>\r\n<h2>Installation</h2>\r\n<div class=\"row\">\r\n\t<div class=\"col-xs-12 col-sm-6\">\r\n    <h3>Compiled</h3>\r\n    <p>Minified CSS and JavaScript with no  documentation or original source files.</p>\r\n    <code>bower install <span class=\"hljs-expansion\">{{pkg.name}}</span> --save-dev</code>\r\n\t</div>\r\n\t<div class=\"col-xs-12 col-sm-6\">\r\n    <h3>Source</h3>\r\n    <p>Source Sass, JavaScript, and documentation files.</p>\r\n    <code>npm install <span class=\"hljs-expansion\">{{pkg.name}}</span> --save-dev</code>\r\n   </div>\r\n</div>\r\n\r\n<div class=\"m-b-lg\"></div>\r\n<h2>Usage</h2>\r\n<p>For compiled components, use it within your Vue instance like this:</p>\r\n<p><code>new <span class=\"hljs-constant\">Vue</span>({ <span class=\"hljs-symbol\">components:</span> { <span class=\"hljs-string\">'{{sampleComponentName}}'</span>: <span class=\"hljs-expansion\">{{pkg.library}}</span>.<span class=\"hljs-expansion\">{{sampleComponentName}}</span> }})</code></p>\r\n\r\n<div class=\"m-b\"></div>\r\n<strong>OR</strong>\r\n<div class=\"m-b\"></div>\r\n\r\n<p>If you chosen to work with source components, just import* desired component like so:</p>\r\n<p><code>import <span class=\"hljs-expansion\">{{sampleComponentName}}</span> from <span class=\"hljs-string\">'{{pkg.name}}/src/components/{{sampleComponentName}}'</span></code></p>\r\n<p>and then load it in your Vue instance:</p>\r\n<p><code>new <span class=\"hljs-constant\">Vue</span>({ <span class=\"hljs-symbol\">components:</span> { <span class=\"hljs-string\">'{{sampleComponentName}}'</span>: <span class=\"hljs-expansion\">{{sampleComponentName}}</span> }})</code></p>\r\n<p>*Note: You will need <a href=\"https://github.com/babel/babel-loader\">Babel Loader</a> in your Webpack config file to support ES6 syntax.</p>";
+	module.exports = "<div class=\"jumbotron\">\r\n  <h1>{{pkg.name}} <span class=\"label label-success\">{{pkg.version}}</span></h1>\r\n  <p>{{pkg.description}}</p>\r\n</div>\r\n<h2>Installation</h2>\r\n<div class=\"row\">\r\n\t<div class=\"col-xs-12 col-sm-6\">\r\n    <h3>Compiled</h3>\r\n    <p>Minified CSS and JavaScript with no  documentation or original source files.</p>\r\n    <code>bower install {{pkg.name}} --save-dev</code>\r\n\t</div>\r\n\t<div class=\"col-xs-12 col-sm-6\">\r\n    <h3>Source</h3>\r\n    <p>Source Sass, JavaScript, and documentation files.</p>\r\n    <code>npm install {{pkg.name}} --save-dev</code>\r\n   </div>\r\n</div>\r\n\r\n<div class=\"m-b-lg\"></div>\r\n<h2>Usage</h2>\r\n<p>For compiled components, use it within your Vue instance like this:</p>\r\n<p><code>new Vue({ components: { '{{sampleComponentName}}': {{pkg.library}}.{{sampleComponentName}} }})</code></p>\r\n\r\n<div class=\"m-b\"></div>\r\n<strong>OR</strong>\r\n<div class=\"m-b\"></div>\r\n\r\n<p>If you chosen to work with source components, just import* desired component like so:</p>\r\n<p><code>import {{sampleComponentName}} from '{{pkg.name}}/src/components/{{sampleComponentName}}'</code></p>\r\n<p>and then load it in your Vue instance:</p>\r\n<p><code>new Vue({ components: { '{{sampleComponentName}}': {{sampleComponentName}} }})</code></p>\r\n<p>*Note: You will need <a href=\"https://github.com/babel/babel-loader\">Babel Loader</a> in your Webpack config file to support ES6 syntax.</p>";
 
 /***/ },
 /* 8 */
@@ -608,7 +608,7 @@
 /* 9 */
 /***/ function(module, exports) {
 
-	module.exports = "<code lang=\"html\">\r\n<span class=\"hljs-comment\">&lt;!-- demo component --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">docs-demo</span> <span class=\"hljs-attribute\">:meta</span>=<span class=\"hljs-value\">\"meta\"</span> <span class=\"hljs-attribute\">:snippet</span>=<span class=\"hljs-value\">\"snippet\"</span> <span class=\"hljs-attribute\">v-if</span>=<span class=\"hljs-value\">\"controls\"</span>&gt;</span>\r\n  <span class=\"hljs-comment\">&lt;!-- Html controls start--&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"controls\"</span> <span class=\"hljs-attribute\">v-if</span>=<span class=\"hljs-value\">\"controls\"</span>&gt;</span>\r\n    Controls go here...\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n  <span class=\"hljs-comment\">&lt;!-- Html controls end--&gt;</span>\r\n  \r\n  <span class=\"hljs-comment\">&lt;!-- Html markup start--&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"markup\"</span> <span class=\"hljs-attribute\">v-bind:class</span>=<span class=\"hljs-value\">\"{ inverse: controls.variant === 'light' }\"</span>&gt;</span>\r\n    Demo Component's markup go here...\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n  <span class=\"hljs-comment\">&lt;!-- Html markup end--&gt;</span> \r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">docs-demo</span>&gt;</span>\r\n</code>";
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">docs-demo</span> <span class=\"hljs-attribute\">:meta</span>=<span class=\"hljs-value\">\"meta\"</span> <span class=\"hljs-attribute\">:snippet</span>=<span class=\"hljs-value\">\"snippet\"</span> <span class=\"hljs-attribute\">v-if</span>=<span class=\"hljs-value\">\"controls\"</span>&gt;</span>\r\n  <span class=\"hljs-comment\">&lt;!-- Html controls start--&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"controls\"</span> <span class=\"hljs-attribute\">v-if</span>=<span class=\"hljs-value\">\"controls\"</span>&gt;</span>\r\n    Controls go here...\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n  <span class=\"hljs-comment\">&lt;!-- Html controls end--&gt;</span>\r\n  \r\n  <span class=\"hljs-comment\">&lt;!-- Html markup start--&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"markup\"</span> <span class=\"hljs-attribute\">v-bind:class</span>=<span class=\"hljs-value\">\"{ inverse: controls.variant === 'light' }\"</span>&gt;</span>\r\n    Demo Component's markup go here...\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n  <span class=\"hljs-comment\">&lt;!-- Html markup end--&gt;</span> \r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">docs-demo</span>&gt;</span>";
 
 /***/ },
 /* 10 */
@@ -731,7 +731,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".vuestrap-docs-demo {\n  margin-bottom: 4rem; }\n  .vuestrap-docs-demo .code-demo {\n    position: relative;\n    margin-left: 0;\n    margin-right: 0;\n    margin-bottom: 2rem;\n    padding: 1rem;\n    padding-bottom: 0;\n    border: solid #f7f7f9;\n    border-width: .2rem; }\n    .vuestrap-docs-demo .code-demo > .inverse {\n      background-color: #898989;\n      padding: 0.2em; }\n  .vuestrap-docs-demo .highlight {\n    padding: 1rem;\n    padding-top: 0;\n    margin: 1rem -1rem;\n    background-color: #f7f7f9;\n    margin-bottom: 0; }\n    .vuestrap-docs-demo .highlight pre {\n      margin-bottom: 0; }\n  .vuestrap-docs-demo .options > table code {\n    display: inline-block;\n    margin-right: 2px;\n    margin-bottom: 2px; }\n  .vuestrap-docs-demo .options > table td {\n    width: 10%; }\n  .vuestrap-docs-demo .options > table td:nth-child(1) {\n    min-width: 150px;\n    color: #563d7c; }\n  .vuestrap-docs-demo .options > table td:nth-child(5) {\n    width: 50%; }\n  .vuestrap-docs-demo [slot=\"controls\"] {\n    background-color: #f7f7f9;\n    padding: 1rem; }\n  .vuestrap-docs-demo [slot=\"controls\"] label {\n    margin-bottom: 0;\n    margin-right: 0.5rem; }\n  .vuestrap-docs-demo label.btn {\n    margin-bottom: 0; }\n  .vuestrap-docs-demo .label {\n    margin-right: 0.5rem; }\n  .vuestrap-docs-demo > .label {\n    background-color: #563d7c; }\n  .vuestrap-docs-demo > .alert {\n    border-right-color: #e6e6ec;\n    border-top-color: #e6e6ec;\n    border-bottom-color: #e6e6ec;\n    border-left-width: 5px;\n    background-color: transparent; }\n    .vuestrap-docs-demo > .alert .icons {\n      vertical-align: text-bottom; }\n  .vuestrap-docs-demo .tab-content .tab-pane {\n    padding: 1em 0; }\n", ""]);
+	exports.push([module.id, ".vuestrap-docs-demo {\n  margin-bottom: 4rem; }\n  .vuestrap-docs-demo .code-demo {\n    position: relative;\n    margin-left: 0;\n    margin-right: 0;\n    margin-bottom: 2rem;\n    padding: 1rem;\n    padding-bottom: 0;\n    border: solid #f7f7f9;\n    border-width: .2rem; }\n    .vuestrap-docs-demo .code-demo > .inverse {\n      background-color: #898989;\n      padding: 0.2em; }\n  .vuestrap-docs-demo .highlight {\n    padding: 1rem;\n    margin: 1rem -1rem;\n    background-color: #f7f7f9;\n    margin-bottom: 0; }\n    .vuestrap-docs-demo .highlight pre {\n      margin-bottom: 0; }\n  .vuestrap-docs-demo .options > table code {\n    display: inline-block;\n    margin-right: 2px;\n    margin-bottom: 2px; }\n  .vuestrap-docs-demo .options > table td {\n    width: 10%; }\n  .vuestrap-docs-demo .options > table td:nth-child(1) {\n    min-width: 150px;\n    color: #563d7c; }\n  .vuestrap-docs-demo .options > table td:nth-child(5) {\n    width: 50%; }\n  .vuestrap-docs-demo [slot=\"controls\"] {\n    background-color: #f7f7f9;\n    padding: 1rem; }\n  .vuestrap-docs-demo [slot=\"controls\"] label {\n    margin-bottom: 0;\n    margin-right: 0.5rem; }\n  .vuestrap-docs-demo label.btn {\n    margin-bottom: 0; }\n  .vuestrap-docs-demo .label {\n    margin-right: 0.5rem; }\n  .vuestrap-docs-demo > .label {\n    background-color: #563d7c; }\n  .vuestrap-docs-demo > .alert {\n    border-right-color: #e6e6ec;\n    border-top-color: #e6e6ec;\n    border-bottom-color: #e6e6ec;\n    border-left-width: 5px;\n    background-color: transparent; }\n    .vuestrap-docs-demo > .alert .icons {\n      vertical-align: text-bottom; }\n  .vuestrap-docs-demo .tab-content .tab-pane {\n    padding: 1em 0; }\n", ""]);
 	
 	// exports
 
@@ -740,7 +740,7 @@
 /* 15 */
 /***/ function(module, exports) {
 
-	module.exports = "<section class=\"vuestrap-docs-demo\" id=\"{{meta.name}}\">\r\n\r\n\t<!-- Meta title -->\r\n\t<h2>{{meta.title}}</h2>\r\n\t<p v-html=\"meta.description\"></p>\r\n\r\n\t<div class=\"m-b\"></div>\r\n\r\n\t<div class=\"alert alert-info\" role=\"alert\" v-if=\"meta.note\">\r\n  \t<icon background=\"circle-outline\" size=\"sm\" variant=\"info\" text=\"i\"></icon> <span v-html=\"meta.note\"></span>\r\n\t</div>\r\n\r\n\t<div class=\"m-b-md\"></div>\r\n\r\n\t<!-- Component manipulators -->\r\n\t<slot name=\"controls\"></slot>\r\n\r\n\t<!-- Output & Code sample -->\r\n\t<div class=\"code-demo\">\r\n\r\n\t\t<slot class=\"markup\" name=\"markup\"></slot>\r\n\r\n\t\t<div class=\"highlight\">\r\n\t\t\t<pre><code v-html=\"snippet\"><span class=\"hljs-expansion\">{{snippet}}</span></code></pre>\r\n\t\t</div>\r\n\t</div>\r\n\r\n\t<!-- Options -->\r\n\t<div class=\"options\" v-if=\"meta.options.length\">\r\n\t\t<h3>Options</h3>\r\n\t\t<table class=\"table table-responsive\">\r\n\t\t\t<tr>\r\n\t\t\t\t<th>Name</th>\r\n\t\t\t\t<th>Type</th>\r\n\t\t\t\t<th>Default</th>\r\n\t\t\t\t<th>Required</th>\r\n\t\t\t\t<th>Description</th>\r\n\t\t\t</tr>\r\n\t\t\t<tr v-for=\"item in meta.options\">\r\n\t\t\t\t<td>{{item.name}}</td>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<code v-html=\"item.type\"></code>\r\n\t\t\t\t</td>\r\n\t\t\t\t<td><code v-if=\"item.default\" v-html=\"item.default\"></code></td>\r\n\t\t\t\t<td>{{item.required == true ? 'yes' : ''}}</td>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<p v-html=\"item.description\"></p>\r\n\t\t\t\t\t<p v-if=\"item.values\">\r\n\t\t\t\t\t\tPosible values:\r\n\t\t\t\t\t\t<code v-for=\"item in item.values\"><span class=\"hljs-expansion\">{{item}}</span></code>\r\n\t\t\t\t\t</p>\r\n\t\t\t\t</td>\r\n\t\t\t</tr>\r\n\t\t</table>\t\r\n\t</div>\r\n\r\n\t<!-- Accessibility -->\r\n\t<div class=\"accessibility\" v-if=\"meta.accessibility\">\r\n\t\t<h3>Accessibility</h3>\r\n\t\t<p v-html=\"meta.accessibility\"></p>\r\n\t</div>\r\n\r\n\t<div class=\"m-b-md\"></div>\r\n\r\n\t<!-- Browser Support -->\r\n\t<div class=\"browserSupport\" v-if=\"meta.browserSupport\">\r\n\t\t<h3>Browser Support</h3>\r\n\t\t<span class=\"label label-primary\" v-for=\"item in meta.browserSupport.browsers\">{{ item }}</span>\r\n\t\t<p><small v-html=\"meta.browserSupport.note\"></small></p>\r\n\t</div>\r\n</section>\r\n";
+	module.exports = "<section class=\"vuestrap-docs-demo\" id=\"{{meta.name}}\">\r\n\r\n\t<!-- Meta title -->\r\n\t<h2>{{meta.title}}</h2>\r\n\t<p v-html=\"meta.description\"></p>\r\n\r\n\t<div class=\"m-b\"></div>\r\n\r\n\t<div class=\"alert alert-info\" role=\"alert\" v-if=\"meta.note\">\r\n  \t<icon background=\"circle-outline\" size=\"sm\" variant=\"info\" text=\"i\"></icon> <span v-html=\"meta.note\"></span>\r\n\t</div>\r\n\r\n\t<div class=\"m-b-md\"></div>\r\n\r\n\t<!-- Component manipulators -->\r\n\t<slot name=\"controls\"></slot>\r\n\r\n\t<!-- Output & Code sample -->\r\n\t<div class=\"code-demo\">\r\n\r\n\t\t<slot class=\"markup\" name=\"markup\"></slot>\r\n\r\n\t\t<div class=\"highlight\">\r\n\t\t\t<pre><code v-html=\"snippet\">{{snippet}}</code></pre>\r\n\t\t</div>\r\n\t</div>\r\n\r\n\t<!-- Options -->\r\n\t<div class=\"options\" v-if=\"meta.options.length\">\r\n\t\t<h3>Options</h3>\r\n\t\t<table class='table table-responsive'>\r\n\t\t\t<tr>\r\n\t\t\t\t<th>Name</th>\r\n\t\t\t\t<th>Type</th>\r\n\t\t\t\t<th>Default</th>\r\n\t\t\t\t<th>Required</th>\r\n\t\t\t\t<th>Description</th>\r\n\t\t\t</tr>\r\n\t\t\t<tr v-for=\"item in meta.options\">\r\n\t\t\t\t<td>{{item.name}}</td>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<code v-html=\"item.type\"></code>\r\n\t\t\t\t</td>\r\n\t\t\t\t<td><code v-if=\"item.default\" v-html=\"item.default\"></code></td>\r\n\t\t\t\t<td>{{item.required == true ? 'yes' : ''}}</td>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<p v-html=\"item.description\"></p>\r\n\t\t\t\t\t<p v-if=\"item.values\">\r\n\t\t\t\t\t\tPosible values:\r\n\t\t\t\t\t\t<code v-for=\"item in item.values\">{{item}}</code>\r\n\t\t\t\t\t</p>\r\n\t\t\t\t</td>\r\n\t\t\t</tr>\r\n\t\t</table>\t\r\n\t</div>\r\n\r\n\t<!-- Accessibility -->\r\n\t<div class=\"accessibility\" v-if=\"meta.accessibility\">\r\n\t\t<h3>Accessibility</h3>\r\n\t\t<p v-html=\"meta.accessibility\"></p>\r\n\t</div>\r\n\r\n\t<div class=\"m-b-md\"></div>\r\n\r\n\t<!-- Browser Support -->\r\n\t<div class=\"browserSupport\" v-if=\"meta.browserSupport\">\r\n\t\t<h3>Browser Support</h3>\r\n\t\t<span class=\"label label-primary\" v-for=\"item in meta.browserSupport.browsers\">{{ item }}</span>\r\n\t\t<p><small v-html=\"meta.browserSupport.note\"></small></p>\r\n\t</div>\r\n</section>\r\n";
 
 /***/ },
 /* 16 */
@@ -978,7 +978,7 @@
 /* 27 */
 /***/ function(module, exports) {
 
-	module.exports = "<code lang=\"html\">\r\n<span class=\"hljs-comment\">&lt;!-- serch list --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">docs-search</span> <span class=\"hljs-attribute\">:list</span>=<span class=\"hljs-value\">\"[\r\n  {name: 'Component A', title: 'Component A'}, \r\n  {name: 'Component B', title: 'Component B'}, \r\n  {name: 'Other', title: 'Other'}]\"</span> <span class=\"hljs-attribute\">:current-view</span>=<span class=\"hljs-value\">\"currentView\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">docs-search</span>&gt;</span>\r\n</code>";
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">docs-search</span> \r\n  <span class=\"hljs-attribute\">:list</span>=<span class=\"hljs-value\">\"[\r\n    {name: 'component-a', title: 'Component A'}, \r\n    {name: 'component-b', title: 'Component B'}, \r\n    {name: 'other', title: 'Other'}]\"</span> \r\n  <span class=\"hljs-attribute\">:current-view</span>=<span class=\"hljs-value\">\"'component-a'\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">docs-search</span>&gt;</span>\r\n";
 
 /***/ },
 /* 28 */
@@ -1020,10 +1020,10 @@
 				"description": "List of components with <code>title</code> and <code>name</code> attributes."
 			},
 			{
-				"name": "currentView",
+				"name": "current-view",
 				"type": "String",
 				"default": "",
-				"description": "Sets active state on the matching component."
+				"description": "Sets active state on the matching component. Expected value is a name of the component as string, i.e. `component-a`."
 			}
 		]
 	};
@@ -1970,7 +1970,7 @@
 /* 37 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"vuestrap-docs-search list-group\">\r\n  <!-- search -->\r\n  <div class=\"list-group-item list-group-search\" v-if=\"list.length > showSearch\">\r\n    <input type=\"text\" class=\"form-control\" placeholder=\"Search...\" v-model=\"search\" autocomplete=\"off\">\r\n  </div>\r\n  <!-- components -->\r\n  <a href=\"{{item.url}}\" class=\"list-group-item\" v-bind:class=\"{active: currentView && item.name === currentView}\" v-for=\"item in list | filterBy search in 'title'\">\r\n    {{item.title}}\r\n  </a>\r\n</div>";
+	module.exports = "<div class=\"vuestrap-docs-search list-group\">\r\n  <!-- search -->\r\n  <div class=\"list-group-item list-group-search\" v-if=\"list.length > showSearch\">\r\n    <input type=\"text\" class=\"form-control\" placeholder=\"Search...\" v-model=\"search\" autocomplete=\"off\">\r\n  </div>\r\n  <!-- components -->\r\n  <a href=\"{{item.url}}\" \r\n    class=\"list-group-item\" \r\n    v-bind:class=\"{active: currentView && item.name === currentView}\" \r\n    v-for=\"item in list | filterBy search in 'title'\">\r\n    {{item.title}}\r\n  </a>\r\n</div>";
 
 /***/ },
 /* 38 */
@@ -2333,7 +2333,7 @@
 
 	module.exports = {
 		"name": "vuestrap-docs",
-		"version": "0.1.0",
+		"version": "0.1.2",
 		"description": "Vuestrap Docs Components are useed in docs pages to showcase web components.",
 		"library": "vuestrapDocs",
 		"repository": {
@@ -2372,7 +2372,7 @@
 			"director": "^1.2.8",
 			"event-stream": "^3.3.2",
 			"extract-text-webpack-plugin": "^0.8.2",
-			"highlightjs-loader": "^0.1.0",
+			"highlightjs-loader": "^0.2.3",
 			"html-loader": "^0.3.0",
 			"json-loader": "^0.5.4",
 			"node-sass": "^3.4.1",

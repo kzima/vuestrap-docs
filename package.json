@@ -39,7 +39,7 @@
     "director": "^1.2.8",
     "event-stream": "^3.3.2",
     "extract-text-webpack-plugin": "^0.8.2",
-    "highlightjs-loader": "^0.1.0",
+    "highlightjs-loader": "^0.2.3",
     "html-loader": "^0.3.0",
     "json-loader": "^0.5.4",
     "node-sass": "^3.4.1",
