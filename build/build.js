@@ -2333,7 +2333,7 @@
 
 	module.exports = {
 		"name": "vuestrap-docs",
-		"version": "0.1.2",
+		"version": "0.1.3",
 		"description": "Vuestrap Docs Components are useed in docs pages to showcase web components.",
 		"library": "vuestrapDocs",
 		"repository": {
