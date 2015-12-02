@@ -44,7 +44,7 @@ if (ENV === 'dev') {
 /**
  * define devtool for source maps
  */
-if (ENV !== 'dist') {
+if (ENV === 'dev') {
   config.devtool = 'source-map'
 }
 
@@ -68,7 +68,7 @@ if (ENV === 'docs') {
  * define entry
  */
 config.entry = (ENV !== 'docs') ? {
-  'vuestrap-icons': './src/components/index.js',
+  'vuestrap-docs': './src/components/index.js',
 } : './src/docs/index.js'
 
 /**

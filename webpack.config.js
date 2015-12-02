@@ -14,7 +14,7 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       loader: 'babel'
-    },  {
+    }, {
       test: /\.html$/,
       exclude: /snippet.html/,
       loader: 'html'
