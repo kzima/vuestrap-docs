@@ -1,0 +1,18 @@
+{
+	"name": "docs",
+	"title": "Docs Component",
+	"description": "Wraps demo content and sidebar components into one view. It also handles routing for each demo component.",
+	"dependencies": ["vuestrap-docs/search", "vuestrap-docs/search", "vuestrap/icons"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "routes",
+			"type": "Array",
+			"required": true,
+			"description": "An Array with routes objects generated from each demo component placed in src/docs directory. Note that each demo object need to have route data attached, i.e. <code>route: {name: compName, url: '/compName', title: 'Comp Name'}</code>"
+		}
+	]
+}

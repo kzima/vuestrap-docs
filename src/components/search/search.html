@@ -4,10 +4,12 @@
     <input type="text" class="form-control" placeholder="Search..." v-model="search" autocomplete="off">
   </div>
   <!-- components -->
-  <a href="{{item.url}}" 
-    class="list-group-item" 
-    v-bind:class="{active: currentView && item.name === currentView}" 
-    v-for="item in list | filterBy search in 'title'">
+  <a href="#{{item.url}}" 
+    v-bind:class="{
+      'list-group-item': true, 
+      active: currentView && item.id === currentView,
+    }" 
+    v-for="item in list | skipIntro | filterBy search in 'title'">
     {{item.title}}
   </a>
 </div>

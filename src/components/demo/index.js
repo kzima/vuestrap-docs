@@ -1,5 +1,5 @@
 // import dependencies
-import './_demo.scss'
+import './demo.scss'
 import template from './demo.html'
 import 'vuestrap/components/labels'
 import 'vuestrap/components/alert'

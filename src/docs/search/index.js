@@ -1,12 +1,17 @@
 import snippet from './snippet.html'
 import template from './search.html'
 import meta from './search.json'
-import './_search.scss'
+import './search.scss'
 import {sizes, variants} from 'utils'
 import demo from 'src/components/demo'
 import search from 'src/components/search'
 
 export default {
+	route: {
+		url: '/search',
+		name: 'search',
+		title: 'Dearch'
+	},
 	template: template,
 	data() {
 		return {

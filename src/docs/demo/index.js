@@ -2,9 +2,14 @@ import snippet from './snippet.html'
 import template from './demo.html'
 import meta from './demo.json'
 import demo from 'src/components/demo'
-import './_demo.scss'
+import './demo.scss'
 
 export default {
+	route: {
+		url: '/demo',
+		name: 'demo',
+		title: 'Demo'
+	},
 	template: template,
 	data() {
 		return {

@@ -67,9 +67,13 @@ if (ENV === 'docs') {
 /**
  * define entry
  */
-config.entry = (ENV !== 'docs') ? {
-  'vuestrap-docs': './src/components/index.js',
-} : './src/docs/index.js'
+if (ENV !== 'docs') {
+  config.entry = {}
+  config.entry[pkg.library] = './src/components/index.js'
+} else {
+  config.entry = './src/index.js'
+}
+
 
 /**
  * define output

@@ -1,5 +1,5 @@
 // import dependencies
-import './_search.scss'
+import './search.scss'
 import template from './search.html'
 import 'vuestrap/components/list-group'
 import 'vuestrap/components/forms'
@@ -10,7 +10,18 @@ export default {
     replace: true,
     data() {
         return {
-            search: ""
+            search: ''
+        }
+    },
+    filters: {
+        skipIntro(elements) {
+            const filtered = []
+            elements.forEach((element) => {
+                if (element.name !== 'introduction') {
+                    filtered.push(element)
+                }
+            })
+            return filtered
         }
     },
     props: {
