@@ -10,7 +10,6 @@ export default {
 	data() {
 		return {
 			pkg: this.$parent.pkg,
-			sampleComponentName: this.$parent.routes[1].name,
 		}
 	},
 }
