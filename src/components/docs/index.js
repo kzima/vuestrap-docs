@@ -11,7 +11,7 @@ import 'vuestrap/components/buttons'
 import docsSearch from '../search'
 
 // import utils
-import {router} from 'utils'
+import {router} from '../../../utils'
 
 // import package.json meta data
 import pkg from 'package.json'
