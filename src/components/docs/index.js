@@ -32,6 +32,10 @@ export default {
             type: Array,
             required: true
         },
+        pageTitle: {
+            type: String,
+            required: true
+        },
     },
     components: {
         docsSearch,
