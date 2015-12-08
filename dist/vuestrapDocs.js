@@ -1283,7 +1283,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "vuestrap-docs",
-		"version": "0.2.2",
+		"version": "0.2.3",
 		"description": "Vuestrap Docs Components are useed in docs pages to showcase web components.",
 		"library": "vuestrapDocs",
 		"repository": {
