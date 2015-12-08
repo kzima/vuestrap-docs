@@ -83,7 +83,8 @@
 	window.docs = new Vue({
 		el: '#docs',
 		data: {
-			routes: routes
+			routes: routes,
+			pageTitle: 'Vuestrap Docs'
 		},
 		components: {
 			docsPages: _srcComponentsDocs2['default']
@@ -1840,7 +1841,7 @@
 
 	module.exports = {
 		"name": "vuestrap-docs",
-		"version": "0.2.0",
+		"version": "0.2.2",
 		"description": "Vuestrap Docs Components are useed in docs pages to showcase web components.",
 		"library": "vuestrapDocs",
 		"repository": {
@@ -1866,6 +1867,10 @@
 		"license": "MIT",
 		"bugs": {
 			"url": "https://github.com/kzima/vuestrap-docs/issues"
+		},
+		"peerDependencies": {
+			"director": "^1.2.8",
+			"vue": "^1.0.10"
 		},
 		"dependencies": {
 			"vue": "^1.0.10"
@@ -1953,8 +1958,7 @@
 		template: _introductionHtml2['default'],
 		data: function data() {
 			return {
-				pkg: this.$parent.pkg,
-				sampleComponentName: this.$parent.routes[1].name
+				pkg: this.$parent.pkg
 			};
 		}
 	};

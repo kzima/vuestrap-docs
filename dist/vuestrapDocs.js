@@ -1283,7 +1283,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "vuestrap-docs",
-		"version": "0.2.0",
+		"version": "0.2.2",
 		"description": "Vuestrap Docs Components are useed in docs pages to showcase web components.",
 		"library": "vuestrapDocs",
 		"repository": {
@@ -1309,6 +1309,10 @@ return /******/ (function(modules) { // webpackBootstrap
 		"license": "MIT",
 		"bugs": {
 			"url": "https://github.com/kzima/vuestrap-docs/issues"
+		},
+		"peerDependencies": {
+			"director": "^1.2.8",
+			"vue": "^1.0.10"
 		},
 		"dependencies": {
 			"vue": "^1.0.10"

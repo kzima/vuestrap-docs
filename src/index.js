@@ -28,6 +28,7 @@ window.docs = new Vue({
 	el: '#docs',
 	data: {
 		routes: routes,
+		pageTitle: 'Vuestrap Docs',
 	},
 	components: {
 		docsPages,
