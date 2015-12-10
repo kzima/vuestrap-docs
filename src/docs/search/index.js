@@ -10,7 +10,7 @@ export default {
 	route: {
 		url: '/search',
 		name: 'search',
-		title: 'Dearch'
+		title: 'Search'
 	},
 	template: template,
 	data() {

@@ -2432,7 +2432,7 @@
 		route: {
 			url: '/search',
 			name: 'search',
-			title: 'Dearch'
+			title: 'Search'
 		},
 		template: _searchHtml2['default'],
 		data: function data() {
