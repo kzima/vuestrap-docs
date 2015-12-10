@@ -377,6 +377,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        routes: {
 	            type: Array,
 	            required: true
+	        },
+	        pageTitle: {
+	            type: String,
+	            required: true
 	        }
 	    },
 	    components: {
