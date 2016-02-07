@@ -582,7 +582,7 @@
 
 
 	// module
-	exports.push([module.id, "html, body {\n  height: 100%; }\n\nhtml {\n  font-size: 16px; }\n\nbody {\n  margin: auto;\n  padding: 0;\n  overflow-x: hidden; }\n\nh1, h2, h3 {\n  font-family: 'Source Sans Pro', sans-serif;\n  color: #563d7c; }\n\nh2 {\n  padding-bottom: 0.3rem;\n  border-bottom: 1px solid #42b983; }\n\nh3 {\n  font-size: 1.3rem !important; }\n\n#docs-pages > .navbar {\n  padding: 0.2em 0 !important;\n  line-height: 3em; }\n  #docs-pages > .navbar .navbar-brand {\n    padding: 0 !important; }\n    #docs-pages > .navbar .navbar-brand img {\n      height: 2.5em; }\n\n#docs-pages > .container {\n  padding-top: 5em; }\n\n.offcanvas-drawer .close {\n  padding-top: 0.35em; }\n\n[v-cloak] {\n  display: none; }\n\n.list-group-item.active {\n  color: #42b983 !important;\n  border-color: #42b983 !important;\n  background-color: transparent !important; }\n\n/* offcanvas menu */\n.navbar a.list-group-item {\n  width: 100%;\n  color: #C5C5C5;\n  text-align: inherit;\n  background-color: rgba(255, 255, 255, 0);\n  border: 1px solid rgba(221, 221, 221, 0.04);\n  border-right: 0;\n  border-left: 0; }\n", ""]);
+	exports.push([module.id, "html, body {\n  height: 100%; }\n\nhtml {\n  font-size: 16px; }\n  @media (max-width: 480px) {\n    html {\n      font-size: 14px; } }\n\nbody {\n  margin: auto;\n  padding: 0;\n  overflow-x: hidden; }\n\nh1, h2, h3 {\n  font-family: 'Source Sans Pro', sans-serif;\n  color: #563d7c; }\n\nh2 {\n  padding-bottom: 0.3rem;\n  border-bottom: 1px solid #42b983; }\n\nh3 {\n  font-size: 1.3rem !important; }\n\n#docs-pages {\n  overflow-x: hidden; }\n  #docs-pages > .navbar {\n    padding: 0.2em 0 !important;\n    line-height: 3em; }\n    #docs-pages > .navbar .navbar-brand {\n      padding: 0 !important; }\n      #docs-pages > .navbar .navbar-brand img {\n        height: 2.5em; }\n  #docs-pages > .container {\n    padding-top: 5em; }\n\n.offcanvas-drawer .close {\n  padding-top: 0.35em; }\n\n[v-cloak] {\n  display: none; }\n\n.list-group-item.active {\n  color: #42b983 !important;\n  border-color: #42b983 !important;\n  background-color: transparent !important; }\n\n/* offcanvas menu */\n.navbar a.list-group-item {\n  width: 100%;\n  color: #C5C5C5;\n  text-align: inherit;\n  background-color: rgba(255, 255, 255, 0);\n  border: 1px solid rgba(221, 221, 221, 0.04);\n  border-right: 0;\n  border-left: 0; }\n", ""]);
 
 	// exports
 
@@ -1494,7 +1494,7 @@
 
 	module.exports = {
 		"name": "vuestrap-docs",
-		"version": "0.3.1",
+		"version": "0.3.2",
 		"description": "Vuestrap Docs Components are useed in docs pages to showcase web components.",
 		"library": "vuestrapDocs",
 		"repository": {

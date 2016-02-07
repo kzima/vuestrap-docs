@@ -3,6 +3,9 @@ html, body {
 }
 html {
     font-size: 16px;
+    @media (max-width: 480px) {
+        font-size: 14px;
+    }
 }
 body {
     margin: auto;
@@ -21,6 +24,7 @@ h3 {
     font-size: 1.3rem !important;
 }
 #docs-pages {
+    overflow-x: hidden;
     > .navbar {
         padding: 0.2em 0 !important;
         line-height: 3em;
