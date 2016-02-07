@@ -11,13 +11,15 @@
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/tomorrow.min.css">
 
 		<style>
+			html, body {
+				height: 100%;
+			}
 			html {
 				font-size: 16px;
 			}
 			body {
 				margin: auto;
-				padding: 1.5rem;
-  			padding-top: 5em;
+				padding: 0;
 			}
 			h1, h2, h3 {
 				font-family: 'Source Sans Pro', sans-serif;
@@ -30,15 +32,18 @@
 			h3 {
 				font-size: 1.3rem !important;
 			}
-			.navbar {
+			#docs-pages > .navbar {
 				padding: 0.2em 0 !important;
 				line-height: 3em;
 			}
-			.navbar-brand {
+			#docs-pages > .navbar .navbar-brand {
 				padding: 0 !important;
 			}
-			.navbar-brand img {
+			#docs-pages > .navbar .navbar-brand img {
 				height: 2.5em;
+			}
+			#docs-pages > .container {
+				padding-top: 5em;
 			}
 			[v-cloak] {
 				display: none;
@@ -48,18 +53,58 @@
 				border-color: #42b983 !important;
 				background-color: transparent !important;
 			}
+			/* offcanvas menu */
+			.navbar a.list-group-item {
+			  width: 100%;
+			  color: #C5C5C5;
+			  text-align: inherit;
+			  background-color: rgba(255, 255, 255, 0);
+  			border: 1px solid rgba(221, 221, 221, 0.04);
+  			border-right: 0;
+			  border-left: 0;
+			}
 		</style>
 	</head>
 
 	<body v-cloak>
 		
-		<div id="docs">
-			<docs-pages :routes="routes"></docs-pages>
-		</div>
-		
+		<vs-offcanvas-wrapper id="main" animation="ease" align="right">
+
+			<vs-offcanvas-drawer>
+				<!-- drawer with navbar -->
+				<div class="navbar navbar-collapse navbar-dark navbar-primary bg-inverse navbar-static-top navbar-full navbar-offcanvas-drawer">
+					<a href="{{pkg.homepage}}" class="btn btn-success pull-left" target="_blank" v-on:click="$root.$broadcast('toggle::offcanvas-drawer', 'main')">
+			    	&#9733; Github
+			    </a>
+			    <!-- close button -->
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close" v-on:click="$root.$broadcast('toggle::offcanvas-drawer', 'main')">
+		        <span aria-hidden="true">×</span>
+		        <span class="sr-only">Close</span>
+			    </button>
+			    <div class="m-b clearfix"></div>
+			    <div class="list-group list-group-flush">
+					  <a href="#{{item.url}}" 
+					    v-bind:class="{
+					      'list-group-item': true, 
+					    }" 
+					    v-for="item in routes"
+					    v-on:click="$root.$broadcast('toggle::offcanvas-drawer', 'main')">
+					    {{item.title}}
+					  </a>
+					</div>
+			  </div>
+			</vs-offcanvas-drawer>
+
+			<!-- content -->
+			<div id="docs-pages">
+				<docs-pages :routes="routes" :page-title.sync="pageTitle"></docs-pages>
+			</div>
+
+		</vs-offcanvas-wrapper>
+
 		<!-- footer -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.10/vue.min.js"></script>
-		<script src="build/build.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script>
+		<script src="dist/docs.js"></script>
 
 	</body>
 </html>

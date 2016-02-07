@@ -2,16 +2,11 @@
 import './docs.scss'
 import template from './docs.html'
 
-// import vuestrap dependencies
-import 'vuestrap/components/nav'
-import 'vuestrap/components/navbar'
-import 'vuestrap/components/buttons'
-
 // import external dependencies
 import docsSearch from '../search'
 
 // import utils
-import {router} from '../../../utils'
+import {router} from '../../utils'
 
 // import package.json meta data
 import pkg from 'package.json'

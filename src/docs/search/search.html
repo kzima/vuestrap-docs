@@ -1,8 +1,8 @@
 <!-- demo component -->
-<demo :meta="meta" :snippet="snippet" path="assets/icons.svg">
+<demo :meta="meta" :snippet="snippet">
 	<!-- Html markup start-->
-	<div slot="markup" v-bind:class="{ inverse: controls.variant === `light` }">
-		<search :show-search="1" :list="list" :current="currentComponent.meta.name"></search>
+	<div slot="markup">
+		<search :show-search="1" :list="list" current-view="component-a"></search>
 	</div>
 	<!-- Html markup end-->
 </demo>

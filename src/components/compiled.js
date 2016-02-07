@@ -6,9 +6,9 @@ import search from 'src/components/search'
 import docs from 'src/components/docs'
 
 const vuestrapDocs = {
-  'vsDemo': demo,
-  'vsSearch': search,
-  'vsDocs': docs,
+  demo,
+  search,
+  docs,
 }
 
 export default vuestrapDocs

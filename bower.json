@@ -6,12 +6,14 @@
   ],
   "description": "Vuestrap Docs Components are useed in docs pages to showcase web components.",
   "main": [
-    "dist/vuestrap-docs.js",
-    "dist/vuestrap-docs.js.map",
-    "dist/vuestrap-docs.min.js",
-    "dist/vuestrap-docs.css",
-    "dist/vuestrap-docs.css.map",
-    "dist/vuestrap-docs.min.css"
+    "dist/vuestrapdocs.js",
+    "dist/vuestrapdocs.js.map",
+    "dist/vuestrapdocs.min.js",
+    "dist/vuestrapdocs.css",
+    "dist/vuestrapdocs.css.map",
+    "dist/vuestrapdocs.min.css",
+    "dist/vuestrapdocs-bundle.js",
+    "dist/vuestrapdocs-bundle.min.js"
   ],
   "moduleType": [
     "amd",
@@ -25,6 +27,7 @@
   ],
   "license": "MIT",
   "ignore": [
+    "assets",
     "node_modules",
     "bower_components",
     "docs",
@@ -33,6 +36,7 @@
     "gulpfile.js",
     "index.html",
     "webpack*.js",
-    "utils"
+    "utils",
+    "dist/docs.js"
   ]
 }

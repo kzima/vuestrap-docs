@@ -13,10 +13,16 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
+      include: [
+        path.resolve('./src'),
+        path.resolve('./node_modules/vuestrap'),
+        path.resolve('./node_modules/gritcode-components'),
+        path.resolve('./node_modules/vuestrap-base-components')
+      ],
       loader: 'babel'
     }, {
       test: /\.html$/,
-      exclude: /snippet.html/,
+      exclude: /(snippet.html)/,
       loader: 'html'
     }, {
       test: /snippet.html$/,

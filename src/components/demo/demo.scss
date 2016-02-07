@@ -38,6 +38,12 @@ $demo-kzima-gray: #f7f7f9;
 			}
 			td {
 				width: 10%;
+				p { 
+					margin: 0
+				}
+				p + p {
+					margin-top: 10px;
+				}
 			}
 			td:nth-child(1) {
 				min-width: 150px;

@@ -1,8 +1,6 @@
 // import dependencies
 import './search.scss'
 import template from './search.html'
-import 'vuestrap/components/list-group'
-import 'vuestrap/components/forms'
 
 // export component object
 export default {

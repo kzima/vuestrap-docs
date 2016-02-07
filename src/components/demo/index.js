@@ -1,8 +1,6 @@
 // import dependencies
 import './demo.scss'
 import template from './demo.html'
-import 'vuestrap/components/labels'
-import 'vuestrap/components/alert'
 
 // export component object
 export default {
@@ -16,7 +14,7 @@ export default {
         },
         snippet: {
             type: String,
-            default: "",
+            default: '',
             required: true
         },
     },

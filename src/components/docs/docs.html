@@ -4,15 +4,18 @@
       <a class="navbar-brand text-center" href="#/">
 				<img v-bind:src="'assets/vuestrap-logo.svg'" alt="Vuestrap logo">
 			</a>
-			<a class="navbar-brand text-center" href="#/">
+			<a class="navbar-brand text-center hidden-sm-down" href="#/">
 				Documentation
 			</a>
 			<ul class="nav navbar-nav pull-right">
-				<li class="nav-item">
+				<li class="nav-item hidden-sm-down">
 					<a href="#/" class="btn">Introduction</a>
 				</li>
-				<li class="nav-item">
-					<a href="{{pkg.homepage}}" class="btn btn-success" target="_blank">Github</a>
+				<li class="nav-item hidden-sm-down">
+					<a href="{{pkg.homepage}}" class="btn btn-success" target="_blank">&#9733; Github</a>
+				</li>
+				<li class="nav-item hidden-md-up">
+					<a href="#" class="btn btn-success" target="_blank" v-on:click.stop.prevent="$root.$broadcast('toggle::offcanvas-drawer', 'main')">&#9776;</a>
 				</li>
 			</ul>
   </div><!-- /.container -->
@@ -21,12 +24,12 @@
 <!-- content -->
 <div class="container">
 	<div class="row row-offcanvas row-offcanvas-right">
-		<div class="col-xs-12 col-sm-9">
+		<div class="col-xs-12 col-md-9">
 			<component :is="currentView"></component>
     </div><!-- /col-xs-12 -->
 
 		<!-- sidebar -->
-		<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+		<div class="col-xs-12 col-md-3 sidebar-offcanvas hidden-sm-down" id="sidebar">
 			<docs-search :list="routes" :current-view="currentView"></docs-search>
 		</div><!--/sidebar-->
 
