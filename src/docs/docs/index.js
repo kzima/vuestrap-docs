@@ -2,7 +2,6 @@ import snippet from './snippet.html'
 import template from './docs.html'
 import meta from './docs.json'
 import docsDemo from 'src/components/demo'
-import './docs.scss'
 
 export default {
 	route: {

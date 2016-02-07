@@ -63,5 +63,58 @@
   color: #42b983;
   background-color: transparent;
   border-color: #42b983; }
+html, body {
+  height: 100%; }
+
+html {
+  font-size: 16px; }
+
+body {
+  margin: auto;
+  padding: 0;
+  overflow-x: hidden; }
+
+h1, h2, h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #563d7c; }
+
+h2 {
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #42b983; }
+
+h3 {
+  font-size: 1.3rem !important; }
+
+#docs-pages > .navbar {
+  padding: 0.2em 0 !important;
+  line-height: 3em; }
+  #docs-pages > .navbar .navbar-brand {
+    padding: 0 !important; }
+    #docs-pages > .navbar .navbar-brand img {
+      height: 2.5em; }
+
+#docs-pages > .container {
+  padding-top: 5em; }
+
+.offcanvas-drawer .close {
+  padding-top: 0.35em; }
+
+[v-cloak] {
+  display: none; }
+
+.list-group-item.active {
+  color: #42b983 !important;
+  border-color: #42b983 !important;
+  background-color: transparent !important; }
+
+/* offcanvas menu */
+.navbar a.list-group-item {
+  width: 100%;
+  color: #C5C5C5;
+  text-align: inherit;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(221, 221, 221, 0.04);
+  border-right: 0;
+  border-left: 0; }
 
 /*# sourceMappingURL=vuestrapDocs.css.map*/
