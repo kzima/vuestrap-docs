@@ -582,7 +582,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, "html, body {\n  height: 100%; }\n\nhtml {\n  font-size: 16px; }\n\nbody {\n  margin: auto;\n  padding: 0;\n  overflow-x: hidden; }\n\nh1, h2, h3 {\n  font-family: 'Source Sans Pro', sans-serif;\n  color: #563d7c; }\n\nh2 {\n  padding-bottom: 0.3rem;\n  border-bottom: 1px solid #42b983; }\n\nh3 {\n  font-size: 1.3rem !important; }\n\n#docs-pages > .navbar {\n  padding: 0.2em 0 !important;\n  line-height: 3em; }\n  #docs-pages > .navbar .navbar-brand {\n    padding: 0 !important; }\n    #docs-pages > .navbar .navbar-brand img {\n      height: 2.5em; }\n\n#docs-pages > .container {\n  padding-top: 5em; }\n\n.offcanvas-drawer .close {\n  padding-top: 0.35em; }\n\n[v-cloak] {\n  display: none; }\n\n.list-group-item.active {\n  color: #42b983 !important;\n  border-color: #42b983 !important;\n  background-color: transparent !important; }\n\n/* offcanvas menu */\n.navbar a.list-group-item {\n  width: 100%;\n  color: #C5C5C5;\n  text-align: inherit;\n  background-color: rgba(255, 255, 255, 0);\n  border: 1px solid rgba(221, 221, 221, 0.04);\n  border-right: 0;\n  border-left: 0; }\n", ""]);
 
 	// exports
 
@@ -1494,7 +1494,7 @@
 
 	module.exports = {
 		"name": "vuestrap-docs",
-		"version": "0.3.0",
+		"version": "0.3.1",
 		"description": "Vuestrap Docs Components are useed in docs pages to showcase web components.",
 		"library": "vuestrapDocs",
 		"repository": {
@@ -1690,31 +1690,31 @@
 
 	var _docs2 = _interopRequireDefault(_docs);
 
-	var _demo = __webpack_require__(34);
+	var _demo = __webpack_require__(32);
 
 	var _demo2 = _interopRequireDefault(_demo);
 
-	var _search = __webpack_require__(40);
+	var _search = __webpack_require__(36);
 
 	var _search2 = _interopRequireDefault(_search);
 
 	// import vuestrap dependencies
 
-	__webpack_require__(46);
+	__webpack_require__(42);
 
-	__webpack_require__(49);
+	__webpack_require__(45);
 
-	__webpack_require__(56);
+	__webpack_require__(52);
 
-	__webpack_require__(57);
+	__webpack_require__(53);
+
+	__webpack_require__(58);
+
+	__webpack_require__(61);
 
 	__webpack_require__(62);
 
 	__webpack_require__(65);
-
-	__webpack_require__(66);
-
-	__webpack_require__(69);
 
 	exports['default'] = {
 		pages: [_introduction2['default'], _docs2['default'], _demo2['default'], _search2['default']]
@@ -1785,8 +1785,6 @@
 	var _srcComponentsDemo = __webpack_require__(28);
 
 	var _srcComponentsDemo2 = _interopRequireDefault(_srcComponentsDemo);
-
-	__webpack_require__(32);
 
 	exports['default'] = {
 		route: {
@@ -1937,46 +1935,6 @@
 /* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(33);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./docs.scss", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./docs.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 33 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "", ""]);
-
-	// exports
-
-
-/***/ },
-/* 34 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
@@ -1985,23 +1943,21 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _snippetHtml = __webpack_require__(35);
+	var _snippetHtml = __webpack_require__(33);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _demoHtml = __webpack_require__(36);
+	var _demoHtml = __webpack_require__(34);
 
 	var _demoHtml2 = _interopRequireDefault(_demoHtml);
 
-	var _demoJson = __webpack_require__(37);
+	var _demoJson = __webpack_require__(35);
 
 	var _demoJson2 = _interopRequireDefault(_demoJson);
 
 	var _srcComponentsDemo = __webpack_require__(28);
 
 	var _srcComponentsDemo2 = _interopRequireDefault(_srcComponentsDemo);
-
-	__webpack_require__(38);
 
 	exports['default'] = {
 		route: {
@@ -2023,19 +1979,19 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 35 */
+/* 33 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">docs-demo</span> <span class=\"hljs-attribute\">:meta</span>=<span class=\"hljs-value\">\"meta\"</span> <span class=\"hljs-attribute\">:snippet</span>=<span class=\"hljs-value\">\"snippet\"</span> <span class=\"hljs-attribute\">v-if</span>=<span class=\"hljs-value\">\"controls\"</span>&gt;</span>\r\n  <span class=\"hljs-comment\">&lt;!-- Html controls start--&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"controls\"</span> <span class=\"hljs-attribute\">v-if</span>=<span class=\"hljs-value\">\"controls\"</span>&gt;</span>\r\n    Controls go here...\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n  <span class=\"hljs-comment\">&lt;!-- Html controls end--&gt;</span>\r\n  \r\n  <span class=\"hljs-comment\">&lt;!-- Html markup start--&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"markup\"</span>&gt;</span>\r\n    Demo Component's markup go here...\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n  <span class=\"hljs-comment\">&lt;!-- Html markup end--&gt;</span> \r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">docs-demo</span>&gt;</span>";
 
 /***/ },
-/* 36 */
+/* 34 */
 /***/ function(module, exports) {
 
 	module.exports = "<!-- demo component -->\r\n<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\">\r\n\t\tControls go here...\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\t\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\tDemo Component's markup go here...\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n</docs-demo>";
 
 /***/ },
-/* 37 */
+/* 35 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2073,47 +2029,7 @@
 	};
 
 /***/ },
-/* 38 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(39);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./demo.scss", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./demo.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 39 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "", ""]);
-
-	// exports
-
-
-/***/ },
-/* 40 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2124,19 +2040,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _snippetHtml = __webpack_require__(41);
+	var _snippetHtml = __webpack_require__(37);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _searchHtml = __webpack_require__(42);
+	var _searchHtml = __webpack_require__(38);
 
 	var _searchHtml2 = _interopRequireDefault(_searchHtml);
 
-	var _searchJson = __webpack_require__(43);
+	var _searchJson = __webpack_require__(39);
 
 	var _searchJson2 = _interopRequireDefault(_searchJson);
 
-	__webpack_require__(44);
+	__webpack_require__(40);
 
 	var _srcComponentsDemo = __webpack_require__(28);
 
@@ -2168,19 +2084,19 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 41 */
+/* 37 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">docs-search</span> \r\n  <span class=\"hljs-attribute\">:list</span>=<span class=\"hljs-value\">\"[\r\n    {id: 'component-a', title: 'Component A'}, \r\n    {id: 'component-b', title: 'Component B'}, \r\n    {id: 'other', title: 'Other'}]\"</span> \r\n  <span class=\"hljs-attribute\">:current-view</span>=<span class=\"hljs-value\">\"'component-a'\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">docs-search</span>&gt;</span>\r\n";
 
 /***/ },
-/* 42 */
+/* 38 */
 /***/ function(module, exports) {
 
 	module.exports = "<!-- demo component -->\r\n<demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t<search :show-search=\"1\" :list=\"list\" current-view=\"component-a\"></search>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n</demo>";
 
 /***/ },
-/* 43 */
+/* 39 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2222,13 +2138,13 @@
 	};
 
 /***/ },
-/* 44 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(45);
+	var content = __webpack_require__(41);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2248,7 +2164,7 @@
 	}
 
 /***/ },
-/* 45 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2262,22 +2178,22 @@
 
 
 /***/ },
-/* 46 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(47);
+	__webpack_require__(43);
 
 /***/ },
-/* 47 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(48);
+	var content = __webpack_require__(44);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2297,7 +2213,7 @@
 	}
 
 /***/ },
-/* 48 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2311,28 +2227,28 @@
 
 
 /***/ },
-/* 49 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
+	__webpack_require__(46);
+
+	__webpack_require__(48);
+
+	__webpack_require__(43);
+
 	__webpack_require__(50);
 
-	__webpack_require__(52);
-
-	__webpack_require__(47);
-
-	__webpack_require__(54);
-
 /***/ },
-/* 50 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(51);
+	var content = __webpack_require__(47);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2352,7 +2268,7 @@
 	}
 
 /***/ },
-/* 51 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2366,13 +2282,13 @@
 
 
 /***/ },
-/* 52 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(53);
+	var content = __webpack_require__(49);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2392,7 +2308,7 @@
 	}
 
 /***/ },
-/* 53 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2406,13 +2322,13 @@
 
 
 /***/ },
-/* 54 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(55);
+	var content = __webpack_require__(51);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2432,7 +2348,7 @@
 	}
 
 /***/ },
-/* 55 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2446,33 +2362,33 @@
 
 
 /***/ },
-/* 56 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(52);
+	__webpack_require__(48);
 
 /***/ },
-/* 57 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(58);
+	__webpack_require__(54);
 
-	__webpack_require__(60);
+	__webpack_require__(56);
 
 /***/ },
-/* 58 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(59);
+	var content = __webpack_require__(55);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2492,7 +2408,7 @@
 	}
 
 /***/ },
-/* 59 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2506,13 +2422,13 @@
 
 
 /***/ },
-/* 60 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(61);
+	var content = __webpack_require__(57);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2532,7 +2448,7 @@
 	}
 
 /***/ },
-/* 61 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2546,26 +2462,26 @@
 
 
 /***/ },
-/* 62 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(52);
+	__webpack_require__(48);
 
-	__webpack_require__(54);
+	__webpack_require__(50);
 
-	__webpack_require__(63);
+	__webpack_require__(59);
 
 /***/ },
-/* 63 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(64);
+	var content = __webpack_require__(60);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2585,7 +2501,7 @@
 	}
 
 /***/ },
-/* 64 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2599,33 +2515,33 @@
 
 
 /***/ },
-/* 65 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(60);
+	__webpack_require__(56);
 
 /***/ },
-/* 66 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(67);
+	__webpack_require__(63);
 
-	__webpack_require__(52);
+	__webpack_require__(48);
 
 /***/ },
-/* 67 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(68);
+	var content = __webpack_require__(64);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2645,7 +2561,7 @@
 	}
 
 /***/ },
-/* 68 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2659,22 +2575,22 @@
 
 
 /***/ },
-/* 69 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(70);
+	__webpack_require__(66);
 
 /***/ },
-/* 70 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(71);
+	var content = __webpack_require__(67);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2694,7 +2610,7 @@
 	}
 
 /***/ },
-/* 71 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
