@@ -1,4 +1,5 @@
 import template from './introduction.html'
+import pkg from 'package.json'
 
 export default {
   route: {
@@ -9,7 +10,7 @@ export default {
   template: template,
 	data() {
 		return {
-			pkg: this.$parent.pkg,
+			pkg: pkg,
 		}
 	},
 }

@@ -61,8 +61,6 @@
 
 	var _srcComponentsDocs2 = _interopRequireDefault(_srcComponentsDocs);
 
-	var _gritcodeComponentsSrcComponentsOffcanvasDrawer = __webpack_require__(17);
-
 	// import demo pages compatibile with docs component
 
 	var _srcDocs = __webpack_require__(21);
@@ -72,12 +70,6 @@
 	// import utils
 
 	var _utils = __webpack_require__(14);
-
-	// import package.json meta data
-
-	var _packageJson = __webpack_require__(16);
-
-	var _packageJson2 = _interopRequireDefault(_packageJson);
 
 	// get list of the route objects
 	var routes = (0, _utils.getRoutes)(_srcDocs2['default']);
@@ -92,13 +84,10 @@
 		el: '#docs',
 		data: {
 			routes: routes,
-			pageTitle: 'Vuestrap Docs',
-			pkg: _packageJson2['default']
+			pageTitle: 'Vuestrap Docs'
 		},
 		components: {
-			docsPages: _srcComponentsDocs2['default'],
-			vsOffcanvasDrawer: _gritcodeComponentsSrcComponentsOffcanvasDrawer.offcanvasDrawer,
-			vsOffcanvasWrapper: _gritcodeComponentsSrcComponentsOffcanvasDrawer.offcanvasWrapper
+			docsPages: _srcComponentsDocs2['default']
 		}
 	});
 
@@ -496,6 +485,8 @@
 
 	var _packageJson2 = _interopRequireDefault(_packageJson);
 
+	var _gritcodeComponentsSrcComponentsOffcanvasDrawer = __webpack_require__(17);
+
 	// export component object
 	exports['default'] = {
 	    template: _docsHtml2['default'],
@@ -517,7 +508,9 @@
 	        }
 	    },
 	    components: {
-	        docsSearch: _search2['default']
+	        docsSearch: _search2['default'],
+	        vsOffcanvasDrawer: _gritcodeComponentsSrcComponentsOffcanvasDrawer.offcanvasDrawer,
+	        vsOffcanvasWrapper: _gritcodeComponentsSrcComponentsOffcanvasDrawer.offcanvasWrapper
 	    },
 	    methods: {
 	        changeRoute: function changeRoute(route) {
@@ -582,7 +575,7 @@
 
 
 	// module
-	exports.push([module.id, "html, body {\n  height: 100%; }\n\nhtml {\n  font-size: 16px; }\n  @media (max-width: 480px) {\n    html {\n      font-size: 14px; } }\n\nbody {\n  margin: auto;\n  padding: 0;\n  overflow-x: hidden; }\n\nh1, h2, h3 {\n  font-family: 'Source Sans Pro', sans-serif;\n  color: #563d7c; }\n\nh2 {\n  padding-bottom: 0.3rem;\n  border-bottom: 1px solid #42b983; }\n\nh3 {\n  font-size: 1.3rem !important; }\n\n#docs-pages {\n  overflow-x: hidden; }\n  #docs-pages > .navbar {\n    padding: 0.2em 0 !important;\n    line-height: 3em; }\n    #docs-pages > .navbar .navbar-brand {\n      padding: 0 !important; }\n      #docs-pages > .navbar .navbar-brand img {\n        height: 2.5em; }\n  #docs-pages > .container {\n    padding-top: 5em; }\n\n.offcanvas-drawer .close {\n  padding-top: 0.35em; }\n\n[v-cloak] {\n  display: none; }\n\n.list-group-item.active {\n  color: #42b983 !important;\n  border-color: #42b983 !important;\n  background-color: transparent !important; }\n\n/* offcanvas menu */\n.navbar a.list-group-item {\n  width: 100%;\n  color: #C5C5C5;\n  text-align: inherit;\n  background-color: rgba(255, 255, 255, 0);\n  border: 1px solid rgba(221, 221, 221, 0.04);\n  border-right: 0;\n  border-left: 0; }\n", ""]);
+	exports.push([module.id, "html, body {\n  height: 100%; }\n\nhtml {\n  font-size: 16px; }\n  @media (max-width: 480px) {\n    html {\n      font-size: 14px; } }\n\nbody {\n  margin: auto;\n  padding: 0;\n  overflow-x: hidden; }\n\nh1, h2, h3 {\n  font-family: 'Source Sans Pro', sans-serif;\n  color: #563d7c; }\n\nh2 {\n  padding-bottom: 0.3rem;\n  border-bottom: 1px solid #42b983; }\n\nh3 {\n  font-size: 1.3rem !important; }\n\n#main > .navbar {\n  padding: 0.2em 0 !important;\n  line-height: 3em; }\n  #main > .navbar .navbar-brand {\n    padding: 0 !important; }\n    #main > .navbar .navbar-brand img {\n      height: 2.5em; }\n\n#main > .container {\n  padding-top: 5em; }\n\n.offcanvas-drawer .close {\n  padding-top: 0.35em; }\n\n[v-cloak] {\n  display: none; }\n\n.list-group-item.active {\n  color: #42b983 !important;\n  border-color: #42b983 !important;\n  background-color: transparent !important; }\n\n/* offcanvas menu */\n.navbar a.list-group-item {\n  width: 100%;\n  color: #C5C5C5;\n  text-align: inherit;\n  background-color: rgba(255, 255, 255, 0);\n  border: 1px solid rgba(221, 221, 221, 0.04);\n  border-right: 0;\n  border-left: 0; }\n", ""]);
 
 	// exports
 
@@ -591,7 +584,7 @@
 /* 9 */
 /***/ function(module, exports) {
 
-	module.exports = "<!-- header -->\r\n<nav class=\"navbar navbar-fixed-top navbar-light bg-faded\">\r\n  <div class=\"container\">\r\n      <a class=\"navbar-brand text-center\" href=\"#/\">\r\n\t\t\t\t<img v-bind:src=\"'assets/vuestrap-logo.svg'\" alt=\"Vuestrap logo\">\r\n\t\t\t</a>\r\n\t\t\t<a class=\"navbar-brand text-center hidden-sm-down\" href=\"#/\">\r\n\t\t\t\tDocumentation\r\n\t\t\t</a>\r\n\t\t\t<ul class=\"nav navbar-nav pull-right\">\r\n\t\t\t\t<li class=\"nav-item hidden-sm-down\">\r\n\t\t\t\t\t<a href=\"#/\" class=\"btn\">Introduction</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item hidden-sm-down\">\r\n\t\t\t\t\t<a href=\"{{pkg.homepage}}\" class=\"btn btn-success\" target=\"_blank\">&#9733; Github</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item hidden-md-up\">\r\n\t\t\t\t\t<a href=\"#\" class=\"btn btn-success\" target=\"_blank\" v-on:click.stop.prevent=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">&#9776;</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n  </div><!-- /.container -->\r\n</nav><!-- /.navbar -->\r\n\r\n<!-- content -->\r\n<div class=\"container\">\r\n\t<div class=\"row row-offcanvas row-offcanvas-right\">\r\n\t\t<div class=\"col-xs-12 col-md-9\">\r\n\t\t\t<component :is=\"currentView\"></component>\r\n    </div><!-- /col-xs-12 -->\r\n\r\n\t\t<!-- sidebar -->\r\n\t\t<div class=\"col-xs-12 col-md-3 sidebar-offcanvas hidden-sm-down\" id=\"sidebar\">\r\n\t\t\t<docs-search :list=\"routes\" :current-view=\"currentView\"></docs-search>\r\n\t\t</div><!--/sidebar-->\r\n\r\n\t</div><!--/row-->\r\n</div><!--/container-->";
+	module.exports = "<!-- offcanvas wrapper -->\r\n<vs-offcanvas-wrapper id=\"main\" animation=\"ease\" align=\"right\">\r\n\r\n\t<vs-offcanvas-drawer>\r\n\t\t<!-- header mobile - drawer with navbar -->\r\n\t\t<div class=\"navbar navbar-collapse navbar-dark navbar-primary bg-inverse navbar-static-top navbar-full navbar-offcanvas-drawer\">\r\n\t\t\t<a href=\"{{pkg.homepage}}\" class=\"btn btn-success pull-left\" target=\"_blank\" v-on:click=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">\r\n\t    \t&#9733; Github\r\n\t    </a>\r\n\t    <!-- close button -->\r\n\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\" v-on:click=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">\r\n        <span aria-hidden=\"true\">×</span>\r\n        <span class=\"sr-only\">Close</span>\r\n\t    </button>\r\n\t    <div class=\"m-b clearfix\"></div>\r\n\t    <div class=\"list-group list-group-flush\">\r\n\t\t\t  <a href=\"#{{item.url}}\" \r\n\t\t\t    v-bind:class=\"{\r\n\t\t\t      'list-group-item': true, \r\n\t\t\t    }\" \r\n\t\t\t    v-for=\"item in routes\"\r\n\t\t\t    v-on:click=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">\r\n\t\t\t    {{item.title}}\r\n\t\t\t  </a>\r\n\t\t\t</div>\r\n\t  </div>\r\n\t</vs-offcanvas-drawer>\r\n\r\n\t<!-- header desktop -->\r\n\t<nav class=\"navbar navbar-fixed-top navbar-light bg-faded\">\r\n\t  <div class=\"container\">\r\n\t      <a class=\"navbar-brand text-center\" href=\"#/\">\r\n\t\t\t\t\t<img v-bind:src=\"'assets/vuestrap-logo.svg'\" alt=\"Vuestrap logo\">\r\n\t\t\t\t</a>\r\n\t\t\t\t<a class=\"navbar-brand text-center hidden-sm-down\" href=\"#/\">\r\n\t\t\t\t\tDocumentation\r\n\t\t\t\t</a>\r\n\t\t\t\t<ul class=\"nav navbar-nav pull-right\">\r\n\t\t\t\t\t<li class=\"nav-item hidden-sm-down\">\r\n\t\t\t\t\t\t<a href=\"#/\" class=\"btn\">Introduction</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li class=\"nav-item hidden-sm-down\">\r\n\t\t\t\t\t\t<a href=\"{{pkg.homepage}}\" class=\"btn btn-success\" target=\"_blank\">&#9733; Github</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li class=\"nav-item hidden-md-up\">\r\n\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-success\" target=\"_blank\" v-on:click.stop.prevent=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">&#9776;</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t</ul>\r\n\t  </div><!-- /.container -->\r\n\t</nav><!-- /.navbar -->\r\n\r\n\t<!-- content -->\r\n\t<div class=\"container\">\r\n\t\t<div class=\"row row-offcanvas row-offcanvas-right\">\r\n\t\t\t<div class=\"col-xs-12 col-md-9\">\r\n\t\t\t\t<component :is=\"currentView\"></component>\r\n\t    </div><!-- /col-xs-12 -->\r\n\r\n\t\t\t<!-- sidebar -->\r\n\t\t\t<div class=\"col-xs-12 col-md-3 sidebar-offcanvas hidden-sm-down\" id=\"sidebar\">\r\n\t\t\t\t<docs-search :list=\"routes\" :current-view=\"currentView\"></docs-search>\r\n\t\t\t</div><!--/sidebar-->\r\n\r\n\t\t</div><!--/row-->\r\n\t</div><!--/container-->\r\n\r\n</vs-offcanvas-wrapper>";
 
 /***/ },
 /* 10 */
@@ -1494,7 +1487,7 @@
 
 	module.exports = {
 		"name": "vuestrap-docs",
-		"version": "0.3.2",
+		"version": "0.4.0",
 		"description": "Vuestrap Docs Components are useed in docs pages to showcase web components.",
 		"library": "vuestrapDocs",
 		"repository": {
@@ -1737,6 +1730,10 @@
 
 	var _introductionHtml2 = _interopRequireDefault(_introductionHtml);
 
+	var _packageJson = __webpack_require__(16);
+
+	var _packageJson2 = _interopRequireDefault(_packageJson);
+
 	exports['default'] = {
 		route: {
 			url: '/',
@@ -1746,7 +1743,7 @@
 		template: _introductionHtml2['default'],
 		data: function data() {
 			return {
-				pkg: this.$parent.pkg
+				pkg: _packageJson2['default']
 			};
 		}
 	};

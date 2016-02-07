@@ -10,6 +10,7 @@ import {router} from '../../utils'
 
 // import package.json meta data
 import pkg from 'package.json'
+import {offcanvasWrapper as vsOffcanvasWrapper, offcanvasDrawer as vsOffcanvasDrawer} from 'gritcode-components/src/components/offcanvas-drawer'
 
 
 // export component object
@@ -34,6 +35,8 @@ export default {
     },
     components: {
         docsSearch,
+        vsOffcanvasDrawer,
+        vsOffcanvasWrapper,
     },
     methods: {
         changeRoute(route) {
