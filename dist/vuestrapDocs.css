@@ -34,7 +34,9 @@
     max-width: 150px;
     color: #563d7c; }
   .vuestrap-docs-demo .options > table td:nth-child(5) {
-    width: 50%; }
+    width: 50%;
+    max-width: 50%;
+    min-width: 200px; }
   .vuestrap-docs-demo [slot="controls"] {
     background-color: #f7f7f9;
     padding: 1rem; }
@@ -101,15 +103,14 @@ h3 {
   #docs-pages > .container {
     padding-top: 5em; }
 
-.offcanvas-drawer .close {
-  padding-top: 0.35em; }
-
 .list-group-item.active {
   color: #42b983 !important;
   border-color: #42b983 !important;
   background-color: transparent !important; }
-
 /* offcanvas menu */
+.offcanvas-drawer .close {
+  padding-top: 0.35em; }
+
 .navbar a.list-group-item {
   width: 100%;
   color: #C5C5C5;

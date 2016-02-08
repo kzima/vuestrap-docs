@@ -51,7 +51,9 @@ $demo-kzima-gray: #f7f7f9;
 				color: $demo-kzima-primary;
 			}
 			td:nth-child(5) {
-				width: 50%;
+		    width: 50%;
+				max-width: 50%;
+				min-width: 200px;
 			}
 		}
 	}

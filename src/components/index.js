@@ -1,14 +1,16 @@
 /**
  * IMPORT EACH COMPONENT
  */
-import demo from 'src/components/demo'
-import search from 'src/components/search'
-import docs from 'src/components/docs'
+import demo from './demo'
+import search from './search'
+import docsPages from './docs-pages'
+import docsDrawer from './docs-drawer'
 
 const vuestrapDocs = {
   'vsDemo': demo,
   'vsSearch': search,
-  'vsDocs': docs,
+  'vsDocsPages': docsPages,
+  'vsDocsDrawer': docsDrawer,
 }
 
 export default vuestrapDocs

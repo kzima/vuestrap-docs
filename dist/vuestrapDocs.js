@@ -65,22 +65,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _srcComponentsDemo = __webpack_require__(1);
+	var _demo = __webpack_require__(1);
 	
-	var _srcComponentsDemo2 = _interopRequireDefault(_srcComponentsDemo);
+	var _demo2 = _interopRequireDefault(_demo);
 	
-	var _srcComponentsSearch = __webpack_require__(7);
+	var _search = __webpack_require__(7);
 	
-	var _srcComponentsSearch2 = _interopRequireDefault(_srcComponentsSearch);
+	var _search2 = _interopRequireDefault(_search);
 	
-	var _srcComponentsDocs = __webpack_require__(11);
+	var _docsPages = __webpack_require__(11);
 	
-	var _srcComponentsDocs2 = _interopRequireDefault(_srcComponentsDocs);
+	var _docsPages2 = _interopRequireDefault(_docsPages);
+	
+	var _docsDrawer = __webpack_require__(17);
+	
+	var _docsDrawer2 = _interopRequireDefault(_docsDrawer);
 	
 	var vuestrapDocs = {
-	  demo: _srcComponentsDemo2['default'],
-	  search: _srcComponentsSearch2['default'],
-	  docs: _srcComponentsDocs2['default']
+	  demo: _demo2['default'],
+	  search: _search2['default'],
+	  docsPages: _docsPages2['default'],
+	  docsDrawer: _docsDrawer2['default']
 	};
 	
 	exports['default'] = vuestrapDocs;
@@ -223,9 +228,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	__webpack_require__(12);
 	
-	var _docsHtml = __webpack_require__(14);
+	var _docsPagesHtml = __webpack_require__(14);
 	
-	var _docsHtml2 = _interopRequireDefault(_docsHtml);
+	var _docsPagesHtml2 = _interopRequireDefault(_docsPagesHtml);
 	
 	// import external dependencies
 	
@@ -237,20 +242,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _utils = __webpack_require__(15);
 	
-	// import package.json meta data
-	
-	var _packageJson = __webpack_require__(17);
-	
-	var _packageJson2 = _interopRequireDefault(_packageJson);
-	
 	// export component object
 	exports['default'] = {
-	    template: _docsHtml2['default'],
+	    template: _docsPagesHtml2['default'],
 	    replace: true,
 	    data: function data() {
 	        return {
-	            currentView: '',
-	            pkg: _packageJson2['default']
+	            currentView: ''
 	        };
 	    },
 	    props: {
@@ -260,6 +258,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        },
 	        pageTitle: {
 	            type: String,
+	            required: true
+	        },
+	        pkg: {
+	            type: Object,
 	            required: true
 	        }
 	    },
@@ -1102,68 +1104,66 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// import dependencies
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	__webpack_require__(18);
+	
+	var _docsDrawerHtml = __webpack_require__(20);
+	
+	var _docsDrawerHtml2 = _interopRequireDefault(_docsDrawerHtml);
+	
+	// import external dependencies
+	
+	var _search = __webpack_require__(7);
+	
+	var _search2 = _interopRequireDefault(_search);
+	
+	// export component object
+	exports['default'] = {
+	    template: _docsDrawerHtml2['default'],
+	    replace: true,
+	    data: function data() {
+	        return {
+	            currentView: ''
+	        };
+	    },
+	    props: {
+	        routes: {
+	            type: Array,
+	            required: true
+	        },
+	        pkg: {
+	            type: Object,
+	            required: true
+	        }
+	    },
+	    components: {
+	        docsSearch: _search2['default']
+	    }
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 18 */
 /***/ function(module, exports) {
 
-	module.exports = {
-		"name": "vuestrap-docs",
-		"version": "0.5.0",
-		"description": "Vuestrap Docs Components are useed in docs pages to showcase web components.",
-		"library": "vuestrapDocs",
-		"repository": {
-			"type": "git",
-			"url": "git+https://github.com/kzima/vuestrap-docs.git"
-		},
-		"scripts": {
-			"build": "npm run docs && npm run dev && npm run dev-bundle && npm run dist && npm run dist-bundle",
-			"dist": "webpack --colors --progress --config webpack.build.js --env production",
-			"dist-bundle": "webpack --colors --progress --config webpack.build.js --env production --bundle true",
-			"dev": "webpack --colors --progress --config webpack.build.js --env development",
-			"dev-bundle": "webpack --colors --progress --config webpack.build.js --env development --bundle true",
-			"docs": "webpack --colors --progress --config  webpack.build.js --env docs",
-			"serve-docs": "webpack-dev-server --port 8083 --inline --hot --quiet --config webpack.build.js --env docs"
-		},
-		"keywords": [
-			"Bootstrap4",
-			"Web",
-			"Components",
-			"Polymer"
-		],
-		"author": {
-			"name": "Kris Zima",
-			"email": "kris@mosquito.ie",
-			"url": "https://github.com/kzima"
-		},
-		"license": "MIT",
-		"bugs": {
-			"url": "https://github.com/kzima/vuestrap-docs/issues"
-		},
-		"dependencies": {
-			"vue": "^1.0.16"
-		},
-		"devDependencies": {
-			"autoprefixer-loader": "^3.1.0",
-			"babel-core": "^5.8.33",
-			"babel-eslint": "^4.1.3",
-			"babel-loader": "^5.3.3",
-			"css-loader": "^0.21.0",
-			"director": "^1.2.8",
-			"event-stream": "^3.3.2",
-			"extract-text-webpack-plugin": "^0.8.2",
-			"gritcode-components": "^0.3.5",
-			"highlightjs-loader": "^0.2.3",
-			"html-loader": "^0.3.0",
-			"json-loader": "^0.5.4",
-			"node-sass": "^3.4.1",
-			"optimist": "^0.6.1",
-			"sass-loader": "^3.1.1",
-			"style-loader": "^0.13.0",
-			"vuestrap": "^1.0.1",
-			"vuestrap-theme-loader": "^0.1.2",
-			"webpack": "^1.12.9",
-			"webpack-dev-server": "^1.12.1"
-		},
-		"homepage": "https://github.com/kzima/vuestrap-docs#readme"
-	};
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 19 */,
+/* 20 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"navbar navbar-collapse navbar-dark navbar-primary bg-inverse navbar-static-top navbar-full navbar-offcanvas-drawer\">\r\n\t<a href=\"{{pkg.homepage}}\" class=\"btn btn-success pull-left\" target=\"_blank\" v-on:click=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">\r\n  \t&#9733; Github\r\n  </a>\r\n  <!-- close button -->\r\n\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\" v-on:click=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">\r\n    <span aria-hidden=\"true\">×</span>\r\n    <span class=\"sr-only\">Close</span>\r\n  </button>\r\n  <div class=\"m-b clearfix\"></div>\r\n  <div class=\"list-group list-group-flush\">\r\n\t  <a href=\"#{{item.url}}\" \r\n\t    v-bind:class=\"{\r\n\t      'list-group-item': true, \r\n\t    }\" \r\n\t    v-for=\"item in routes\"\r\n\t    v-on:click=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">\r\n\t    {{item.title}}\r\n\t  </a>\r\n\t</div>\r\n</div>";
 
 /***/ }
 /******/ ])

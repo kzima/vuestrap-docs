@@ -65,22 +65,27 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _srcComponentsDemo = __webpack_require__(1);
+	var _demo = __webpack_require__(1);
 
-	var _srcComponentsDemo2 = _interopRequireDefault(_srcComponentsDemo);
+	var _demo2 = _interopRequireDefault(_demo);
 
-	var _srcComponentsSearch = __webpack_require__(7);
+	var _search = __webpack_require__(7);
 
-	var _srcComponentsSearch2 = _interopRequireDefault(_srcComponentsSearch);
+	var _search2 = _interopRequireDefault(_search);
 
-	var _srcComponentsDocs = __webpack_require__(11);
+	var _docsPages = __webpack_require__(11);
 
-	var _srcComponentsDocs2 = _interopRequireDefault(_srcComponentsDocs);
+	var _docsPages2 = _interopRequireDefault(_docsPages);
+
+	var _docsDrawer = __webpack_require__(17);
+
+	var _docsDrawer2 = _interopRequireDefault(_docsDrawer);
 
 	var vuestrapDocs = {
-	  demo: _srcComponentsDemo2['default'],
-	  search: _srcComponentsSearch2['default'],
-	  docs: _srcComponentsDocs2['default']
+	  demo: _demo2['default'],
+	  search: _search2['default'],
+	  docsPages: _docsPages2['default'],
+	  docsDrawer: _docsDrawer2['default']
 	};
 
 	exports['default'] = vuestrapDocs;
@@ -159,7 +164,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".vuestrap-docs-demo {\n  margin-bottom: 4rem; }\n  .vuestrap-docs-demo .code-demo {\n    position: relative;\n    margin-left: 0;\n    margin-right: 0;\n    margin-bottom: 2rem;\n    padding: 1rem;\n    padding-bottom: 0;\n    border: solid #f7f7f9;\n    border-width: .2rem; }\n    .vuestrap-docs-demo .code-demo > .inverse {\n      background-color: #898989;\n      padding: 0.2em; }\n  .vuestrap-docs-demo .highlight {\n    padding: 1rem;\n    margin: 1rem -1rem;\n    background-color: #f7f7f9;\n    margin-bottom: 0; }\n    .vuestrap-docs-demo .highlight pre {\n      margin-bottom: 0; }\n  .vuestrap-docs-demo .options > table code {\n    display: inline-block;\n    margin-right: 2px;\n    margin-bottom: 2px; }\n  .vuestrap-docs-demo .options > table td {\n    width: 10%; }\n    .vuestrap-docs-demo .options > table td p {\n      margin: 0; }\n    .vuestrap-docs-demo .options > table td p + p {\n      margin-top: 10px; }\n  .vuestrap-docs-demo .options > table td:nth-child(1) {\n    min-width: 50px;\n    max-width: 150px;\n    color: #563d7c; }\n  .vuestrap-docs-demo .options > table td:nth-child(5) {\n    width: 50%; }\n  .vuestrap-docs-demo [slot=\"controls\"] {\n    background-color: #f7f7f9;\n    padding: 1rem; }\n  .vuestrap-docs-demo [slot=\"controls\"] label {\n    margin-bottom: 0;\n    margin-right: 0.5rem; }\n  .vuestrap-docs-demo label.btn {\n    margin-bottom: 0; }\n  .vuestrap-docs-demo .label {\n    margin-right: 0.5rem; }\n  .vuestrap-docs-demo > .label {\n    background-color: #563d7c; }\n  .vuestrap-docs-demo > .alert {\n    border-right-color: #e6e6ec;\n    border-top-color: #e6e6ec;\n    border-bottom-color: #e6e6ec;\n    border-left-width: 5px;\n    background-color: transparent; }\n    .vuestrap-docs-demo > .alert .icons {\n      vertical-align: text-bottom; }\n  .vuestrap-docs-demo .tab-content .tab-pane {\n    padding: 1em 0; }\n", ""]);
+	exports.push([module.id, ".vuestrap-docs-demo {\n  margin-bottom: 4rem; }\n  .vuestrap-docs-demo .code-demo {\n    position: relative;\n    margin-left: 0;\n    margin-right: 0;\n    margin-bottom: 2rem;\n    padding: 1rem;\n    padding-bottom: 0;\n    border: solid #f7f7f9;\n    border-width: .2rem; }\n    .vuestrap-docs-demo .code-demo > .inverse {\n      background-color: #898989;\n      padding: 0.2em; }\n  .vuestrap-docs-demo .highlight {\n    padding: 1rem;\n    margin: 1rem -1rem;\n    background-color: #f7f7f9;\n    margin-bottom: 0; }\n    .vuestrap-docs-demo .highlight pre {\n      margin-bottom: 0; }\n  .vuestrap-docs-demo .options > table code {\n    display: inline-block;\n    margin-right: 2px;\n    margin-bottom: 2px; }\n  .vuestrap-docs-demo .options > table td {\n    width: 10%; }\n    .vuestrap-docs-demo .options > table td p {\n      margin: 0; }\n    .vuestrap-docs-demo .options > table td p + p {\n      margin-top: 10px; }\n  .vuestrap-docs-demo .options > table td:nth-child(1) {\n    min-width: 50px;\n    max-width: 150px;\n    color: #563d7c; }\n  .vuestrap-docs-demo .options > table td:nth-child(5) {\n    width: 50%;\n    max-width: 50%;\n    min-width: 200px; }\n  .vuestrap-docs-demo [slot=\"controls\"] {\n    background-color: #f7f7f9;\n    padding: 1rem; }\n  .vuestrap-docs-demo [slot=\"controls\"] label {\n    margin-bottom: 0;\n    margin-right: 0.5rem; }\n  .vuestrap-docs-demo label.btn {\n    margin-bottom: 0; }\n  .vuestrap-docs-demo .label {\n    margin-right: 0.5rem; }\n  .vuestrap-docs-demo > .label {\n    background-color: #563d7c; }\n  .vuestrap-docs-demo > .alert {\n    border-right-color: #e6e6ec;\n    border-top-color: #e6e6ec;\n    border-bottom-color: #e6e6ec;\n    border-left-width: 5px;\n    background-color: transparent; }\n    .vuestrap-docs-demo > .alert .icons {\n      vertical-align: text-bottom; }\n  .vuestrap-docs-demo .tab-content .tab-pane {\n    padding: 1em 0; }\n", ""]);
 
 	// exports
 
@@ -597,9 +602,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	__webpack_require__(12);
 
-	var _docsHtml = __webpack_require__(14);
+	var _docsPagesHtml = __webpack_require__(14);
 
-	var _docsHtml2 = _interopRequireDefault(_docsHtml);
+	var _docsPagesHtml2 = _interopRequireDefault(_docsPagesHtml);
 
 	// import external dependencies
 
@@ -611,20 +616,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _utils = __webpack_require__(15);
 
-	// import package.json meta data
-
-	var _packageJson = __webpack_require__(17);
-
-	var _packageJson2 = _interopRequireDefault(_packageJson);
-
 	// export component object
 	exports['default'] = {
-	    template: _docsHtml2['default'],
+	    template: _docsPagesHtml2['default'],
 	    replace: true,
 	    data: function data() {
 	        return {
-	            currentView: '',
-	            pkg: _packageJson2['default']
+	            currentView: ''
 	        };
 	    },
 	    props: {
@@ -634,6 +632,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        },
 	        pageTitle: {
 	            type: String,
+	            required: true
+	        },
+	        pkg: {
+	            type: Object,
 	            required: true
 	        }
 	    },
@@ -684,8 +686,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./docs.scss", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./docs.scss");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./docs-pages.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./docs-pages.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -703,7 +705,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "html, body {\n  height: 100%; }\n\nhtml {\n  font-size: 16px; }\n  @media (max-width: 480px) {\n    html {\n      font-size: 14px; } }\n\nbody {\n  margin: auto;\n  padding: 0;\n  overflow-x: hidden; }\n\nh1, h2, h3 {\n  font-family: 'Source Sans Pro', sans-serif;\n  color: #563d7c; }\n\nh2 {\n  padding-bottom: 0.3rem;\n  border-bottom: 1px solid #42b983; }\n\nh3 {\n  font-size: 1.3rem !important; }\n\n#docs-pages {\n  overflow-x: hidden; }\n  #docs-pages > .navbar {\n    padding: 0.2em 0 !important;\n    line-height: 3em; }\n    #docs-pages > .navbar .navbar-brand {\n      padding: 0 !important; }\n      #docs-pages > .navbar .navbar-brand img {\n        height: 2.5em; }\n  #docs-pages > .container {\n    padding-top: 5em; }\n\n.offcanvas-drawer .close {\n  padding-top: 0.35em; }\n\n.list-group-item.active {\n  color: #42b983 !important;\n  border-color: #42b983 !important;\n  background-color: transparent !important; }\n\n/* offcanvas menu */\n.navbar a.list-group-item {\n  width: 100%;\n  color: #C5C5C5;\n  text-align: inherit;\n  background-color: rgba(255, 255, 255, 0);\n  border: 1px solid rgba(221, 221, 221, 0.04);\n  border-right: 0;\n  border-left: 0; }\n", ""]);
+	exports.push([module.id, "html, body {\n  height: 100%; }\n\nhtml {\n  font-size: 16px; }\n  @media (max-width: 480px) {\n    html {\n      font-size: 14px; } }\n\nbody {\n  margin: auto;\n  padding: 0;\n  overflow-x: hidden; }\n\nh1, h2, h3 {\n  font-family: 'Source Sans Pro', sans-serif;\n  color: #563d7c; }\n\nh2 {\n  padding-bottom: 0.3rem;\n  border-bottom: 1px solid #42b983; }\n\nh3 {\n  font-size: 1.3rem !important; }\n\n#docs-pages {\n  overflow-x: hidden; }\n  #docs-pages > .navbar {\n    padding: 0.2em 0 !important;\n    line-height: 3em; }\n    #docs-pages > .navbar .navbar-brand {\n      padding: 0 !important; }\n      #docs-pages > .navbar .navbar-brand img {\n        height: 2.5em; }\n  #docs-pages > .container {\n    padding-top: 5em; }\n\n.list-group-item.active {\n  color: #42b983 !important;\n  border-color: #42b983 !important;\n  background-color: transparent !important; }\n", ""]);
 
 	// exports
 
@@ -1509,68 +1511,99 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// import dependencies
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	__webpack_require__(18);
+
+	var _docsDrawerHtml = __webpack_require__(20);
+
+	var _docsDrawerHtml2 = _interopRequireDefault(_docsDrawerHtml);
+
+	// import external dependencies
+
+	var _search = __webpack_require__(7);
+
+	var _search2 = _interopRequireDefault(_search);
+
+	// export component object
+	exports['default'] = {
+	    template: _docsDrawerHtml2['default'],
+	    replace: true,
+	    data: function data() {
+	        return {
+	            currentView: ''
+	        };
+	    },
+	    props: {
+	        routes: {
+	            type: Array,
+	            required: true
+	        },
+	        pkg: {
+	            type: Object,
+	            required: true
+	        }
+	    },
+	    components: {
+	        docsSearch: _search2['default']
+	    }
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(19);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./docs-drawer.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./docs-drawer.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "/* offcanvas menu */\n.offcanvas-drawer .close {\n  padding-top: 0.35em; }\n\n.navbar a.list-group-item {\n  width: 100%;\n  color: #C5C5C5;\n  text-align: inherit;\n  background-color: rgba(255, 255, 255, 0);\n  border: 1px solid rgba(221, 221, 221, 0.04);\n  border-right: 0;\n  border-left: 0; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 20 */
 /***/ function(module, exports) {
 
-	module.exports = {
-		"name": "vuestrap-docs",
-		"version": "0.5.0",
-		"description": "Vuestrap Docs Components are useed in docs pages to showcase web components.",
-		"library": "vuestrapDocs",
-		"repository": {
-			"type": "git",
-			"url": "git+https://github.com/kzima/vuestrap-docs.git"
-		},
-		"scripts": {
-			"build": "npm run docs && npm run dev && npm run dev-bundle && npm run dist && npm run dist-bundle",
-			"dist": "webpack --colors --progress --config webpack.build.js --env production",
-			"dist-bundle": "webpack --colors --progress --config webpack.build.js --env production --bundle true",
-			"dev": "webpack --colors --progress --config webpack.build.js --env development",
-			"dev-bundle": "webpack --colors --progress --config webpack.build.js --env development --bundle true",
-			"docs": "webpack --colors --progress --config  webpack.build.js --env docs",
-			"serve-docs": "webpack-dev-server --port 8083 --inline --hot --quiet --config webpack.build.js --env docs"
-		},
-		"keywords": [
-			"Bootstrap4",
-			"Web",
-			"Components",
-			"Polymer"
-		],
-		"author": {
-			"name": "Kris Zima",
-			"email": "kris@mosquito.ie",
-			"url": "https://github.com/kzima"
-		},
-		"license": "MIT",
-		"bugs": {
-			"url": "https://github.com/kzima/vuestrap-docs/issues"
-		},
-		"dependencies": {
-			"vue": "^1.0.16"
-		},
-		"devDependencies": {
-			"autoprefixer-loader": "^3.1.0",
-			"babel-core": "^5.8.33",
-			"babel-eslint": "^4.1.3",
-			"babel-loader": "^5.3.3",
-			"css-loader": "^0.21.0",
-			"director": "^1.2.8",
-			"event-stream": "^3.3.2",
-			"extract-text-webpack-plugin": "^0.8.2",
-			"gritcode-components": "^0.3.5",
-			"highlightjs-loader": "^0.2.3",
-			"html-loader": "^0.3.0",
-			"json-loader": "^0.5.4",
-			"node-sass": "^3.4.1",
-			"optimist": "^0.6.1",
-			"sass-loader": "^3.1.1",
-			"style-loader": "^0.13.0",
-			"vuestrap": "^1.0.1",
-			"vuestrap-theme-loader": "^0.1.2",
-			"webpack": "^1.12.9",
-			"webpack-dev-server": "^1.12.1"
-		},
-		"homepage": "https://github.com/kzima/vuestrap-docs#readme"
-	};
+	module.exports = "<div class=\"navbar navbar-collapse navbar-dark navbar-primary bg-inverse navbar-static-top navbar-full navbar-offcanvas-drawer\">\r\n\t<a href=\"{{pkg.homepage}}\" class=\"btn btn-success pull-left\" target=\"_blank\" v-on:click=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">\r\n  \t&#9733; Github\r\n  </a>\r\n  <!-- close button -->\r\n\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\" v-on:click=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">\r\n    <span aria-hidden=\"true\">×</span>\r\n    <span class=\"sr-only\">Close</span>\r\n  </button>\r\n  <div class=\"m-b clearfix\"></div>\r\n  <div class=\"list-group list-group-flush\">\r\n\t  <a href=\"#{{item.url}}\" \r\n\t    v-bind:class=\"{\r\n\t      'list-group-item': true, \r\n\t    }\" \r\n\t    v-for=\"item in routes\"\r\n\t    v-on:click=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">\r\n\t    {{item.title}}\r\n\t  </a>\r\n\t</div>\r\n</div>";
 
 /***/ }
 /******/ ])

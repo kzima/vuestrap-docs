@@ -1,13 +1,13 @@
 import snippet from './snippet.html'
-import template from './docs.html'
-import meta from './docs.json'
+import template from './docs-pages.html'
+import meta from './docs-pages.json'
 import docsDemo from 'src/components/demo'
 
 export default {
 	route: {
-		url: '/docs',
-		name: 'docs',
-		title: 'Docs'
+		url: '/docs-pages',
+		name: 'docs-pages',
+		title: 'Docs Pages'
 	},
 	template: template,
 	data() {

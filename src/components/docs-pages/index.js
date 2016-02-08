@@ -1,16 +1,12 @@
 // import dependencies
-import './docs.scss'
-import template from './docs.html'
+import './docs-pages.scss'
+import template from './docs-pages.html'
 
 // import external dependencies
 import docsSearch from '../search'
 
 // import utils
 import {router} from '../../utils'
-
-// import package.json meta data
-import pkg from 'package.json'
-
 
 // export component object
 export default {
@@ -19,7 +15,6 @@ export default {
     data() {
         return {
             currentView: '',
-            pkg: pkg,
         }
     },
     props: {
@@ -29,6 +24,10 @@ export default {
         },
         pageTitle: {
             type: String,
+            required: true
+        },
+        pkg: {
+            type: Object,
             required: true
         },
     },

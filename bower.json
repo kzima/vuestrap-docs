@@ -6,6 +6,8 @@
   ],
   "description": "Vuestrap Docs Components are useed in docs pages to showcase web components.",
   "main": [
+    "dist/vuestrap.css",
+    "dist/vuestrap.min.css",
     "dist/vuestrapdocs.js",
     "dist/vuestrapdocs.js.map",
     "dist/vuestrapdocs.min.js",
