@@ -46,7 +46,8 @@ $demo-kzima-gray: #f7f7f9;
 				}
 			}
 			td:nth-child(1) {
-				min-width: 150px;
+				min-width: 50px;
+				max-width: 150px;
 				color: $demo-kzima-primary;
 			}
 			td:nth-child(5) {

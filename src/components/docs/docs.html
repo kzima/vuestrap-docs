@@ -1,67 +1,37 @@
-<!-- offcanvas wrapper -->
-<vs-offcanvas-wrapper id="main" animation="ease" align="right">
+<!-- header -->
+<nav class="navbar navbar-fixed-top navbar-light bg-faded">
+  <div class="container">
+      <a class="navbar-brand text-center" href="#/">
+				<img v-bind:src="'assets/vuestrap-logo.svg'" alt="Vuestrap logo">
+			</a>
+			<a class="navbar-brand text-center hidden-sm-down" href="#/">
+				Documentation
+			</a>
+			<ul class="nav navbar-nav pull-right">
+				<li class="nav-item hidden-sm-down">
+					<a href="#/" class="btn">Introduction</a>
+				</li>
+				<li class="nav-item hidden-sm-down">
+					<a href="{{pkg.homepage}}" class="btn btn-success" target="_blank">&#9733; Github</a>
+				</li>
+				<li class="nav-item hidden-md-up">
+					<a href="#" class="btn btn-success" target="_blank" v-on:click.stop.prevent="$root.$broadcast('toggle::offcanvas-drawer', 'main')">&#9776;</a>
+				</li>
+			</ul>
+  </div><!-- /.container -->
+</nav><!-- /.navbar -->
 
-	<vs-offcanvas-drawer>
-		<!-- header mobile - drawer with navbar -->
-		<div class="navbar navbar-collapse navbar-dark navbar-primary bg-inverse navbar-static-top navbar-full navbar-offcanvas-drawer">
-			<a href="{{pkg.homepage}}" class="btn btn-success pull-left" target="_blank" v-on:click="$root.$broadcast('toggle::offcanvas-drawer', 'main')">
-	    	&#9733; Github
-	    </a>
-	    <!-- close button -->
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close" v-on:click="$root.$broadcast('toggle::offcanvas-drawer', 'main')">
-        <span aria-hidden="true">×</span>
-        <span class="sr-only">Close</span>
-	    </button>
-	    <div class="m-b clearfix"></div>
-	    <div class="list-group list-group-flush">
-			  <a href="#{{item.url}}" 
-			    v-bind:class="{
-			      'list-group-item': true, 
-			    }" 
-			    v-for="item in routes"
-			    v-on:click="$root.$broadcast('toggle::offcanvas-drawer', 'main')">
-			    {{item.title}}
-			  </a>
-			</div>
-	  </div>
-	</vs-offcanvas-drawer>
+<!-- content -->
+<div class="container">
+	<div class="row row-offcanvas row-offcanvas-right">
+		<div class="col-xs-12 col-md-9">
+			<component :is="currentView"></component>
+    </div><!-- /col-xs-12 -->
 
-	<!-- header desktop -->
-	<nav class="navbar navbar-fixed-top navbar-light bg-faded">
-	  <div class="container">
-	      <a class="navbar-brand text-center" href="#/">
-					<img v-bind:src="'assets/vuestrap-logo.svg'" alt="Vuestrap logo">
-				</a>
-				<a class="navbar-brand text-center hidden-sm-down" href="#/">
-					Documentation
-				</a>
-				<ul class="nav navbar-nav pull-right">
-					<li class="nav-item hidden-sm-down">
-						<a href="#/" class="btn">Introduction</a>
-					</li>
-					<li class="nav-item hidden-sm-down">
-						<a href="{{pkg.homepage}}" class="btn btn-success" target="_blank">&#9733; Github</a>
-					</li>
-					<li class="nav-item hidden-md-up">
-						<a href="#" class="btn btn-success" target="_blank" v-on:click.stop.prevent="$root.$broadcast('toggle::offcanvas-drawer', 'main')">&#9776;</a>
-					</li>
-				</ul>
-	  </div><!-- /.container -->
-	</nav><!-- /.navbar -->
+		<!-- sidebar -->
+		<div class="col-xs-12 col-md-3 sidebar-offcanvas hidden-sm-down" id="sidebar">
+			<docs-search :list="routes" :current-view="currentView"></docs-search>
+		</div><!--/sidebar-->
 
-	<!-- content -->
-	<div class="container">
-		<div class="row row-offcanvas row-offcanvas-right">
-			<div class="col-xs-12 col-md-9">
-				<component :is="currentView"></component>
-	    </div><!-- /col-xs-12 -->
-
-			<!-- sidebar -->
-			<div class="col-xs-12 col-md-3 sidebar-offcanvas hidden-sm-down" id="sidebar">
-				<docs-search :list="routes" :current-view="currentView"></docs-search>
-			</div><!--/sidebar-->
-
-		</div><!--/row-->
-	</div><!--/container-->
-
-</vs-offcanvas-wrapper>
+	</div><!--/row-->
+</div><!--/container-->

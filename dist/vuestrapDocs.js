@@ -243,8 +243,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _packageJson2 = _interopRequireDefault(_packageJson);
 	
-	var _gritcodeComponentsSrcComponentsOffcanvasDrawer = __webpack_require__(18);
-	
 	// export component object
 	exports['default'] = {
 	    template: _docsHtml2['default'],
@@ -266,9 +264,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	    },
 	    components: {
-	        docsSearch: _search2['default'],
-	        vsOffcanvasDrawer: _gritcodeComponentsSrcComponentsOffcanvasDrawer.offcanvasDrawer,
-	        vsOffcanvasWrapper: _gritcodeComponentsSrcComponentsOffcanvasDrawer.offcanvasWrapper
+	        docsSearch: _search2['default']
 	    },
 	    methods: {
 	        changeRoute: function changeRoute(route) {
@@ -309,7 +305,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 14 */
 /***/ function(module, exports) {
 
-	module.exports = "<!-- offcanvas wrapper -->\r\n<vs-offcanvas-wrapper id=\"main\" animation=\"ease\" align=\"right\">\r\n\r\n\t<vs-offcanvas-drawer>\r\n\t\t<!-- header mobile - drawer with navbar -->\r\n\t\t<div class=\"navbar navbar-collapse navbar-dark navbar-primary bg-inverse navbar-static-top navbar-full navbar-offcanvas-drawer\">\r\n\t\t\t<a href=\"{{pkg.homepage}}\" class=\"btn btn-success pull-left\" target=\"_blank\" v-on:click=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">\r\n\t    \t&#9733; Github\r\n\t    </a>\r\n\t    <!-- close button -->\r\n\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\" v-on:click=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">\r\n        <span aria-hidden=\"true\">×</span>\r\n        <span class=\"sr-only\">Close</span>\r\n\t    </button>\r\n\t    <div class=\"m-b clearfix\"></div>\r\n\t    <div class=\"list-group list-group-flush\">\r\n\t\t\t  <a href=\"#{{item.url}}\" \r\n\t\t\t    v-bind:class=\"{\r\n\t\t\t      'list-group-item': true, \r\n\t\t\t    }\" \r\n\t\t\t    v-for=\"item in routes\"\r\n\t\t\t    v-on:click=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">\r\n\t\t\t    {{item.title}}\r\n\t\t\t  </a>\r\n\t\t\t</div>\r\n\t  </div>\r\n\t</vs-offcanvas-drawer>\r\n\r\n\t<!-- header desktop -->\r\n\t<nav class=\"navbar navbar-fixed-top navbar-light bg-faded\">\r\n\t  <div class=\"container\">\r\n\t      <a class=\"navbar-brand text-center\" href=\"#/\">\r\n\t\t\t\t\t<img v-bind:src=\"'assets/vuestrap-logo.svg'\" alt=\"Vuestrap logo\">\r\n\t\t\t\t</a>\r\n\t\t\t\t<a class=\"navbar-brand text-center hidden-sm-down\" href=\"#/\">\r\n\t\t\t\t\tDocumentation\r\n\t\t\t\t</a>\r\n\t\t\t\t<ul class=\"nav navbar-nav pull-right\">\r\n\t\t\t\t\t<li class=\"nav-item hidden-sm-down\">\r\n\t\t\t\t\t\t<a href=\"#/\" class=\"btn\">Introduction</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li class=\"nav-item hidden-sm-down\">\r\n\t\t\t\t\t\t<a href=\"{{pkg.homepage}}\" class=\"btn btn-success\" target=\"_blank\">&#9733; Github</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li class=\"nav-item hidden-md-up\">\r\n\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-success\" target=\"_blank\" v-on:click.stop.prevent=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">&#9776;</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t</ul>\r\n\t  </div><!-- /.container -->\r\n\t</nav><!-- /.navbar -->\r\n\r\n\t<!-- content -->\r\n\t<div class=\"container\">\r\n\t\t<div class=\"row row-offcanvas row-offcanvas-right\">\r\n\t\t\t<div class=\"col-xs-12 col-md-9\">\r\n\t\t\t\t<component :is=\"currentView\"></component>\r\n\t    </div><!-- /col-xs-12 -->\r\n\r\n\t\t\t<!-- sidebar -->\r\n\t\t\t<div class=\"col-xs-12 col-md-3 sidebar-offcanvas hidden-sm-down\" id=\"sidebar\">\r\n\t\t\t\t<docs-search :list=\"routes\" :current-view=\"currentView\"></docs-search>\r\n\t\t\t</div><!--/sidebar-->\r\n\r\n\t\t</div><!--/row-->\r\n\t</div><!--/container-->\r\n\r\n</vs-offcanvas-wrapper>";
+	module.exports = "<!-- header -->\r\n<nav class=\"navbar navbar-fixed-top navbar-light bg-faded\">\r\n  <div class=\"container\">\r\n      <a class=\"navbar-brand text-center\" href=\"#/\">\r\n\t\t\t\t<img v-bind:src=\"'assets/vuestrap-logo.svg'\" alt=\"Vuestrap logo\">\r\n\t\t\t</a>\r\n\t\t\t<a class=\"navbar-brand text-center hidden-sm-down\" href=\"#/\">\r\n\t\t\t\tDocumentation\r\n\t\t\t</a>\r\n\t\t\t<ul class=\"nav navbar-nav pull-right\">\r\n\t\t\t\t<li class=\"nav-item hidden-sm-down\">\r\n\t\t\t\t\t<a href=\"#/\" class=\"btn\">Introduction</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item hidden-sm-down\">\r\n\t\t\t\t\t<a href=\"{{pkg.homepage}}\" class=\"btn btn-success\" target=\"_blank\">&#9733; Github</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item hidden-md-up\">\r\n\t\t\t\t\t<a href=\"#\" class=\"btn btn-success\" target=\"_blank\" v-on:click.stop.prevent=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">&#9776;</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n  </div><!-- /.container -->\r\n</nav><!-- /.navbar -->\r\n\r\n<!-- content -->\r\n<div class=\"container\">\r\n\t<div class=\"row row-offcanvas row-offcanvas-right\">\r\n\t\t<div class=\"col-xs-12 col-md-9\">\r\n\t\t\t<component :is=\"currentView\"></component>\r\n    </div><!-- /col-xs-12 -->\r\n\r\n\t\t<!-- sidebar -->\r\n\t\t<div class=\"col-xs-12 col-md-3 sidebar-offcanvas hidden-sm-down\" id=\"sidebar\">\r\n\t\t\t<docs-search :list=\"routes\" :current-view=\"currentView\"></docs-search>\r\n\t\t</div><!--/sidebar-->\r\n\r\n\t</div><!--/row-->\r\n</div><!--/container-->";
 
 /***/ },
 /* 15 */
@@ -1110,7 +1106,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "vuestrap-docs",
-		"version": "0.4.0",
+		"version": "0.5.0",
 		"description": "Vuestrap Docs Components are useed in docs pages to showcase web components.",
 		"library": "vuestrapDocs",
 		"repository": {
@@ -1168,89 +1164,6 @@ return /******/ (function(modules) { // webpackBootstrap
 		},
 		"homepage": "https://github.com/kzima/vuestrap-docs#readme"
 	};
-
-/***/ },
-/* 18 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import styling
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	__webpack_require__(19);
-	
-	// import template
-	
-	var _offcanvasDrawerHtml = __webpack_require__(21);
-	
-	var _offcanvasDrawerHtml2 = _interopRequireDefault(_offcanvasDrawerHtml);
-	
-	var offcanvasWrapper = {
-	  template: _offcanvasDrawerHtml2['default'],
-	  replace: true,
-	  data: function data() {
-	    return {
-	      show: false
-	    };
-	  },
-	  props: {
-	    id: {
-	      type: String,
-	      required: true,
-	      'default': ''
-	    },
-	    animation: {
-	      type: String,
-	      'default': 'ease'
-	    },
-	    align: {
-	      type: String,
-	      'default': 'left'
-	    }
-	  },
-	  methods: {
-	    toggle: function toggle() {
-	      this.show = !this.show;
-	      if (this.show) {
-	        this.$dispatch('shown::offcanvas-drawer', this.id);
-	      } else {
-	        this.$dispatch('hiden::offcanvas-drawer', this.id);
-	      }
-	    }
-	  },
-	  events: {
-	    'toggle::offcanvas-drawer': function toggleOffcanvasDrawer(id) {
-	      if (id === this.id) {
-	        this.toggle();
-	      }
-	    }
-	  }
-	};
-	
-	exports.offcanvasWrapper = offcanvasWrapper;
-	var offcanvasDrawer = {
-	  template: '<div class="offcanvas-drawer"><slot></slot></div>',
-	  replace: true
-	};
-	exports.offcanvasDrawer = offcanvasDrawer;
-
-/***/ },
-/* 19 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 20 */,
-/* 21 */
-/***/ function(module, exports) {
-
-	module.exports = "<div id=\"{{id}}\" class=\"gritcode-offcanvas-drawer {{animation}} {{align}} {{show ? 'active' : ''}}\">\r\n  <slot></slot>\r\n</div>\r\n";
 
 /***/ }
 /******/ ])

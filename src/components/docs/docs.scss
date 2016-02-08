@@ -23,7 +23,8 @@ h2 {
 h3 {
     font-size: 1.3rem !important;
 }
-#main {
+#docs-pages {
+    overflow-x: hidden;
     > .navbar {
         padding: 0.2em 0 !important;
         line-height: 3em;
@@ -40,9 +41,6 @@ h3 {
 }
 .offcanvas-drawer .close { 
     padding-top: 0.35em;
-}
-[v-cloak] {
-    display: none;
 }
 .list-group-item.active {
     color: #42b983 !important;
